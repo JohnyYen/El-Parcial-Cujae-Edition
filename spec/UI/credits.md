@@ -23,7 +23,6 @@ Pantalla informativa que muestra el equipo de desarrollo, colaboradores, y atrib
 - **Contenido por miembro:**
   - Rol/Nombre del contributor
   - Área de contribución (Programación, Arte, Audio, Diseño)
-  - Links opcionales (GitHub, Portfolio)
 
 #### Roles típicos:
 - Director de Proyecto
