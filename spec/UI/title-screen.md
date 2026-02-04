@@ -21,7 +21,7 @@ Pantalla inicial del juego que se muestra al ejecutar la aplicación. Es el prim
 
 ### Botón "Nuevo Juego"
 - **Tipo:** Button
-- **Comportamiento:** Inicia una nueva partida,-reseteando todo el progreso y بدء estado inicial del juego
+- **Comportamiento:** Inicia una nueva partida,-reseteando todo el progreso y su estado inicial del juego
 - **Estado inicial:** Habilitado
 - **Keyboard shortcut:** N
 
