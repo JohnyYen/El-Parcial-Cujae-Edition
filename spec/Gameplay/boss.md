@@ -1,6 +1,6 @@
 ---
 title: Boss - Fases, Ataques y Spawning
-assignee: @gameplay-team
+assignee: carlos
 ---
 
 ## Historia de Usuario
@@ -9,7 +9,7 @@ Como jugador, quiero enfrentar un boss desafiante con múltiples fases y patrone
 
 ## Descripción
 
-El Boss es el enemigo principal del nivel. Tiene 3 fases con comportamientos distintos, puede spawnear minions para apoyar sus ataques, y cambia su estrategia según le quede menos vida. Implementa IBoss para estandarizar su comportamiento.
+El Boss es el enemigo principal del nivel. Tiene 3 fases con comportamientos distintos, puede spawnear minions para apoyar sus ataques, y cambia su estrategia según le quede menos vida. Implementa IBoss para estandarizar su comportamiento y crear más rápido los bosses. Los mensajes que salen deben de estar enfocadas en la Cujae
 
 ## Elementos Requeridos
 

@@ -1,6 +1,6 @@
 ---
 title: Minion - Niveles y Comportamiento
-assignee: @gameplay-team
+assignee: carlos
 ---
 
 ## Historia de Usuario

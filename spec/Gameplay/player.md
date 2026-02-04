@@ -1,6 +1,6 @@
 ---
 title: Player - Movimiento y Ataques
-assignee: @gameplay-team
+assignee: johny
 ---
 
 ## Historia de Usuario
