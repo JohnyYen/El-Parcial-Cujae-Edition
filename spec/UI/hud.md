@@ -1,6 +1,6 @@
 ---
 title: HUD (Heads-Up Display)
-assignee: @ui-team
+assignee: fernando
 ---
 
 ## Historia de Usuario

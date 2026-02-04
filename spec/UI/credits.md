@@ -1,6 +1,6 @@
 ---
 title: Pantalla Créditos
-assignee: @content-team
+assignee: fernando
 ---
 
 ## Historia de Usuario

@@ -1,6 +1,6 @@
 ---
 title: Pantalla Nuevo Juego
-assignee: @ui-team
+assignee: yanni
 ---
 
 ## Historia de Usuario

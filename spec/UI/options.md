@@ -1,6 +1,6 @@
 ---
 title: Menú Opciones (Title Screen)
-assignee: @ui-team
+assignee: yanni
 ---
 
 ## Historia de Usuario

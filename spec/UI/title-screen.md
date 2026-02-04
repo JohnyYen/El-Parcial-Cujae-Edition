@@ -1,6 +1,6 @@
 ---
 title: Title Screen
-assignee: @ui-team
+assignee: fernando
 ---
 
 ## Historia de Usuario

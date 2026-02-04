@@ -1,6 +1,6 @@
 ---
 title: Game Over Screen
-assignee: @ui-team
+assignee: fernando
 ---
 
 ## Historia de Usuario

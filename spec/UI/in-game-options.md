@@ -1,6 +1,6 @@
 ---
 title: Menú Opciones Durante el Juego
-assignee: @ui-team
+assignee: yanni
 ---
 
 ## Historia de Usuario
