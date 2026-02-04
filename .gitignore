@@ -1,0 +1,74 @@
+# ===============================
+# Unity generated folders
+# ===============================
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+
+# ===============================
+# OS / Editor junk
+# ===============================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.tmp
+*.bak
+*.orig
+*.log
+
+# ===============================
+# IDEs
+# ===============================
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+# Rider
+.idea/
+*.DotSettings.user
+
+# ===============================
+# Unity cache & crash reports
+# ===============================
+crashlytics-build.properties
+
+# ===============================
+# Unity Addressables (opcional)
+# ===============================
+Assets/AddressableAssetsData/*/BuildLayout_*.json
+Assets/AddressableAssetsData/*/buildlogtep.json
+
+# ===============================
+# Builds & exports
+# ===============================
+*.apk
+*.aab
+*.exe
+*.app
+*.unitypackage
+*.ipa
+*.xcodeproj
+*.xcworkspace
+
+# ===============================
+# Optional: StreamingAssets generated content
+# ===============================
+# Assets/StreamingAssets/**/Generated/
+
+# ===============================
+# Optional: Git LFS pointers (NO ignore)
+# ===============================
+# *.png
+# *.wav
+# *.fbx
