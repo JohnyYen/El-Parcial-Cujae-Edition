@@ -18,9 +18,9 @@ Interfaz persistente que muestra información crítica del jugador durante todo 
 - **Tipo:** Progress Bar / Health Bar
 - **Posición:** Esquina superior izquierda o inferior-center
 - **Comportamiento:**
-  - Llena al inicio (100%)
-  - Decrease cuando el jugador recibe ataques
-  - Empty = pérdida de vida/continuar
+  - Vacía al inicio (0%)
+  - Add cuando el jugador recibe ataques
+  - Full = pérdida de vida/continuar
 - **Umbral crítico:** < 20% → Animación de parpadeo / color rojo
 - **Efecto acumulado:** No se regenera naturalmente, requiere curas
 
