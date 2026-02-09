@@ -1,5 +1,5 @@
 using System;
-
+using ElParcialCujae.Gameplay.Enum;
 namespace ElParcialCujae.Gameplay
 {
     /// <summary>

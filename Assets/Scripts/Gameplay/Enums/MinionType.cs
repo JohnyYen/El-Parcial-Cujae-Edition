@@ -1,4 +1,4 @@
-namespace ElParcialCujae.Gameplay
+namespace ElParcialCujae.Gameplay.Enum
 {
     public enum MinionType
     {
