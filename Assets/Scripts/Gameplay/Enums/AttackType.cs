@@ -1,9 +1,8 @@
-namespace ElParcialCujae.Gameplay.Enum
+using System;
+
+public enum AttackType
 {
-    public enum AttackType
-    {
-        Projectile,
-        Melee,
-        Area
-    }
+    Projectile,
+    Melee,
+    Area
 }

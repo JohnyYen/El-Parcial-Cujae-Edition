@@ -1,10 +1,9 @@
-namespace ElParcialCujae.Gameplay.Enum
+using System;
+
+public enum MinionType
 {
-    public enum MinionType
-    {
-        Basic,
-        Fast,
-        Tank,
-        Ranged
-    }
+    Basic,
+    Fast,
+    Tank,
+    Ranged
 }

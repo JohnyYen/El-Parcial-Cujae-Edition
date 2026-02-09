@@ -1,6 +1,6 @@
 ---
 title: Potenciador - Café
-assignee: @gameplay-team
+assignee: johny
 ---
 
 ## Historia de Usuario

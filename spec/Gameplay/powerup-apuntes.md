@@ -1,6 +1,6 @@
 ---
 title: Potenciador - Apuntes
-assignee: @gameplay-team
+assignee: johny
 ---
 
 ## Historia de Usuario
