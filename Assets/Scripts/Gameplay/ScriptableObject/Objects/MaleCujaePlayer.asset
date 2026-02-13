@@ -15,9 +15,14 @@ MonoBehaviour:
   maxStress: 100
   maxEnfoque: 100
   moveSpeed: 5
-  dashSpeed: 10
-  jumpForce: 5
-  dashCooldown: 2
+  dashSpeed: 3
+  jumpForce: 3
+  dashCooldown: 1
+  softAttackDamage: 12
+  softAttackCooldown: 0.3
+  hardAttackDamage: 30
+  hardAttackCooldown: 1.5
+  hardAttackEnfoqueCost: 20
   enfoquePerKill: 10
   enfoquePerDodge: 5
   stressPerHit: 15

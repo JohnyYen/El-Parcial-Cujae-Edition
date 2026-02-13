@@ -20,6 +20,15 @@ public class FemaleCujaePlayer : PlayerSO
     [Header("Cooldowns")]
     [SerializeField] private float dashCooldown = 1.5f;
 
+    [Header("Soft Attack")]
+    [SerializeField] private float softAttackDamage = 14f;
+    [SerializeField] private float softAttackCooldown = 0.25f;
+
+    [Header("Hard Attack")]
+    [SerializeField] private float hardAttackDamage = 32f;
+    [SerializeField] private float hardAttackCooldown = 1.3f;
+    [SerializeField] private float hardAttackEnfoqueCost = 18f;
+
     [Header("Enfoque Rewards")]
     [SerializeField] private float enfoquePerKill = 15f;
     [SerializeField] private float enfoquePerDodge = 8f;
@@ -36,6 +45,8 @@ public class FemaleCujaePlayer : PlayerSO
     private bool isAlive = true;
     private PlayerState currentState = PlayerState.Idle;
     private float lastDashTime;
+    private float lastSoftAttackTime;
+    private float lastHardAttackTime;
 
     // ========== EVENTOS ==========
 
@@ -47,6 +58,9 @@ public class FemaleCujaePlayer : PlayerSO
     public override event Action<float> OnEnfoqueChanged;
     public override event Action OnDashRefreshed;
     public override event Action<PlayerState> OnStateChanged;
+    public override event Action OnSoftAttackUsed;
+    public override event Action OnHardAttackUsed;
+    public override event Action<float> OnAttackHit;
 
     // ========== PROPIEDADES ==========
 
@@ -62,9 +76,9 @@ public class FemaleCujaePlayer : PlayerSO
 
     public override PlayerState CurrentState => currentState;
 
-    public override float JumpForce => throw new NotImplementedException();
+    public override float JumpForce => jumpForce;
 
-    public override float DashSpeed => throw new NotImplementedException();
+    public override float DashSpeed => dashSpeed;
 
     // ========== MÉTODOS ==========
 
@@ -199,5 +213,62 @@ public class FemaleCujaePlayer : PlayerSO
         isAlive = true;
         currentState = PlayerState.Idle;
         lastDashTime = 0;
+        lastSoftAttackTime = -softAttackCooldown;
+        lastHardAttackTime = -hardAttackCooldown;
+    }
+
+    public override void SoftAttack()
+    {
+        if (!isAlive) return;
+
+        // Verificar cooldown del ataque suave
+        if (Time.time < lastSoftAttackTime + softAttackCooldown) return;
+
+        // Actualizar timestamp del último ataque
+        lastSoftAttackTime = Time.time;
+
+        // Cambiar estado
+        ChangeState(PlayerState.Attacking);
+
+        // Disparar evento
+        OnSoftAttackUsed?.Invoke();
+
+        // Disparar evento de ataque conectado (para el sistema de daño)
+        OnAttackHit?.Invoke(softAttackDamage);
+
+        // Aquí iría la lógica adicional:
+        // - Reproducir animación de ataque suave
+        // - Detectar colisiones con enemigos
+        // - Aplicar knockback si es necesario
+    }
+
+    public override void HardAttack()
+    {
+        if (!isAlive) return;
+
+        // Verificar que hay suficiente enfoque
+        if (!ConsumeEnfoque(hardAttackEnfoqueCost)) return;
+
+        // Verificar cooldown del ataque fuerte
+        if (Time.time < lastHardAttackTime + hardAttackCooldown) return;
+
+        // Actualizar timestamp del último ataque
+        lastHardAttackTime = Time.time;
+
+        // Cambiar estado
+        ChangeState(PlayerState.Attacking);
+
+        // Disparar evento
+        OnHardAttackUsed?.Invoke();
+
+        // Disparar evento de ataque conectado (para el sistema de daño)
+        OnAttackHit?.Invoke(hardAttackDamage);
+
+        // Aquí iría la lógica adicional:
+        // - Reproducir animación de ataque fuerte
+        // - Crear efecto de impacto/explosión
+        // - Detectar colisiones con enemigos
+        // - Aplicar stun (breve congelación del enemigo)
+        // - Aplicar knockback más fuerte que el ataque suave
     }
 }

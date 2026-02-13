@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private LayerMask groundLayer;
 
+    [Header("Bullet Prefabs")]
+    [SerializeField] private GameObject softBulletPrefab;
+    [SerializeField] private GameObject hardBulletPrefab;
+
     private bool isGrounded = true;
     private Rigidbody2D rb;
 
@@ -45,7 +49,17 @@ public class Player : MonoBehaviour
                 player_behaviour.Jump(transform);
             }
 
+            if (Input.GetAxis("SoftAttack") > 0.0f)
+            {
+                Debug.Log("SoftAttack input detected!");
+                player_behaviour.SoftAttack();
+            }
 
+            if (Input.GetAxis("HardAttack") > 0.0f)
+            {
+                Debug.Log("HardAttack input detected!");
+                player_behaviour.HardAttack();
+            }
         }
     }
 
@@ -53,12 +67,16 @@ public class Player : MonoBehaviour
     {
         player_behaviour.OnJumpUsed += Jump;
         player_behaviour.OnDashUsed += Dash;
+        player_behaviour.OnSoftAttackUsed += SoftAttack;
+        player_behaviour.OnHardAttackUsed += HardAttack;
     }
 
     void OnDisable()
     {
         player_behaviour.OnJumpUsed -= Jump;
         player_behaviour.OnDashUsed -= Dash;
+        player_behaviour.OnSoftAttackUsed -= SoftAttack;
+        player_behaviour.OnHardAttackUsed -= HardAttack;
     }
 
     public void Jump()
@@ -80,5 +98,35 @@ public class Player : MonoBehaviour
             else if (horizontalInput < 0) // Dashing left
                 rb.AddForce(Vector2.left * player_behaviour.DashSpeed, ForceMode2D.Impulse);
         }
+    }
+
+    public void SoftAttack()
+    {
+        // Esqueleto del ataque suave
+        Debug.Log("SoftAttack ejecutado!");
+        
+        Instantiate(softBulletPrefab, transform.position + transform.right * 0.5f, Quaternion.identity);
+        
+        // Aquí se agregará:
+        // - Reproducir animación de ataque suave
+        // - Crear hitbox temporal para detectar enemigos
+        // - Aplicar daño a enemigos en la zona
+        // - Aplicar knockback menor
+    }
+
+    public void HardAttack()
+    {
+        // Esqueleto del ataque fuerte
+        Debug.Log("HardAttack ejecutado!");
+        
+        Instantiate(hardBulletPrefab, transform.position + transform.right * 0.5f, Quaternion.identity);
+
+        // Aquí se agregará:
+        // - Reproducir animación de ataque fuerte
+        // - Crear hitbox más grande para detectar enemigos
+        // - Aplicar daño a enemigos en la zona
+        // - Aplicar knockback significativo
+        // - Crear efecto visual de impacto
+        // - Aplicar stun a enemigos (congelación breve)
     }
 }

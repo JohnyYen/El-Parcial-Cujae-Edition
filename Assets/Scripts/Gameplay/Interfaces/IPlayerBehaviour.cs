@@ -10,6 +10,8 @@ public interface IPlayerBehaviour
     void Jump(Transform transform);
     void AddStress(float amount);
     void AddEnfoque(float amount);
+    void SoftAttack();
+    void HardAttack();
     bool ConsumeEnfoque(float amount);
     void ReduceStress(float amount);
 

@@ -25,6 +25,9 @@ public abstract class PlayerSO : ScriptableObject, IPlayerBehaviour, IPlayerProp
     public abstract bool ConsumeEnfoque(float amount);
     public abstract void ReduceStress(float amount);
 
+    public abstract void SoftAttack();
+    public abstract void HardAttack();
+
     // ========== EVENTOS ==========
 
     public abstract event Action OnPlayerDeath;
@@ -35,4 +38,20 @@ public abstract class PlayerSO : ScriptableObject, IPlayerBehaviour, IPlayerProp
     public abstract event Action<float> OnEnfoqueChanged;
     public abstract event Action OnDashRefreshed;
     public abstract event Action<PlayerState> OnStateChanged;
+
+    /// <summary>
+    /// Se dispara cuando se ejecuta un ataque suave.
+    /// </summary>
+    public abstract event Action OnSoftAttackUsed;
+
+    /// <summary>
+    /// Se dispara cuando se ejecuta un ataque fuerte.
+    /// </summary>
+    public abstract event Action OnHardAttackUsed;
+
+    /// <summary>
+    /// Se dispara cuando un ataque conecta al enemigo.
+    /// Parámetro: daño infringido
+    /// </summary>
+    public abstract event Action<float> OnAttackHit;
 }
