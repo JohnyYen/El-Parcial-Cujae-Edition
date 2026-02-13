@@ -2,16 +2,8 @@ using UnityEngine;
 using System;
 
 [CreateAssetMenu(fileName = "NewPlayer", menuName = "Player")]
-public abstract class PlayerSO : ScriptableObject, IPlayer
+public abstract class PlayerSO : ScriptableObject, IPlayerBehaviour
 {
-    // ========== PROPIEDADES ==========
-
-    public abstract bool IsAlive { get; }
-    public abstract float Stress { get; }
-    public abstract float Enfoque { get; }
-    public abstract bool CanDash { get; }
-    public abstract bool CanJump { get; }
-    public abstract PlayerState CurrentState { get; }
 
     // ========== MÉTODOS ==========
 

@@ -5,7 +5,7 @@ using System;
 /// Implementación concreta del jugador MaleCujae.
 /// Hereda de PlayerSO y define los valores específicos del jugador.
 /// </summary>
-[CreateAssetMenu(fileName = "MaleCujaePlayer", menuName = "Player/Male Cujae")]
+[CreateAssetMenu(fileName = "MaleCujaePlayer", menuName = "Player/Male_Cujae")]
 public class MaleCujaePlayer : PlayerSO
 {
     // ========== CONFIGURACIÓN ==========
@@ -72,7 +72,7 @@ public class MaleCujaePlayer : PlayerSO
         {
             ChangeState(PlayerState.Moving);
             // Lógica de movimiento
-            transform.Translate(Vector2.right * direction * moveSpeed * Time.deltaTime);
+            // transform.Translate(Vector2.right * direction * moveSpeed * Time.deltaTime);
         }
         else
         {
@@ -91,7 +91,8 @@ public class MaleCujaePlayer : PlayerSO
         OnDashUsed?.Invoke();
 
         // Lógica de dash
-        Invoke(nameof(RefreshDash), dashCooldown);
+        RefreshDash();
+        // Invoke(nameof(RefreshDash), dashCooldown);
     }
 
     public override void Jump()
@@ -104,7 +105,8 @@ public class MaleCujaePlayer : PlayerSO
         OnJumpUsed?.Invoke();
 
         // Lógica de jump
-        Invoke(nameof(RefreshJump), 0.5f);
+        RefreshJump();
+        // Invoke(nameof(RefreshJump), 0.5f);
     }
 
     public override void AddStress(float amount)
