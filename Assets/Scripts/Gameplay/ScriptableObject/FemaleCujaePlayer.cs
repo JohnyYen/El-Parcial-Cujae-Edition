@@ -2,30 +2,30 @@ using UnityEngine;
 using System;
 
 /// <summary>
-/// Implementación concreta del jugador MaleCujae.
-/// Hereda de PlayerSO y define los valores específicos del jugador.
+/// Implementación concreta del jugador FemaleCujae.
+/// Variante más rápida y resistente del jugador base.
 /// </summary>
-[CreateAssetMenu(fileName = "MaleCujaePlayer", menuName = "Player/Male_Cujae")]
-public class MaleCujaePlayer : PlayerSO
+[CreateAssetMenu(fileName = "FemaleCujaePlayer", menuName = "Player/Female Cujae")]
+public class FemaleCujaePlayer : PlayerSO
 {
     // ========== CONFIGURACIÓN ==========
 
     [Header("Stats")]
     [SerializeField] private float maxStress = 100f;
     [SerializeField] private float maxEnfoque = 100f;
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float dashSpeed = 10f;
-    [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private float moveSpeed = 6f;
+    [SerializeField] private float dashSpeed = 12f;
+    [SerializeField] private float jumpForce = 7f;
 
     [Header("Cooldowns")]
-    [SerializeField] private float dashCooldown = 2f;
+    [SerializeField] private float dashCooldown = 1.5f;
 
     [Header("Enfoque Rewards")]
-    [SerializeField] private float enfoquePerKill = 10f;
-    [SerializeField] private float enfoquePerDodge = 5f;
+    [SerializeField] private float enfoquePerKill = 15f;
+    [SerializeField] private float enfoquePerDodge = 8f;
 
     [Header("Stress Damage")]
-    [SerializeField] private float stressPerHit = 15f;
+    [SerializeField] private float stressPerHit = 12f;
 
     // ========== ESTADO PRIVADO ==========
 
@@ -62,9 +62,13 @@ public class MaleCujaePlayer : PlayerSO
 
     public override PlayerState CurrentState => currentState;
 
+    public override float JumpForce => throw new NotImplementedException();
+
+    public override float DashSpeed => throw new NotImplementedException();
+
     // ========== MÉTODOS ==========
 
-    public override void Move(float direction)
+    public override void Move(Transform transform, float direction)
     {
         if (!isAlive) return;
 
@@ -80,7 +84,7 @@ public class MaleCujaePlayer : PlayerSO
         }
     }
 
-    public override void Dash()
+    public override void Dash(Transform transform)
     {
         if (!isAlive || !dashAvailable) return;
 
@@ -91,11 +95,10 @@ public class MaleCujaePlayer : PlayerSO
         OnDashUsed?.Invoke();
 
         // Lógica de dash
-        RefreshDash();
         // Invoke(nameof(RefreshDash), dashCooldown);
     }
 
-    public override void Jump()
+    public override void Jump(Transform transform)
     {
         if (!isAlive || !jumpAvailable) return;
 

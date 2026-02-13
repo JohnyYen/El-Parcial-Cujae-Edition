@@ -5,9 +5,9 @@ public interface IPlayerBehaviour
 {
     // ========== MÉTODOS ==========
 
-    void Move(float direction);
-    void Dash();
-    void Jump();
+    void Move(Transform transform,float direction);
+    void Dash(Transform transform);
+    void Jump(Transform transform);
     void AddStress(float amount);
     void AddEnfoque(float amount);
     bool ConsumeEnfoque(float amount);

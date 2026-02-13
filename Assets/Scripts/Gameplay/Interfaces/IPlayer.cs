@@ -45,6 +45,10 @@ public interface IPlayerProperties
     /// Estado actual del jugador.
     /// </summary>
     PlayerState CurrentState { get; }
+
+    float JumpForce { get; }
+
+    float DashSpeed { get; }
 }
 
 /// <summary>

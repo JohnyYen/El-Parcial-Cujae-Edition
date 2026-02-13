@@ -2,30 +2,30 @@ using UnityEngine;
 using System;
 
 /// <summary>
-/// Implementación concreta del jugador FemaleCujae.
-/// Variante más rápida y resistente del jugador base.
+/// Implementación concreta del jugador MaleCujae.
+/// Hereda de PlayerSO y define los valores específicos del jugador.
 /// </summary>
-// [CreateAssetMenu(fileName = "FemaleCujaePlayer", menuName = "Player/Female Cujae")]
-public class FemaleCujaePlayer : PlayerSO
+[CreateAssetMenu(fileName = "MaleCujaePlayer", menuName = "Player/Male Cujae")]
+public class MaleCujaePlayer : PlayerSO
 {
     // ========== CONFIGURACIÓN ==========
 
     [Header("Stats")]
     [SerializeField] private float maxStress = 100f;
     [SerializeField] private float maxEnfoque = 100f;
-    [SerializeField] private float moveSpeed = 6f;
-    [SerializeField] private float dashSpeed = 12f;
-    [SerializeField] private float jumpForce = 7f;
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float dashSpeed = 10f;
+    [SerializeField] private float jumpForce = 8f;
 
     [Header("Cooldowns")]
-    [SerializeField] private float dashCooldown = 1.5f;
+    [SerializeField] private float dashCooldown = 2f;
 
     [Header("Enfoque Rewards")]
-    [SerializeField] private float enfoquePerKill = 15f;
-    [SerializeField] private float enfoquePerDodge = 8f;
+    [SerializeField] private float enfoquePerKill = 10f;
+    [SerializeField] private float enfoquePerDodge = 5f;
 
     [Header("Stress Damage")]
-    [SerializeField] private float stressPerHit = 12f;
+    [SerializeField] private float stressPerHit = 15f;
 
     // ========== ESTADO PRIVADO ==========
 
@@ -62,9 +62,14 @@ public class FemaleCujaePlayer : PlayerSO
 
     public override PlayerState CurrentState => currentState;
 
+    public override float JumpForce => jumpForce;
+
+    public override float DashSpeed => dashSpeed;
+
+
     // ========== MÉTODOS ==========
 
-    public override void Move(float direction)
+    public override void Move(Transform transform, float direction)
     {
         if (!isAlive) return;
 
@@ -72,7 +77,7 @@ public class FemaleCujaePlayer : PlayerSO
         {
             ChangeState(PlayerState.Moving);
             // Lógica de movimiento
-            // transform.Translate(Vector2.right * direction * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector2.right * direction * moveSpeed * Time.deltaTime);
         }
         else
         {
@@ -80,9 +85,11 @@ public class FemaleCujaePlayer : PlayerSO
         }
     }
 
-    public override void Dash()
+    public override void Dash(Transform transform)
     {
         if (!isAlive || !dashAvailable) return;
+
+        if (Time.time < lastDashTime + dashCooldown) return;
 
         dashAvailable = false;
         lastDashTime = Time.time;
@@ -91,13 +98,15 @@ public class FemaleCujaePlayer : PlayerSO
         OnDashUsed?.Invoke();
 
         // Lógica de dash
+        RefreshDash();
         // Invoke(nameof(RefreshDash), dashCooldown);
     }
 
-    public override void Jump()
+    public override void Jump(Transform transform)
     {
         if (!isAlive || !jumpAvailable) return;
-
+        if (Time.time < 0.5f) return; // Evitar salto inmediato después de un dash
+    
         jumpAvailable = false;
         ChangeState(PlayerState.Jumping);
 

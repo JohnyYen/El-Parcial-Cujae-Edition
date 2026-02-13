@@ -1,15 +1,25 @@
 using UnityEngine;
 using System;
 
-[CreateAssetMenu(fileName = "NewPlayer", menuName = "Player")]
-public abstract class PlayerSO : ScriptableObject, IPlayerBehaviour
+public abstract class PlayerSO : ScriptableObject, IPlayerBehaviour, IPlayerProperties
 {
+    // ========== PROPIEDADES ==========
+
+    public abstract bool IsAlive { get; }
+    public abstract float Stress { get; }
+    public abstract float Enfoque { get; }
+    public abstract bool CanDash { get; }
+    public abstract bool CanJump { get; }
+    public abstract PlayerState CurrentState { get; }
+
+    public abstract float JumpForce { get; }
+    public abstract float DashSpeed { get; }
 
     // ========== MÉTODOS ==========
 
-    public abstract void Move(float direction);
-    public abstract void Dash();
-    public abstract void Jump();
+    public abstract void Move(Transform transform,float direction);
+    public abstract void Dash(Transform transform);
+    public abstract void Jump(Transform transform);
     public abstract void AddStress(float amount);
     public abstract void AddEnfoque(float amount);
     public abstract bool ConsumeEnfoque(float amount);

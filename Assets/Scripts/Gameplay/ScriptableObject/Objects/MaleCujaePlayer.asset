@@ -16,7 +16,7 @@ MonoBehaviour:
   maxEnfoque: 100
   moveSpeed: 5
   dashSpeed: 10
-  jumpForce: 8
+  jumpForce: 5
   dashCooldown: 2
   enfoquePerKill: 10
   enfoquePerDodge: 5
