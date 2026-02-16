@@ -15,6 +15,9 @@ public abstract class PlayerSO : ScriptableObject, IPlayerBehaviour, IPlayerProp
 
     public abstract float JumpForce { get; }
     public abstract float DashSpeed { get; }
+    public abstract float SoftAttackCooldown { get; }
+    public abstract float HardAttackCooldown { get; }
+    public abstract float DashCooldown { get; }
 
     // ========== MÉTODOS ==========
 

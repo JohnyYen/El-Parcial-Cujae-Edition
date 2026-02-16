@@ -9,11 +9,14 @@ public class CoffeePickup : MonoBehaviour
         if (!collision.CompareTag("Player"))
             return;
 
-           BuffController buffController = collision.GetComponent<BuffController>();
-           if (buffController != null)
-           {
-               buffController.ApplyCoffeeBuff(coffeeBuff);
-               Destroy(gameObject);
-           }
+        Player player = collision.GetComponent<Player>();
+        // if (player != null && player == null || player.BuffController == null)
+        //     Debug.Log("Player collided with CoffeePickup!");
+        if (player != null && player.BuffController != null)
+        {
+            // Debug.Log("Player collided with CoffeePickup!");
+            player.BuffController.ApplyCoffeeBuff(coffeeBuff);
+            Destroy(gameObject);
+        }
     }
 }

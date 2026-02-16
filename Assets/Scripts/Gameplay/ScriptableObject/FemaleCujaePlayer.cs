@@ -85,6 +85,12 @@ public class FemaleCujaePlayer : PlayerSO
 
     public override float DashSpeed => dashSpeed;
 
+    public override float SoftAttackCooldown => softAttackCooldown;
+
+    public override float HardAttackCooldown => hardAttackCooldown;
+
+    public override float DashCooldown => dashCooldown;
+
     // ========== MÉTODOS ==========
 
     public override void Move(Transform transform, float direction)

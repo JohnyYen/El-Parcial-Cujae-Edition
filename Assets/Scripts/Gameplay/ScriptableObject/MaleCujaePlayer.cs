@@ -85,6 +85,11 @@ public class MaleCujaePlayer : PlayerSO
 
     public override float DashSpeed => dashSpeed;
 
+    public override float SoftAttackCooldown => softAttackCooldown;
+
+    public override float HardAttackCooldown => hardAttackCooldown;
+
+    public override float DashCooldown => dashCooldown;
 
     // ========== MÉTODOS ==========
 
@@ -125,7 +130,7 @@ public class MaleCujaePlayer : PlayerSO
     {
         if (!isAlive || !jumpAvailable) return;
         if (Time.time < 0.5f) return; // Evitar salto inmediato después de un dash
-    
+
         jumpAvailable = false;
         ChangeState(PlayerState.Jumping);
 

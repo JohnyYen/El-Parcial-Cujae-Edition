@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class NotebookPickup : MonoBehaviour
 {
-
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player"))
             return;
 
-        BuffController buffController = collision.GetComponent<BuffController>();
-        if (buffController != null)
+        Debug.Log("Player collided with NotebookPickup!");
+        Player player = collision.GetComponent<Player>();
+        if (player != null && player.BuffController != null)
         {
-            buffController.ApplyNotebookBuff();
+            player.BuffController.ApplyNotebookBuff();
             Destroy(gameObject);
         }
     }

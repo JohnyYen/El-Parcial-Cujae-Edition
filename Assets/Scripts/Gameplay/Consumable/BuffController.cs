@@ -68,9 +68,12 @@ public class BuffController : MonoBehaviour
         // Disparar eventos para notificar al Player
         OnSpeedMultiplierChanged?.Invoke(speedMultiplier);
         OnFireRateMultiplierChanged?.Invoke(fireRateMultiplier);
-
+        
+        Debug.Log($"Coffee buff applied! SpeedMultiplier: {speedMultiplier}, FireRateMultiplier: {fireRateMultiplier}");
         yield return new WaitForSeconds(buff.duration);
 
+
+        Debug.Log("Coffee buff expired. Reverting to default values.");
         // Revertir multiplicadores a 1f (valores por defecto)
         speedMultiplier = 1f;
         fireRateMultiplier = 1f;

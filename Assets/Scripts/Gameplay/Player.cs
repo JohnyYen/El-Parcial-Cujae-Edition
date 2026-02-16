@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
-{   
+{
     [Header("Player Behavior")]
     [SerializeField] public PlayerSO player_behaviour;
 
@@ -22,11 +22,15 @@ public class Player : MonoBehaviour
     private bool isGrounded = true;
     private Rigidbody2D rb;
 
+    // ========== PROPIEDADES ==========
+
+    public BuffController BuffController => buffController;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+
         if (player_behaviour != null && buffController != null)
         {
             player_behaviour.SetBuffController(buffController);
@@ -37,6 +41,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer.value);
+
+        // Debug.Log($" Invencible: {player_behaviour.IsInvincible} | Speed Multiplier: {player_behaviour.DashSpeed} | Fire Rate Multiplier: {player_behaviour.SoftAttackCooldown}");
     }
 
     void FixedUpdate()
@@ -47,7 +53,7 @@ public class Player : MonoBehaviour
             player_behaviour.Move(transform, horizontalInput);
 
             if (Input.GetAxis("Dash") > 0.0f)
-            {   
+            {
                 Debug.Log("Dash input detected!");
                 player_behaviour.Dash(transform);
             }
@@ -77,7 +83,7 @@ public class Player : MonoBehaviour
         player_behaviour.OnDashUsed += Dash;
         player_behaviour.OnSoftAttackUsed += SoftAttack;
         player_behaviour.OnHardAttackUsed += HardAttack;
-        
+
         // Suscribirse a eventos del BuffController
         if (buffController != null)
         {
@@ -93,7 +99,7 @@ public class Player : MonoBehaviour
         player_behaviour.OnDashUsed -= Dash;
         player_behaviour.OnSoftAttackUsed -= SoftAttack;
         player_behaviour.OnHardAttackUsed -= HardAttack;
-        
+
         // Desuscribirse de eventos del BuffController
         if (buffController != null)
         {
@@ -104,7 +110,7 @@ public class Player : MonoBehaviour
     }
 
     public void Jump()
-    {   
+    {
         if (player_behaviour != null && isGrounded)
         {
             rb.AddForce(Vector2.up * player_behaviour.JumpForce, ForceMode2D.Impulse);
@@ -129,9 +135,9 @@ public class Player : MonoBehaviour
     {
         // Esqueleto del ataque suave
         Debug.Log("SoftAttack ejecutado!");
-        
+
         Instantiate(softBulletPrefab, transform.position + transform.right * 0.5f, Quaternion.identity);
-        
+
         // Aquí se agregará:
         // - Reproducir animación de ataque suave
         // - Crear hitbox temporal para detectar enemigos
@@ -143,7 +149,7 @@ public class Player : MonoBehaviour
     {
         // Esqueleto del ataque fuerte
         Debug.Log("HardAttack ejecutado!");
-        
+
         Instantiate(hardBulletPrefab, transform.position + transform.right * 0.5f, Quaternion.identity);
 
         // Aquí se agregará:
