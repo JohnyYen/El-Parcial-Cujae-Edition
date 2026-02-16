@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1bdc06fbb9474e7acc1e2767b86dd5, type: 3}
+  m_Name: ProgrammingProjectileAttack
+  m_EditorClassIdentifier: 
+  attackName: Lluvia de Proyectiles
+  damage: 20
+  cooldown: 2
+  validPhases: 010000000200000003000000
+  projectilePrefab: {fileID: 0}
+  projectileCount: 3
+  projectileSpeed: 10

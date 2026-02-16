@@ -8,6 +8,7 @@ public class BossHit : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log($"BossHit detecta colisión con: {collision.gameObject.name}");
         // Verificar que el objeto tiene el tag "Bullet"
         if (!collision.CompareTag("Bullet"))
             return;

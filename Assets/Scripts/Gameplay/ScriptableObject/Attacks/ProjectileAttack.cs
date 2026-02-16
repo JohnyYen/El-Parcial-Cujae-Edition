@@ -101,6 +101,17 @@ public class ProjectileAttack : BossAttackSO
             rb.linearVelocity = direction * projectileSpeed;
         }
 
-        Debug.Log($"Proyectil spawn #{index + 1} - Ángulo: {angle}°");
+        // Pasar daño al proyectil desde este script de ataque
+        BossProjectile bossProj = projectile.GetComponent<BossProjectile>();
+        if (bossProj != null)
+        {
+            bossProj.SetDamage(damage);
+            Debug.Log($"Proyectil spawn #{index + 1} - Ángulo: {angle}°, Daño: {damage}");
+        }
+        else
+        {
+            Debug.LogWarning("BossProjectile component not found on projectile prefab!");
+            Debug.Log($"Proyectil spawn #{index + 1} - Ángulo: {angle}°");
+        }
     }
 }

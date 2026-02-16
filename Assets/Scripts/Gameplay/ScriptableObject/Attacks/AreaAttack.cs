@@ -96,9 +96,20 @@ public class AreaAttack : BossAttackSO
             circleCollider.radius = areaRadius;
         }
 
+        // Pasar daño a la zona desde este script de ataque
+        DamageZone damageZone = areaObj.GetComponent<DamageZone>();
+        if (damageZone != null)
+        {
+            damageZone.SetDamage(damage);
+        }
+        else
+        {
+            Debug.LogWarning("DamageZone component not found on area prefab!");
+        }
+
         // Destruir después de la duración
         Destroy(areaObj, areaDuration);
 
-        Debug.Log($"Área de daño creada - Radius: {areaRadius}, Duration: {areaDuration}s");
+        Debug.Log($"Área de daño creada - Radius: {areaRadius}, Duration: {areaDuration}s, Daño: {damage}");
     }
 }
