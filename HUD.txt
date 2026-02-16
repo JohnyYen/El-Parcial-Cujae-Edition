@@ -1,0 +1,216 @@
+  Pantalla HUD — Paso a paso
+                                                                                                                                                         
+  1. Abrir la escena correcta                                                                                                                            
+
+  1. Si aún no existe la escena de gameplay, créala: Assets/Scenes/ → clic derecho → Create → Scene → renómbrala a Gameplay
+  2. Doble clic en Gameplay para abrirla
+  3. File → Build Settings → Add Open Scenes
+
+  ---
+  2. Crear el Canvas del HUD
+
+  1. Clic derecho en Hierarchy → UI → Canvas → renómbralo a HUDCanvas
+  2. En Canvas Scaler:
+    - UI Scale Mode: Scale With Screen Size
+    - Reference Resolution: 1920 x 1080
+    - Match Width Or Height: 0.5
+  3. En el componente Canvas Group (Add Component → Canvas Group):
+    - Alpha: 0.9 (semi-transparente como dice la spec)
+  4. Selecciona EventSystem → elimina Standalone Input Module → agrega InputSystemUIInputModule
+
+  ---
+  3. Crear la Barra de Estrés (Vida)
+
+  1. Clic derecho sobre HUDCanvas → Create Empty → renómbralo a StressBarContainer
+  2. En Rect Transform:
+    - Anchor: top-left
+    - Pos X: 180, Pos Y: -50
+    - Width: 300, Height: 30
+  3. Clic derecho sobre StressBarContainer → UI → Text - TextMeshPro → renómbralo a TxtStressLabel
+    - Texto: Estrés
+    - Font Size: 18
+    - Anchor: left, Pos X: -80
+  4. Clic derecho sobre StressBarContainer → UI → Slider → renómbralo a StressBar
+    - Rect Transform → Alt + stretch-stretch (que llene el contenedor)
+    - En el componente Slider:
+        - Min Value: 0
+      - Max Value: 1
+      - Value: 0
+      - Interactable: desmarca ✗ (el jugador no lo toca, es solo visual)
+  5. Configurar los colores del slider:
+    - Expande StressBar → Background → Color: #333333 (gris oscuro)
+    - Expande StressBar → Fill Area → Fill → Color: #33CC33 (verde, el script lo cambia a rojo cuando es crítico)
+    - Elimina el hijo Handle Slide Area (no necesitamos el handle)
+
+  ---
+  4. Crear la Barra de Enfoque
+
+  1. Clic derecho sobre HUDCanvas → Create Empty → renómbralo a FocusBarContainer
+  2. En Rect Transform:
+    - Anchor: top-left
+    - Pos X: 180, Pos Y: -90
+    - Width: 300, Height: 30
+  3. Clic derecho sobre FocusBarContainer → UI → Text - TextMeshPro → renómbralo a TxtFocusLabel
+    - Texto: Enfoque
+    - Font Size: 18
+    - Anchor: left, Pos X: -80
+  4. Clic derecho sobre FocusBarContainer → UI → Slider → renómbralo a FocusBar
+    - Rect Transform → Alt + stretch-stretch
+    - Min Value: 0, Max Value: 1, Value: 0
+    - Interactable: ✗
+    - Expande → Background → Color: #333333
+    - Expande → Fill Area → Fill → Color: #3399FF (azul)
+    - Elimina Handle Slide Area
+
+  ---
+  5. Crear el overlay de daño (flash rojo)
+
+  1. Clic derecho sobre HUDCanvas → UI → Image → renómbralo a DamageOverlay
+  2. Rect Transform → Alt + stretch-stretch (cubre toda la pantalla)
+  3. Color: #FF0000, Alpha: 0 (invisible, el script lo activa al recibir daño)
+  4. Raycast Target: desmarca ✗ (para que no bloquee clicks)
+
+  ---
+  6. Crear el botón de pausa
+
+  1. Clic derecho sobre HUDCanvas → UI → Button - TextMeshPro → renómbralo a BtnPause
+  2. En Rect Transform:
+    - Anchor: top-right
+    - Pos X: -60, Pos Y: -50
+    - Width: 80, Height: 80
+  3. Texto: ⚙ o II (temporal, después le pones un ícono)
+  4. Font Size: 36
+  5. Add Component → MenuButton
+
+  ---
+  7. Crear el panel de pausa
+
+  1. Clic derecho sobre HUDCanvas → Create Empty → renómbralo a PausePanel
+  2. Rect Transform → Alt + stretch-stretch
+  3. Add Component → Image → Color: #000000, Alpha: 180
+  4. Clic derecho sobre PausePanel → UI → Text - TextMeshPro → TxtPausa
+    - Texto: Pausa
+    - Font Size: 60
+    - Alignment: centro
+    - Anchor: middle-center, Pos Y: 120
+  5. Clic derecho sobre PausePanel → UI → Button - TextMeshPro → BtnResume
+    - Texto: Continuar
+    - Width: 300, Height: 60
+    - Pos Y: 20
+    - Add Component → MenuButton
+  6. Clic derecho sobre PausePanel → UI → Button - TextMeshPro → BtnExitToMenu
+    - Texto: Salir al Menú
+    - Width: 300, Height: 60
+    - Pos Y: -60
+    - Add Component → MenuButton
+  7. Navegación circular:
+    - BtnResume → Explicit → Up: BtnExitToMenu, Down: BtnExitToMenu
+    - BtnExitToMenu → Explicit → Up: BtnResume, Down: BtnResume
+  8. Desactiva PausePanel → ☐ PausePanel
+
+  ---
+  8. Agregar el script GameHUD
+
+  1. Clic derecho en Hierarchy → Create Empty → renómbralo a HUDController
+  2. Add Component → busca GameHUD → agrégalo
+  3. En el Inspector:
+
+  ┌─────────────────┬──────────────────────────────────────────────────┐
+  │      Campo      │                  Qué arrastrar                   │
+  ├─────────────────┼──────────────────────────────────────────────────┤
+  │ Stress Bar      │ StressBar                                        │
+  ├─────────────────┼──────────────────────────────────────────────────┤
+  │ Stress Bar Fill │ StressBar → Fill Area → Fill (el Image del fill) │
+  ├─────────────────┼──────────────────────────────────────────────────┤
+  │ Focus Bar       │ FocusBar                                         │
+  ├─────────────────┼──────────────────────────────────────────────────┤
+  │ Focus Bar Fill  │ FocusBar → Fill Area → Fill                      │
+  ├─────────────────┼──────────────────────────────────────────────────┤
+  │ Damage Overlay  │ DamageOverlay                                    │
+  ├─────────────────┼──────────────────────────────────────────────────┤
+  │ Pause Panel     │ PausePanel                                       │
+  └─────────────────┴──────────────────────────────────────────────────┘
+
+  Los colores ya tienen valores por defecto en el script, pero puedes ajustarlos:
+
+  ┌────────────────────┬───────────────────┬─────────────────────────┐
+  │       Campo        │ Valor por defecto │       Significado       │
+  ├────────────────────┼───────────────────┼─────────────────────────┤
+  │ Normal Color       │ Verde             │ Estrés bajo             │
+  ├────────────────────┼───────────────────┼─────────────────────────┤
+  │ Critical Color     │ Rojo              │ Estrés ≥ 80%            │
+  ├────────────────────┼───────────────────┼─────────────────────────┤
+  │ Critical Threshold │ 0.8               │ Cuándo se pone rojo     │
+  ├────────────────────┼───────────────────┼─────────────────────────┤
+  │ Focus Color        │ Azul              │ Enfoque normal          │
+  ├────────────────────┼───────────────────┼─────────────────────────┤
+  │ Focus Full Color   │ Amarillo          │ Enfoque lleno           │
+  ├────────────────────┼───────────────────┼─────────────────────────┤
+  │ Flash Duration     │ 0.3               │ Duración del flash rojo │
+  └────────────────────┴───────────────────┴─────────────────────────┘
+
+  ---
+  9. Conectar los onClick
+
+  Botón pausa:
+
+  ┌───────────────┬───────────────┬──────────────────────┐
+  │     Botón     │    Objeto     │       Función        │
+  ├───────────────┼───────────────┼──────────────────────┤
+  │ BtnPause      │ HUDController │ GameHUD.TogglePause  │
+  ├───────────────┼───────────────┼──────────────────────┤
+  │ BtnResume     │ HUDController │ GameHUD.OnResume     │
+  ├───────────────┼───────────────┼──────────────────────┤
+  │ BtnExitToMenu │ HUDController │ GameHUD.OnExitToMenu │
+  └───────────────┴───────────────┴──────────────────────┘
+
+  ---
+  10. Probar
+
+  1. Ctrl+S para guardar
+  2. Dale Play ▶
+  3. Verifica:
+    - Las barras aparecen en la esquina superior izquierda ✓
+    - Tecla Esc o P abre el panel de pausa ✓
+    - El juego se congela cuando está en pausa ✓
+    - "Continuar" cierra la pausa ✓
+    - "Salir al Menú" carga el TitleScreen ✓
+
+  Cómo el equipo de Gameplay lo usa
+
+  Cuando implementen el Player, solo necesitan buscar el HUD y llamar sus métodos:
+
+  // Encontrar el HUD
+  GameHUD hud = FindFirstObjectByType<GameHUD>();
+
+  // Cuando el jugador recibe daño
+  hud.AddStress(0.15f);  // sube 15% el estrés
+
+  // Cuando el jugador esquiva o mata un enemigo
+  hud.AddFocus(0.1f);    // sube 10% el enfoque
+
+  // Cuando usa ataque especial
+  hud.UseFocus(0.5f);    // gasta 50% del enfoque
+
+  ---
+  Con esto completamos todas las pantallas que te tocan. Resumen final:
+
+  ┌────────────────┬───────────────────────┬────────┐
+  │    Pantalla    │        Script         │ Estado │
+  ├────────────────┼───────────────────────┼────────┤
+  │ Title Screen   │ TitleScreenManager.cs │ ✓      │
+  ├────────────────┼───────────────────────┼────────┤
+  │ Menu Button    │ MenuButton.cs         │ ✓      │
+  ├────────────────┼───────────────────────┼────────┤
+  │ Options Panel  │ OptionsPanel.cs       │ ✓      │
+  ├────────────────┼───────────────────────┼────────┤
+  │ Credits Panel  │ CreditsPanel.cs       │ ✓      │
+  ├────────────────┼───────────────────────┼────────┤
+  │ New Game Panel │ NewGamePanel.cs       │ ✓      │
+  ├────────────────┼───────────────────────┼────────┤
+  │ Game Over      │ GameOverScreen.cs     │ ✓      │
+  ├────────────────┼───────────────────────┼────────┤
+  │ HUD            │ GameHUD.cs            │ ✓      │
+  └────────────────┴───────────────────────┴────────┘
+
+✻ Brewed for 1m 12s                                                

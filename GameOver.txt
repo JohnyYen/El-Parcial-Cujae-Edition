@@ -1,0 +1,146 @@
+● Script creado. Ahora los pasos en Unity:                                                                                                                  
+  ---                                                                                                                                                    
+  Pantalla Game Over — Paso a paso
+                                                                                                                                                           1. Crear la escena                                                                                                                                     
+
+  1. En la ventana Project → carpeta Assets/Scenes/
+  2. Clic derecho → Create → Scene → renómbrala a GameOver
+  3. Doble clic en GameOver para abrirla
+  4. File → Build Settings → clic en Add Open Scenes (debe aparecer Scenes/GameOver)
+
+  ---
+  2. Crear el Canvas
+
+  1. En Hierarchy, clic derecho → UI → Canvas
+  2. En el componente Canvas Scaler:
+    - UI Scale Mode: Scale With Screen Size
+    - Reference Resolution: 1920 x 1080
+    - Match Width Or Height: 0.5
+  3. Selecciona el EventSystem que se creó automáticamente:
+    - Si tiene Standalone Input Module → elimínalo
+    - Add Component → InputSystemUIInputModule
+
+  ---
+  3. Crear el Background
+
+  1. Clic derecho sobre Canvas → UI → Image → renómbralo a Background
+  2. Rect Transform → Alt + stretch-stretch
+  3. Color: #1C2833 (oscuro temporal, después pones bg_gameover.png)
+
+  ---
+  4. Crear el grupo del mensaje
+
+  1. Clic derecho sobre Canvas → Create Empty → renómbralo a MessageGroup
+  2. Add Component → Canvas Group
+  3. En Rect Transform: Anchor middle-center, Pos Y: 100
+  4. Clic derecho sobre MessageGroup → UI → Text - TextMeshPro → renómbralo a TxtLives
+    - Texto temporal: Tienes 2
+    - Font Size: 72
+    - Alignment: centro
+    - Color: blanco #FFFFFF
+    - Width: 800, Height: 100
+
+  ---
+  5. Crear el grupo de botones
+
+  1. Clic derecho sobre Canvas → Create Empty → renómbralo a ButtonsGroup
+  2. Add Component → Canvas Group
+    - Interactable: desmarca ✗ (el script lo activa al terminar el fade)
+  3. Add Component → Vertical Layout Group
+    - Spacing: 20
+    - Child Alignment: Middle Center
+    - Control Child Size: Width ✓, Height ✗
+    - Child Force Expand: desmarca ambos ✗
+  4. En Rect Transform: Anchor middle-center, Pos Y: -50
+
+  ---
+  6. Crear los 3 botones
+
+  Clic derecho sobre ButtonsGroup → UI → Button - TextMeshPro para cada uno:
+
+  Botón 1: renómbralo a BtnRetry
+  - Texto: Reintentar
+  - Width: 300, Height: 60
+  - Add Component → MenuButton
+
+  Botón 2: renómbralo a BtnMenu
+  - Texto: Menú Principal
+  - Width: 300, Height: 60
+  - Add Component → MenuButton
+
+  Botón 3: renómbralo a BtnQuit
+  - Texto: Salir
+  - Width: 300, Height: 60
+  - Add Component → MenuButton
+
+  ---
+  7. Configurar navegación circular
+
+  1. BtnRetry → Navigation: Explicit
+    - Select On Up: BtnQuit
+    - Select On Down: BtnMenu
+  2. BtnMenu → Navigation: Explicit
+    - Select On Up: BtnRetry
+    - Select On Down: BtnQuit
+  3. BtnQuit → Navigation: Explicit
+    - Select On Up: BtnMenu
+    - Select On Down: BtnRetry
+
+  ---
+  8. Agregar el script GameOverScreen
+
+  1. En Hierarchy, clic derecho → Create Empty → renómbralo a GameOverController
+  2. Add Component → busca GameOverScreen → agrégalo
+  3. En el Inspector, arrastra las referencias:
+
+  ┌─────────────────────────┬───────────────┐
+  │          Campo          │ Qué arrastrar │
+  ├─────────────────────────┼───────────────┤
+  │ Lives Text              │ TxtLives      │
+  ├─────────────────────────┼───────────────┤
+  │ Retry Button            │ BtnRetry      │
+  ├─────────────────────────┼───────────────┤
+  │ Menu Button             │ BtnMenu       │
+  ├─────────────────────────┼───────────────┤
+  │ Quit Button             │ BtnQuit       │
+  ├─────────────────────────┼───────────────┤
+  │ Message Group           │ MessageGroup  │
+  ├─────────────────────────┼───────────────┤
+  │ Buttons Group           │ ButtonsGroup  │
+  ├─────────────────────────┼───────────────┤
+  │ Fade Speed              │ 2             │
+  ├─────────────────────────┼───────────────┤
+  │ Gameplay Scene Name     │ Gameplay      │
+  ├─────────────────────────┼───────────────┤
+  │ Title Screen Scene Name │ TitleScreen   │
+  └─────────────────────────┴───────────────┘
+
+  ---
+  9. Conectar los onClick de los botones
+
+  ┌──────────┬────────────────────┬───────────────────────────┐
+  │  Botón   │ Objeto a arrastrar │          Función          │
+  ├──────────┼────────────────────┼───────────────────────────┤
+  │ BtnRetry │ GameOverController │ GameOverScreen.OnRetry    │
+  ├──────────┼────────────────────┼───────────────────────────┤
+  │ BtnMenu  │ GameOverController │ GameOverScreen.OnMainMenu │
+  ├──────────┼────────────────────┼───────────────────────────┤
+  │ BtnQuit  │ GameOverController │ GameOverScreen.OnQuit     │
+  └──────────┴────────────────────┴───────────────────────────┘
+
+  ---
+  10. Probar
+
+  1. Ctrl+S para guardar la escena
+  2. Dale Play ▶
+  3. Verifica:
+    - El texto "Tienes 2" aparece con fade-in ✓
+    - Los botones aparecen después con fade-in ✓
+    - Flechas arriba/abajo navegan los botones ✓
+    - Enter o R → Reintentar ✓
+    - Esc o M → Menú Principal ✓
+    - Q → Salir ✓
+    - Navegación circular funciona ✓
+
+  Nota: El número de vidas se lee de PlayerPrefs.GetInt("PlayerLives", 2). Cuando el equipo de gameplay implemente el sistema de vidas, solo tiene que   
+  guardar PlayerPrefs.SetInt("PlayerLives", vidas) antes de cargar esta escena.
