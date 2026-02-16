@@ -1,0 +1,1089 @@
+fileFormatVersion: 2
+guid: 2354010f6f0d97d41a8430c2956a945c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5362136946154921859
+    second: consumir objeto_0
+  - first:
+      213: -3405740760582951252
+    second: consumir objeto_1
+  - first:
+      213: 5025532036149241887
+    second: consumir objeto_2
+  - first:
+      213: 2620099783083739251
+    second: consumir objeto_3
+  - first:
+      213: -1747497134066529982
+    second: consumir objeto_4
+  - first:
+      213: 627506451409353741
+    second: consumir objeto_5
+  - first:
+      213: 8042441822221807430
+    second: consumir objeto_6
+  - first:
+      213: 9046794519850189368
+    second: consumir objeto_7
+  - first:
+      213: 7285016483915532052
+    second: consumir objeto_8
+  - first:
+      213: 8978617578149972271
+    second: consumir objeto_9
+  - first:
+      213: 5560596840275686716
+    second: consumir objeto_10
+  - first:
+      213: 8567797281947476054
+    second: consumir objeto_11
+  - first:
+      213: 4129115266915134842
+    second: consumir objeto_12
+  - first:
+      213: 835220395658936982
+    second: consumir objeto_13
+  - first:
+      213: 8277252989668372348
+    second: consumir objeto_14
+  - first:
+      213: -4629783806369950767
+    second: consumir objeto_15
+  - first:
+      213: 929690334895728903
+    second: consumir objeto_16
+  - first:
+      213: -2635640887425406604
+    second: consumir objeto_17
+  - first:
+      213: 4205577535759725632
+    second: consumir objeto_18
+  - first:
+      213: -2348268493913119231
+    second: consumir objeto_19
+  - first:
+      213: -8347623768431402359
+    second: consumir objeto_20
+  - first:
+      213: -7076933528416104363
+    second: consumir objeto_21
+  - first:
+      213: -2661269883046907027
+    second: consumir objeto_22
+  - first:
+      213: -6402993928265336255
+    second: consumir objeto_23
+  - first:
+      213: -2514743491920009635
+    second: consumir objeto_24
+  - first:
+      213: 5328874021876501651
+    second: consumir objeto_25
+  - first:
+      213: 3428717140985213929
+    second: consumir objeto_26
+  - first:
+      213: -1073558575686085100
+    second: consumir objeto_27
+  - first:
+      213: -3136424804727135539
+    second: consumir objeto_28
+  - first:
+      213: -3725524984422017277
+    second: consumir objeto_29
+  - first:
+      213: -6077682296730676988
+    second: consumir objeto_30
+  - first:
+      213: -5170066081301047869
+    second: consumir objeto_31
+  - first:
+      213: 921407076482319376
+    second: consumir objeto_32
+  - first:
+      213: 2255423050714183071
+    second: consumir objeto_33
+  - first:
+      213: -8499890633415164508
+    second: consumir objeto_34
+  - first:
+      213: -5867772914852237102
+    second: consumir objeto_35
+  - first:
+      213: -6294870674323682214
+    second: consumir objeto_36
+  - first:
+      213: -2659373314496561673
+    second: consumir objeto_37
+  - first:
+      213: -8014904748963299118
+    second: consumir objeto_38
+  - first:
+      213: 6302364253686196915
+    second: consumir objeto_39
+  - first:
+      213: -3287202995472239997
+    second: consumir objeto_40
+  - first:
+      213: -1422664933976910138
+    second: consumir objeto_41
+  - first:
+      213: 3791324777162854467
+    second: consumir objeto_42
+  - first:
+      213: 2712328103389965168
+    second: consumir objeto_43
+  - first:
+      213: 3875877128156890912
+    second: consumir objeto_44
+  - first:
+      213: 5236475649711429683
+    second: consumir objeto_45
+  - first:
+      213: 4636176932441572217
+    second: consumir objeto_46
+  - first:
+      213: -414723459563330765
+    second: consumir objeto_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: consumir objeto_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2425
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7020777bdcd595b0800000000000000
+      internalID: -5362136946154921859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_1
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 2425
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae626892d06cb0d0800000000000000
+      internalID: -3405740760582951252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_2
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 2425
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18650ea2c64eb540800000000000000
+      internalID: 5025532036149241887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_3
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 2425
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 378c8ceeed67c5420800000000000000
+      internalID: 2620099783083739251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_4
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 2425
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24983fd7d94afb7e0800000000000000
+      internalID: -1747497134066529982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_5
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 2425
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c358afac955b800800000000000000
+      internalID: 627506451409353741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1940
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64fa6440a3e7c9f60800000000000000
+      internalID: 8042441822221807430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_7
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1940
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8320f9f0fabac8d70800000000000000
+      internalID: 9046794519850189368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_8
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1940
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41786aaf4e3991560800000000000000
+      internalID: 7285016483915532052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_9
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1940
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2905b7dd157a9c70800000000000000
+      internalID: 8978617578149972271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_10
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1940
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c35bacb6d553b2d40800000000000000
+      internalID: 5560596840275686716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_11
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1940
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650690adb3ee6e670800000000000000
+      internalID: 8567797281947476054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1455
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d6e1155709d4930800000000000000
+      internalID: 4129115266915134842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_13
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1455
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6928960568c479b00800000000000000
+      internalID: 835220395658936982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_14
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1455
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f29354db5bed270800000000000000
+      internalID: 8277252989668372348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_15
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1455
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d396726824bfbfb0800000000000000
+      internalID: -4629783806369950767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_16
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1455
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709e2921f6ce6ec00800000000000000
+      internalID: 929690334895728903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_17
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1455
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479638db3925c6bd0800000000000000
+      internalID: -2635640887425406604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 970
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04432569c763d5a30800000000000000
+      internalID: 4205577535759725632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_19
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 970
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10621171f36496fd0800000000000000
+      internalID: -2348268493913119231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_20
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 970
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982e9040968472c80800000000000000
+      internalID: -8347623768431402359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_21
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 970
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 550d4bb737ea9cd90800000000000000
+      internalID: -7076933528416104363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_22
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 970
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d633b813425411bd0800000000000000
+      internalID: -2661269883046907027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_23
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 970
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14af2ce52fef327a0800000000000000
+      internalID: -6402993928265336255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 485
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d56e1e62e16d91dd0800000000000000
+      internalID: -2514743491920009635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_25
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 485
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c81c670b6f3f940800000000000000
+      internalID: 5328874021876501651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_26
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 485
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e377b7d210459f20800000000000000
+      internalID: 3428717140985213929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_27
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 485
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41618a2d924f911f0800000000000000
+      internalID: -1073558575686085100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_28
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 485
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc2e381f14e2974d0800000000000000
+      internalID: -3136424804727135539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_29
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 485
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307deade3c64c4cc0800000000000000
+      internalID: -3725524984422017277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40110bde62cb7aba0800000000000000
+      internalID: -6077682296730676988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_31
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c551ce8a4c3048b0800000000000000
+      internalID: -5170066081301047869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_32
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014824faade79cc00800000000000000
+      internalID: 921407076482319376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_33
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 0
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f95fb0c905fdc4f10800000000000000
+      internalID: 2255423050714183071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_34
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad7e95d0825a0a80800000000000000
+      internalID: -8499890633415164508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: consumir objeto_35
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 0
+        width: 204
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0f29b6f9b719ea0800000000000000
+      internalID: -5867772914852237102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c83ae6dd87964e34993dfe46e996bc28
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      consumir objeto_0: -5362136946154921859
+      consumir objeto_1: -3405740760582951252
+      consumir objeto_10: 5560596840275686716
+      consumir objeto_11: 8567797281947476054
+      consumir objeto_12: 4129115266915134842
+      consumir objeto_13: 835220395658936982
+      consumir objeto_14: 8277252989668372348
+      consumir objeto_15: -4629783806369950767
+      consumir objeto_16: 929690334895728903
+      consumir objeto_17: -2635640887425406604
+      consumir objeto_18: 4205577535759725632
+      consumir objeto_19: -2348268493913119231
+      consumir objeto_2: 5025532036149241887
+      consumir objeto_20: -8347623768431402359
+      consumir objeto_21: -7076933528416104363
+      consumir objeto_22: -2661269883046907027
+      consumir objeto_23: -6402993928265336255
+      consumir objeto_24: -2514743491920009635
+      consumir objeto_25: 5328874021876501651
+      consumir objeto_26: 3428717140985213929
+      consumir objeto_27: -1073558575686085100
+      consumir objeto_28: -3136424804727135539
+      consumir objeto_29: -3725524984422017277
+      consumir objeto_3: 2620099783083739251
+      consumir objeto_30: -6077682296730676988
+      consumir objeto_31: -5170066081301047869
+      consumir objeto_32: 921407076482319376
+      consumir objeto_33: 2255423050714183071
+      consumir objeto_34: -8499890633415164508
+      consumir objeto_35: -5867772914852237102
+      consumir objeto_4: -1747497134066529982
+      consumir objeto_5: 627506451409353741
+      consumir objeto_6: 8042441822221807430
+      consumir objeto_7: 9046794519850189368
+      consumir objeto_8: 7285016483915532052
+      consumir objeto_9: 8978617578149972271
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

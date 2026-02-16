@@ -1,0 +1,1479 @@
+fileFormatVersion: 2
+guid: 0996628ebd3357c4a8fae4d8ae0b4dcb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4734664638176258015
+    second: Jefe IP ataque (fase 1)_0
+  - first:
+      213: -7241150562908921057
+    second: Jefe IP ataque (fase 1)_1
+  - first:
+      213: 950279503456228493
+    second: Jefe IP ataque (fase 1)_2
+  - first:
+      213: -5158019938547979530
+    second: Jefe IP ataque (fase 1)_3
+  - first:
+      213: -3281345554243868659
+    second: Jefe IP ataque (fase 1)_4
+  - first:
+      213: 190747801520487147
+    second: Jefe IP ataque (fase 1)_5
+  - first:
+      213: 2251026944622254037
+    second: Jefe IP ataque (fase 1)_6
+  - first:
+      213: 8524892424019019590
+    second: Jefe IP ataque (fase 1)_7
+  - first:
+      213: -5011123722539143478
+    second: Jefe IP ataque (fase 1)_8
+  - first:
+      213: -6855010040702160909
+    second: Jefe IP ataque (fase 1)_9
+  - first:
+      213: 5542707933309763561
+    second: Jefe IP ataque (fase 1)_10
+  - first:
+      213: 9053597277627072370
+    second: Jefe IP ataque (fase 1)_11
+  - first:
+      213: 9034501742506781055
+    second: Jefe IP ataque (fase 1)_12
+  - first:
+      213: -8085898369635763271
+    second: Jefe IP ataque (fase 1)_13
+  - first:
+      213: 5145317035273674945
+    second: Jefe IP ataque (fase 1)_14
+  - first:
+      213: 8468403760345684403
+    second: Jefe IP ataque (fase 1)_15
+  - first:
+      213: -3093676636602104062
+    second: Jefe IP ataque (fase 1)_16
+  - first:
+      213: 6874529930789405489
+    second: Jefe IP ataque (fase 1)_17
+  - first:
+      213: 8154973314160992777
+    second: Jefe IP ataque (fase 1)_18
+  - first:
+      213: 3486784281202687544
+    second: Jefe IP ataque (fase 1)_19
+  - first:
+      213: 4237870437171136133
+    second: Jefe IP ataque (fase 1)_20
+  - first:
+      213: 7447771354717244148
+    second: Jefe IP ataque (fase 1)_21
+  - first:
+      213: 3925509956695161069
+    second: Jefe IP ataque (fase 1)_22
+  - first:
+      213: 8850164107035896361
+    second: Jefe IP ataque (fase 1)_23
+  - first:
+      213: 2222130081006609148
+    second: Jefe IP ataque (fase 1)_24
+  - first:
+      213: -6275644238521684194
+    second: Jefe IP ataque (fase 1)_25
+  - first:
+      213: -5656074826016884106
+    second: Jefe IP ataque (fase 1)_26
+  - first:
+      213: 2285951293746537558
+    second: Jefe IP ataque (fase 1)_27
+  - first:
+      213: 8076189627490725577
+    second: Jefe IP ataque (fase 1)_28
+  - first:
+      213: -4984566752733741327
+    second: Jefe IP ataque (fase 1)_29
+  - first:
+      213: -8727286251336014801
+    second: Jefe IP ataque (fase 1)_30
+  - first:
+      213: 4182693820590264928
+    second: Jefe IP ataque (fase 1)_31
+  - first:
+      213: -9150197065244882137
+    second: Jefe IP ataque (fase 1)_32
+  - first:
+      213: -7542453635058901094
+    second: Jefe IP ataque (fase 1)_33
+  - first:
+      213: 6231585098046416073
+    second: Jefe IP ataque (fase 1)_34
+  - first:
+      213: 6483126919290717385
+    second: Jefe IP ataque (fase 1)_35
+  - first:
+      213: -4688187276955750837
+    second: Jefe IP ataque (fase 1)_36
+  - first:
+      213: 4414878267483996418
+    second: Jefe IP ataque (fase 1)_37
+  - first:
+      213: 6346346976573273060
+    second: Jefe IP ataque (fase 1)_38
+  - first:
+      213: 7879223270967042718
+    second: Jefe IP ataque (fase 1)_39
+  - first:
+      213: 4319210919100909207
+    second: Jefe IP ataque (fase 1)_40
+  - first:
+      213: -3870362543444073092
+    second: Jefe IP ataque (fase 1)_41
+  - first:
+      213: 624982991483866938
+    second: Jefe IP ataque (fase 1)_42
+  - first:
+      213: -4308382003764990953
+    second: Jefe IP ataque (fase 1)_43
+  - first:
+      213: -9096094598804659490
+    second: Jefe IP ataque (fase 1)_44
+  - first:
+      213: -3182429121925561638
+    second: Jefe IP ataque (fase 1)_45
+  - first:
+      213: 7706483615055527987
+    second: Jefe IP ataque (fase 1)_46
+  - first:
+      213: 3104620575390365855
+    second: Jefe IP ataque (fase 1)_47
+  - first:
+      213: 2767807417316069289
+    second: Jefe IP ataque (fase 1)_48
+  - first:
+      213: 4454713516306253482
+    second: Jefe IP ataque (fase 1)_49
+  - first:
+      213: 3430595957189511887
+    second: Jefe IP ataque (fase 1)_50
+  - first:
+      213: -5940216558589636349
+    second: Jefe IP ataque (fase 1)_51
+  - first:
+      213: -8293252502852933477
+    second: Jefe IP ataque (fase 1)_52
+  - first:
+      213: 7331615125550366146
+    second: Jefe IP ataque (fase 1)_53
+  - first:
+      213: 1186025330393145472
+    second: Jefe IP ataque (fase 1)_54
+  - first:
+      213: 5094002687675835082
+    second: Jefe IP ataque (fase 1)_55
+  - first:
+      213: -7364748390519991028
+    second: Jefe IP ataque (fase 1)_56
+  - first:
+      213: 8905783323766879079
+    second: Jefe IP ataque (fase 1)_57
+  - first:
+      213: -254690769783172621
+    second: Jefe IP ataque (fase 1)_58
+  - first:
+      213: 1283801069729850679
+    second: Jefe IP ataque (fase 1)_59
+  - first:
+      213: 2944313062756782265
+    second: Jefe IP ataque (fase 1)_60
+  - first:
+      213: 5781707997051888082
+    second: Jefe IP ataque (fase 1)_61
+  - first:
+      213: 2512618308681970416
+    second: Jefe IP ataque (fase 1)_62
+  - first:
+      213: 3687003249928150797
+    second: Jefe IP ataque (fase 1)_63
+  - first:
+      213: -956921640745463423
+    second: Jefe IP ataque (fase 1)_64
+  - first:
+      213: -1148386917164634043
+    second: Jefe IP ataque (fase 1)_65
+  - first:
+      213: 4102546679763463227
+    second: Jefe IP ataque (fase 1)_66
+  - first:
+      213: 7102028416511847392
+    second: Jefe IP ataque (fase 1)_67
+  - first:
+      213: -2439927182131960535
+    second: Jefe IP ataque (fase 1)_68
+  - first:
+      213: -1860060879261118871
+    second: Jefe IP ataque (fase 1)_69
+  - first:
+      213: -3005383134463962444
+    second: Jefe IP ataque (fase 1)_70
+  - first:
+      213: 6953767725425251764
+    second: Jefe IP ataque (fase 1)_71
+  - first:
+      213: -3229675327573371334
+    second: Jefe IP ataque (fase 1)_72
+  - first:
+      213: -5373153829479049787
+    second: Jefe IP ataque (fase 1)_73
+  - first:
+      213: -3717064000898754976
+    second: Jefe IP ataque (fase 1)_74
+  - first:
+      213: -4747116847263325057
+    second: Jefe IP ataque (fase 1)_75
+  - first:
+      213: 3293656928881644231
+    second: Jefe IP ataque (fase 1)_76
+  - first:
+      213: -2905109054615917914
+    second: Jefe IP ataque (fase 1)_77
+  - first:
+      213: 8004373652248382803
+    second: Jefe IP ataque (fase 1)_78
+  - first:
+      213: 5813333228101310178
+    second: Jefe IP ataque (fase 1)_79
+  - first:
+      213: -8265240829450555065
+    second: Jefe IP ataque (fase 1)_80
+  - first:
+      213: -8043750029126368036
+    second: Jefe IP ataque (fase 1)_81
+  - first:
+      213: 2969921856227445997
+    second: Jefe IP ataque (fase 1)_82
+  - first:
+      213: 633905235198281637
+    second: Jefe IP ataque (fase 1)_83
+  - first:
+      213: -4624052468618557387
+    second: Jefe IP ataque (fase 1)_84
+  - first:
+      213: 7746108336913892028
+    second: Jefe IP ataque (fase 1)_85
+  - first:
+      213: -3887761916746955005
+    second: Jefe IP ataque (fase 1)_86
+  - first:
+      213: 3466447196787840083
+    second: Jefe IP ataque (fase 1)_87
+  - first:
+      213: 3928934913085420666
+    second: Jefe IP ataque (fase 1)_88
+  - first:
+      213: -8826940954021575288
+    second: Jefe IP ataque (fase 1)_89
+  - first:
+      213: 4480800722733120011
+    second: Jefe IP ataque (fase 1)_90
+  - first:
+      213: 1789635925823063351
+    second: Jefe IP ataque (fase 1)_91
+  - first:
+      213: -2986592042658204998
+    second: Jefe IP ataque (fase 1)_92
+  - first:
+      213: 6258176294674920522
+    second: Jefe IP ataque (fase 1)_93
+  - first:
+      213: 6775972950547023028
+    second: Jefe IP ataque (fase 1)_94
+  - first:
+      213: -1234834339142325446
+    second: Jefe IP ataque (fase 1)_95
+  - first:
+      213: -8921510038335895599
+    second: Jefe IP ataque (fase 1)_96
+  - first:
+      213: 6537697531124631235
+    second: Jefe IP ataque (fase 1)_97
+  - first:
+      213: 5009455495540501265
+    second: Jefe IP ataque (fase 1)_98
+  - first:
+      213: -5189446674919457939
+    second: Jefe IP ataque (fase 1)_99
+  - first:
+      213: -5551546647442943927
+    second: Jefe IP ataque (fase 1)_100
+  - first:
+      213: 7932177089589798305
+    second: Jefe IP ataque (fase 1)_101
+  - first:
+      213: 473115175298164451
+    second: Jefe IP ataque (fase 1)_102
+  - first:
+      213: -6378614211828157882
+    second: Jefe IP ataque (fase 1)_103
+  - first:
+      213: 4249328773156661753
+    second: Jefe IP ataque (fase 1)_104
+  - first:
+      213: -3296596519722821245
+    second: Jefe IP ataque (fase 1)_105
+  - first:
+      213: 1694867774392453130
+    second: Jefe IP ataque (fase 1)_106
+  - first:
+      213: 9071604999486106343
+    second: Jefe IP ataque (fase 1)_107
+  - first:
+      213: 174774686905573689
+    second: Jefe IP ataque (fase 1)_108
+  - first:
+      213: 3363113860896741510
+    second: Jefe IP ataque (fase 1)_109
+  - first:
+      213: 7389006453252596623
+    second: Jefe IP ataque (fase 1)_110
+  - first:
+      213: -3182364470609248459
+    second: Jefe IP ataque (fase 1)_111
+  - first:
+      213: 2889574178615501504
+    second: Jefe IP ataque (fase 1)_112
+  - first:
+      213: 521832378140050181
+    second: Jefe IP ataque (fase 1)_113
+  - first:
+      213: -4258891289894534551
+    second: Jefe IP ataque (fase 1)_114
+  - first:
+      213: -1471200748263246163
+    second: Jefe IP ataque (fase 1)_115
+  - first:
+      213: 6128253766508716917
+    second: Jefe IP ataque (fase 1)_116
+  - first:
+      213: -8438639917050842356
+    second: Jefe IP ataque (fase 1)_117
+  - first:
+      213: 3620528183662571378
+    second: Jefe IP ataque (fase 1)_118
+  - first:
+      213: 8058258895346497231
+    second: Jefe IP ataque (fase 1)_119
+  - first:
+      213: 335313266697080686
+    second: Jefe IP ataque (fase 1)_120
+  - first:
+      213: -3914088370029980908
+    second: Jefe IP ataque (fase 1)_121
+  - first:
+      213: -1573629386848554186
+    second: Jefe IP ataque (fase 1)_122
+  - first:
+      213: -4507605874191197406
+    second: Jefe IP ataque (fase 1)_123
+  - first:
+      213: 5523617225690755601
+    second: Jefe IP ataque (fase 1)_124
+  - first:
+      213: 5020449861675363945
+    second: Jefe IP ataque (fase 1)_125
+  - first:
+      213: 658028439638583346
+    second: Jefe IP ataque (fase 1)_126
+  - first:
+      213: 3023987617649572584
+    second: Jefe IP ataque (fase 1)_127
+  - first:
+      213: -2646247999995463292
+    second: Jefe IP ataque (fase 1)_128
+  - first:
+      213: -6769965032185515858
+    second: Jefe IP ataque (fase 1)_129
+  - first:
+      213: -6370507813595324158
+    second: Jefe IP ataque (fase 1)_130
+  - first:
+      213: 4562325023843812816
+    second: Jefe IP ataque (fase 1)_131
+  - first:
+      213: 7943622561752448588
+    second: Jefe IP ataque (fase 1)_132
+  - first:
+      213: -6549516865721740095
+    second: Jefe IP ataque (fase 1)_133
+  - first:
+      213: 2188245260762962988
+    second: Jefe IP ataque (fase 1)_134
+  - first:
+      213: 2463497608573966261
+    second: Jefe IP ataque (fase 1)_135
+  - first:
+      213: 8291448219433058156
+    second: Jefe IP ataque (fase 1)_136
+  - first:
+      213: 243550385466845653
+    second: Jefe IP ataque (fase 1)_137
+  - first:
+      213: -2437408120079144013
+    second: Jefe IP ataque (fase 1)_138
+  - first:
+      213: -5273596513804694526
+    second: Jefe IP ataque (fase 1)_139
+  - first:
+      213: 5455366284813873371
+    second: Jefe IP ataque (fase 1)_140
+  - first:
+      213: 3882623713869971065
+    second: Jefe IP ataque (fase 1)_141
+  - first:
+      213: 2296020988655455513
+    second: Jefe IP ataque (fase 1)_142
+  - first:
+      213: -2016044678053809024
+    second: Jefe IP ataque (fase 1)_143
+  - first:
+      213: 7674754637624464259
+    second: Jefe IP ataque (fase 1)_144
+  - first:
+      213: 4143867045720622064
+    second: Jefe IP ataque (fase 1)_145
+  - first:
+      213: 3883297295330333328
+    second: Jefe IP ataque (fase 1)_146
+  - first:
+      213: -4698962110545787410
+    second: Jefe IP ataque (fase 1)_147
+  - first:
+      213: -2770558036562864689
+    second: Jefe IP ataque (fase 1)_148
+  - first:
+      213: 7996207419660483299
+    second: Jefe IP ataque (fase 1)_149
+  - first:
+      213: 2879553732844807024
+    second: Jefe IP ataque (fase 1)_150
+  - first:
+      213: 5509595532524668641
+    second: Jefe IP ataque (fase 1)_151
+  - first:
+      213: -8392639309527367047
+    second: Jefe IP ataque (fase 1)_152
+  - first:
+      213: 466610304104708774
+    second: Jefe IP ataque (fase 1)_153
+  - first:
+      213: 6788165619538082050
+    second: Jefe IP ataque (fase 1)_154
+  - first:
+      213: 3466085611762472428
+    second: Jefe IP ataque (fase 1)_155
+  - first:
+      213: 2810088670193590683
+    second: Jefe IP ataque (fase 1)_156
+  - first:
+      213: -5266234623767966608
+    second: Jefe IP ataque (fase 1)_157
+  - first:
+      213: 1136334127538392669
+    second: Jefe IP ataque (fase 1)_158
+  - first:
+      213: -3779643824782318301
+    second: Jefe IP ataque (fase 1)_159
+  - first:
+      213: -877143995535038966
+    second: Jefe IP ataque (fase 1)_160
+  - first:
+      213: 1607131435080089343
+    second: Jefe IP ataque (fase 1)_161
+  - first:
+      213: -1272826667644822037
+    second: Jefe IP ataque (fase 1)_162
+  - first:
+      213: 3357913605880766276
+    second: Jefe IP ataque (fase 1)_163
+  - first:
+      213: -5429420574795834719
+    second: Jefe IP ataque (fase 1)_164
+  - first:
+      213: 6298706651417345881
+    second: Jefe IP ataque (fase 1)_165
+  - first:
+      213: 5716900816935812369
+    second: Jefe IP ataque (fase 1)_166
+  - first:
+      213: 5982884103055795508
+    second: Jefe IP ataque (fase 1)_167
+  - first:
+      213: -8425232531658844236
+    second: Jefe IP ataque (fase 1)_168
+  - first:
+      213: -6835611378532225720
+    second: Jefe IP ataque (fase 1)_169
+  - first:
+      213: -7399804509797636739
+    second: Jefe IP ataque (fase 1)_170
+  - first:
+      213: 2543498217962848771
+    second: Jefe IP ataque (fase 1)_171
+  - first:
+      213: 7121586782076150768
+    second: Jefe IP ataque (fase 1)_172
+  - first:
+      213: -3082474496026820695
+    second: Jefe IP ataque (fase 1)_173
+  - first:
+      213: -9110256154607792048
+    second: Jefe IP ataque (fase 1)_174
+  - first:
+      213: 5452265516582483578
+    second: Jefe IP ataque (fase 1)_175
+  - first:
+      213: -4479725171928912632
+    second: Jefe IP ataque (fase 1)_176
+  - first:
+      213: -1506158704130872655
+    second: Jefe IP ataque (fase 1)_177
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1860
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12896eec8971b4eb0800000000000000
+      internalID: -4734664638176258015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_1
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1860
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13a1b4ade3428b90800000000000000
+      internalID: -7241150562908921057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_2
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1860
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d84d7d07c22103d00800000000000000
+      internalID: 950279503456228493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_3
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1860
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fa277ab1380b68b0800000000000000
+      internalID: -5158019938547979530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_4
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1860
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d08acfd8a915672d0800000000000000
+      internalID: -3281345554243868659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_5
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1860
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beab0576d1ca5a200800000000000000
+      internalID: 190747801520487147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1488
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d7da0664114d3f10800000000000000
+      internalID: 2251026944622254037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_7
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1488
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 647821a2e708e4670800000000000000
+      internalID: 8524892424019019590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_8
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1488
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace65804689e47ab0800000000000000
+      internalID: -5011123722539143478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_9
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1488
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff2638ffac1ed0a0800000000000000
+      internalID: -6855010040702160909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_10
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1488
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9effaa2bf77abec40800000000000000
+      internalID: 5542707933309763561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_11
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1488
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27fb76881c6d4ad70800000000000000
+      internalID: 9053597277627072370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1116
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f79a3ccc77ff06d70800000000000000
+      internalID: 9034501742506781055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_13
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1116
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb33f3164e19cf80800000000000000
+      internalID: -8085898369635763271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1116
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0e0402596d76740800000000000000
+      internalID: 5145317035273674945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_15
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1116
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b99cfd3a50d58570800000000000000
+      internalID: 8468403760345684403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_16
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1116
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20708617d7d0115d0800000000000000
+      internalID: -3093676636602104062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_17
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1116
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1334e7a9c8c376f50800000000000000
+      internalID: 6874529930789405489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 744
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9022b57b5094c2170800000000000000
+      internalID: 8154973314160992777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_19
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 744
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e708974db836030800000000000000
+      internalID: 3486784281202687544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_20
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 744
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58607bb95b0ffca30800000000000000
+      internalID: 4237870437171136133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_21
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 744
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fa404e469ccb5760800000000000000
+      internalID: 7447771354717244148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_22
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 744
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8f213e1863a7630800000000000000
+      internalID: 3925509956695161069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_23
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 744
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92a69cb7d5912da70800000000000000
+      internalID: 8850164107035896361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2eb1b098796de10800000000000000
+      internalID: 2222130081006609148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_25
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 372
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f203a90de68e8a0800000000000000
+      internalID: -6275644238521684194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_26
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 372
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67afb34b9e59181b0800000000000000
+      internalID: -5656074826016884106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_27
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 372
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6546b95179459bf10800000000000000
+      internalID: 2285951293746537558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_28
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 372
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce674d3da3641070800000000000000
+      internalID: 8076189627490725577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_29
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 372
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe3510a2f243dab0800000000000000
+      internalID: -4984566752733741327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2467ffb46372e680800000000000000
+      internalID: -8727286251336014801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_31
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06211847ed9eb0a30800000000000000
+      internalID: 4182693820590264928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_32
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 0
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72bc14dbf38f30180800000000000000
+      internalID: -9150197065244882137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_33
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 0
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9fd57b6162d35790800000000000000
+      internalID: -7542453635058901094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_34
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 0
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4acac51a90b7650800000000000000
+      internalID: 6231585098046416073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP ataque (fase 1)_35
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 0
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c488128591b8f950800000000000000
+      internalID: 6483126919290717385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 23e18bc4353f1dc43807f1d7d47eeab7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Jefe IP ataque (fase 1)_0: -4734664638176258015
+      Jefe IP ataque (fase 1)_1: -7241150562908921057
+      Jefe IP ataque (fase 1)_10: 5542707933309763561
+      Jefe IP ataque (fase 1)_11: 9053597277627072370
+      Jefe IP ataque (fase 1)_12: 9034501742506781055
+      Jefe IP ataque (fase 1)_13: -8085898369635763271
+      Jefe IP ataque (fase 1)_14: 5145317035273674945
+      Jefe IP ataque (fase 1)_15: 8468403760345684403
+      Jefe IP ataque (fase 1)_16: -3093676636602104062
+      Jefe IP ataque (fase 1)_17: 6874529930789405489
+      Jefe IP ataque (fase 1)_18: 8154973314160992777
+      Jefe IP ataque (fase 1)_19: 3486784281202687544
+      Jefe IP ataque (fase 1)_2: 950279503456228493
+      Jefe IP ataque (fase 1)_20: 4237870437171136133
+      Jefe IP ataque (fase 1)_21: 7447771354717244148
+      Jefe IP ataque (fase 1)_22: 3925509956695161069
+      Jefe IP ataque (fase 1)_23: 8850164107035896361
+      Jefe IP ataque (fase 1)_24: 2222130081006609148
+      Jefe IP ataque (fase 1)_25: -6275644238521684194
+      Jefe IP ataque (fase 1)_26: -5656074826016884106
+      Jefe IP ataque (fase 1)_27: 2285951293746537558
+      Jefe IP ataque (fase 1)_28: 8076189627490725577
+      Jefe IP ataque (fase 1)_29: -4984566752733741327
+      Jefe IP ataque (fase 1)_3: -5158019938547979530
+      Jefe IP ataque (fase 1)_30: -8727286251336014801
+      Jefe IP ataque (fase 1)_31: 4182693820590264928
+      Jefe IP ataque (fase 1)_32: -9150197065244882137
+      Jefe IP ataque (fase 1)_33: -7542453635058901094
+      Jefe IP ataque (fase 1)_34: 6231585098046416073
+      Jefe IP ataque (fase 1)_35: 6483126919290717385
+      Jefe IP ataque (fase 1)_4: -3281345554243868659
+      Jefe IP ataque (fase 1)_5: 190747801520487147
+      Jefe IP ataque (fase 1)_6: 2251026944622254037
+      Jefe IP ataque (fase 1)_7: 8524892424019019590
+      Jefe IP ataque (fase 1)_8: -5011123722539143478
+      Jefe IP ataque (fase 1)_9: -6855010040702160909
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

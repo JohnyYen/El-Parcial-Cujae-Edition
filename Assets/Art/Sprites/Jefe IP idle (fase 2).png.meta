@@ -1,0 +1,1053 @@
+fileFormatVersion: 2
+guid: 4e124c9b13c2aa54fba4559870eb58fd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7705461182387601825
+    second: Jefe IP idle (fase 2)_0
+  - first:
+      213: 1278778063154882254
+    second: Jefe IP idle (fase 2)_1
+  - first:
+      213: 3834822332436229080
+    second: Jefe IP idle (fase 2)_2
+  - first:
+      213: 8707821624154520252
+    second: Jefe IP idle (fase 2)_3
+  - first:
+      213: -5750858544946764261
+    second: Jefe IP idle (fase 2)_4
+  - first:
+      213: -4418005867505558678
+    second: Jefe IP idle (fase 2)_5
+  - first:
+      213: 1944831125346748243
+    second: Jefe IP idle (fase 2)_6
+  - first:
+      213: -7737030146335283709
+    second: Jefe IP idle (fase 2)_7
+  - first:
+      213: 3970390720849208629
+    second: Jefe IP idle (fase 2)_8
+  - first:
+      213: -526188572812632240
+    second: Jefe IP idle (fase 2)_9
+  - first:
+      213: -1016663847877367453
+    second: Jefe IP idle (fase 2)_10
+  - first:
+      213: -8158143775775687435
+    second: Jefe IP idle (fase 2)_11
+  - first:
+      213: -7320766359032635829
+    second: Jefe IP idle (fase 2)_12
+  - first:
+      213: -2645298361638698239
+    second: Jefe IP idle (fase 2)_13
+  - first:
+      213: 8816664060072565120
+    second: Jefe IP idle (fase 2)_14
+  - first:
+      213: -2307020945030495359
+    second: Jefe IP idle (fase 2)_15
+  - first:
+      213: 6193416879981441075
+    second: Jefe IP idle (fase 2)_16
+  - first:
+      213: 6624464494120080896
+    second: Jefe IP idle (fase 2)_17
+  - first:
+      213: -2525320805580220013
+    second: Jefe IP idle (fase 2)_18
+  - first:
+      213: 8708265310705083844
+    second: Jefe IP idle (fase 2)_19
+  - first:
+      213: -5766479694180776415
+    second: Jefe IP idle (fase 2)_20
+  - first:
+      213: -7798087109650647702
+    second: Jefe IP idle (fase 2)_21
+  - first:
+      213: 5612179074657882954
+    second: Jefe IP idle (fase 2)_22
+  - first:
+      213: -1254365744034861862
+    second: Jefe IP idle (fase 2)_23
+  - first:
+      213: -7364802611911684111
+    second: Jefe IP idle (fase 2)_24
+  - first:
+      213: -2829887152631207389
+    second: Jefe IP idle (fase 2)_25
+  - first:
+      213: -4137497242089165641
+    second: Jefe IP idle (fase 2)_26
+  - first:
+      213: -379223827005618734
+    second: Jefe IP idle (fase 2)_27
+  - first:
+      213: -3949648542618152644
+    second: Jefe IP idle (fase 2)_28
+  - first:
+      213: 2756615485240327062
+    second: Jefe IP idle (fase 2)_29
+  - first:
+      213: 8917822592927259663
+    second: Jefe IP idle (fase 2)_30
+  - first:
+      213: 478514526519497228
+    second: Jefe IP idle (fase 2)_31
+  - first:
+      213: 5489872214558959070
+    second: Jefe IP idle (fase 2)_32
+  - first:
+      213: 1436783312514459582
+    second: Jefe IP idle (fase 2)_33
+  - first:
+      213: -7730683925952515385
+    second: Jefe IP idle (fase 2)_34
+  - first:
+      213: 4035155221139036321
+    second: Jefe IP idle (fase 2)_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1320
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5eb93141e3b01590800000000000000
+      internalID: -7705461182387601825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_1
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1320
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec6a8e88fd12fb110800000000000000
+      internalID: 1278778063154882254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_2
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1320
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dba895f796083530800000000000000
+      internalID: 3834822332436229080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_3
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1320
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbaf13391a568d870800000000000000
+      internalID: 8707821624154520252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_4
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 1320
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16adea6f98d030b0800000000000000
+      internalID: -5750858544946764261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_5
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1320
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b5db3321710b2c0800000000000000
+      internalID: -4418005867505558678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1056
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3578a66ba9d6dfa10800000000000000
+      internalID: 1944831125346748243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_7
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1056
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 306623f031c80a490800000000000000
+      internalID: -7737030146335283709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_8
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1056
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53569b71359a91730800000000000000
+      internalID: 3970390720849208629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_9
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1056
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f12a8e74a92b8f0800000000000000
+      internalID: -526188572812632240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_10
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 1056
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 369a94bed9514e1f0800000000000000
+      internalID: -1016663847877367453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_11
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1056
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc735aa57378ce80800000000000000
+      internalID: -8158143775775687435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 792
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4eda3698c9676a90800000000000000
+      internalID: -7320766359032635829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_13
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 792
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1034a9dc7230a4bd0800000000000000
+      internalID: -2645298361638698239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_14
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 792
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089149cff351b5a70800000000000000
+      internalID: 8816664060072565120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_15
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 792
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18342127ca0dbffd0800000000000000
+      internalID: -2307020945030495359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_16
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 792
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 330b33596df63f550800000000000000
+      internalID: 6193416879981441075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_17
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 792
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00617370c53deeb50800000000000000
+      internalID: 6624464494120080896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 399dc776b1244fcd0800000000000000
+      internalID: -2525320805580220013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_19
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 528
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c5ee666929f9d870800000000000000
+      internalID: 8708265310705083844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_20
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 528
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1260adf254959ffa0800000000000000
+      internalID: -5766479694180776415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_21
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 528
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6578bdf611a7c390800000000000000
+      internalID: -7798087109650647702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_22
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 528
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a431dd0422772ed40800000000000000
+      internalID: 5612179074657882954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_23
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 528
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc22607009979ee0800000000000000
+      internalID: -1254365744034861862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ff822c7b07fac990800000000000000
+      internalID: -7364802611911684111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_25
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 264
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32aa9f8c0a83ab8d0800000000000000
+      internalID: -2829887152631207389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_26
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 264
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bced120e28a496c0800000000000000
+      internalID: -4137497242089165641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_27
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 264
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d547f440f9bcbaf0800000000000000
+      internalID: -379223827005618734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_28
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 264
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c311b9d93970039c0800000000000000
+      internalID: -3949648542618152644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_29
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 264
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b371cbd27714620800000000000000
+      internalID: 2756615485240327062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0cd16d466872cb70800000000000000
+      internalID: 8917822592927259663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_31
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 0
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c021f053d6604a600800000000000000
+      internalID: 478514526519497228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_32
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 0
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed5e21b41b1ff2c40800000000000000
+      internalID: 5489872214558959070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_33
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 0
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb722a17fca70f310800000000000000
+      internalID: 1436783312514459582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_34
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 0
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c237c2ade717b490800000000000000
+      internalID: -7730683925952515385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe IP idle (fase 2)_35
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 0
+        width: 262
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a81e816b40cff730800000000000000
+      internalID: 4035155221139036321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a1411d333ea18954d8f88a807998b8bc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Jefe IP idle (fase 2)_0: -7705461182387601825
+      Jefe IP idle (fase 2)_1: 1278778063154882254
+      Jefe IP idle (fase 2)_10: -1016663847877367453
+      Jefe IP idle (fase 2)_11: -8158143775775687435
+      Jefe IP idle (fase 2)_12: -7320766359032635829
+      Jefe IP idle (fase 2)_13: -2645298361638698239
+      Jefe IP idle (fase 2)_14: 8816664060072565120
+      Jefe IP idle (fase 2)_15: -2307020945030495359
+      Jefe IP idle (fase 2)_16: 6193416879981441075
+      Jefe IP idle (fase 2)_17: 6624464494120080896
+      Jefe IP idle (fase 2)_18: -2525320805580220013
+      Jefe IP idle (fase 2)_19: 8708265310705083844
+      Jefe IP idle (fase 2)_2: 3834822332436229080
+      Jefe IP idle (fase 2)_20: -5766479694180776415
+      Jefe IP idle (fase 2)_21: -7798087109650647702
+      Jefe IP idle (fase 2)_22: 5612179074657882954
+      Jefe IP idle (fase 2)_23: -1254365744034861862
+      Jefe IP idle (fase 2)_24: -7364802611911684111
+      Jefe IP idle (fase 2)_25: -2829887152631207389
+      Jefe IP idle (fase 2)_26: -4137497242089165641
+      Jefe IP idle (fase 2)_27: -379223827005618734
+      Jefe IP idle (fase 2)_28: -3949648542618152644
+      Jefe IP idle (fase 2)_29: 2756615485240327062
+      Jefe IP idle (fase 2)_3: 8707821624154520252
+      Jefe IP idle (fase 2)_30: 8917822592927259663
+      Jefe IP idle (fase 2)_31: 478514526519497228
+      Jefe IP idle (fase 2)_32: 5489872214558959070
+      Jefe IP idle (fase 2)_33: 1436783312514459582
+      Jefe IP idle (fase 2)_34: -7730683925952515385
+      Jefe IP idle (fase 2)_35: 4035155221139036321
+      Jefe IP idle (fase 2)_4: -5750858544946764261
+      Jefe IP idle (fase 2)_5: -4418005867505558678
+      Jefe IP idle (fase 2)_6: 1944831125346748243
+      Jefe IP idle (fase 2)_7: -7737030146335283709
+      Jefe IP idle (fase 2)_8: 3970390720849208629
+      Jefe IP idle (fase 2)_9: -526188572812632240
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
