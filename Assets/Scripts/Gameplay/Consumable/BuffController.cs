@@ -4,10 +4,10 @@ using UnityEngine;
 public class BuffController : MonoBehaviour
 {
 
-    float speedMultiplier = 1f;
-    float fireRateMultiplier = 1f;
+    [SerializeField] public float speedMultiplier = 1f;
+    [SerializeField] float fireRateMultiplier = 1f;
 
-    bool isInvencible = false;
+    [SerializeField] bool isInvencible = false;
     Coroutine coffeeCoroutine;
     Coroutine notebookCoroutine;
 

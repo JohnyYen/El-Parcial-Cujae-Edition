@@ -47,6 +47,7 @@ public class FemaleCujaePlayer : PlayerSO
     private float lastDashTime;
     private float lastSoftAttackTime;
     private float lastHardAttackTime;
+    private BuffController buffController;
 
     // ========== EVENTOS ==========
 
@@ -89,8 +90,8 @@ public class FemaleCujaePlayer : PlayerSO
         if (direction != 0)
         {
             ChangeState(PlayerState.Moving);
-            // Lógica de movimiento
-            // transform.Translate(Vector2.right * direction * moveSpeed * Time.deltaTime);
+            float speedMultiplier = buffController != null ? buffController.SpeedMultiplier : 1f;
+            transform.Translate(Vector2.right * direction * moveSpeed * speedMultiplier * Time.deltaTime);
         }
         else
         {
@@ -221,8 +222,11 @@ public class FemaleCujaePlayer : PlayerSO
     {
         if (!isAlive) return;
 
+        float fireRateMultiplier = buffController != null ? buffController.FireRateMultiplier : 1f;
+        float adjustedCooldown = softAttackCooldown / fireRateMultiplier;
+
         // Verificar cooldown del ataque suave
-        if (Time.time < lastSoftAttackTime + softAttackCooldown) return;
+        if (Time.time < lastSoftAttackTime + adjustedCooldown) return;
 
         // Actualizar timestamp del último ataque
         lastSoftAttackTime = Time.time;
@@ -235,11 +239,6 @@ public class FemaleCujaePlayer : PlayerSO
 
         // Disparar evento de ataque conectado (para el sistema de daño)
         OnAttackHit?.Invoke(softAttackDamage);
-
-        // Aquí iría la lógica adicional:
-        // - Reproducir animación de ataque suave
-        // - Detectar colisiones con enemigos
-        // - Aplicar knockback si es necesario
     }
 
     public override void HardAttack()
@@ -249,8 +248,11 @@ public class FemaleCujaePlayer : PlayerSO
         // Verificar que hay suficiente enfoque
         if (!ConsumeEnfoque(hardAttackEnfoqueCost)) return;
 
+        float fireRateMultiplier = buffController != null ? buffController.FireRateMultiplier : 1f;
+        float adjustedCooldown = hardAttackCooldown / fireRateMultiplier;
+
         // Verificar cooldown del ataque fuerte
-        if (Time.time < lastHardAttackTime + hardAttackCooldown) return;
+        if (Time.time < lastHardAttackTime + adjustedCooldown) return;
 
         // Actualizar timestamp del último ataque
         lastHardAttackTime = Time.time;
@@ -263,12 +265,10 @@ public class FemaleCujaePlayer : PlayerSO
 
         // Disparar evento de ataque conectado (para el sistema de daño)
         OnAttackHit?.Invoke(hardAttackDamage);
+    }
 
-        // Aquí iría la lógica adicional:
-        // - Reproducir animación de ataque fuerte
-        // - Crear efecto de impacto/explosión
-        // - Detectar colisiones con enemigos
-        // - Aplicar stun (breve congelación del enemigo)
-        // - Aplicar knockback más fuerte que el ataque suave
+    public override void SetBuffController(BuffController buffController)
+    {
+        this.buffController = buffController;
     }
 }

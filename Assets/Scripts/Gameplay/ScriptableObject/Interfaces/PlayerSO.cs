@@ -27,6 +27,7 @@ public abstract class PlayerSO : ScriptableObject, IPlayerBehaviour, IPlayerProp
 
     public abstract void SoftAttack();
     public abstract void HardAttack();
+    public abstract void SetBuffController(BuffController buffController);
 
     // ========== EVENTOS ==========
 

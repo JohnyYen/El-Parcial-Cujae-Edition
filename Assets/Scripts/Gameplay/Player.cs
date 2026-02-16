@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
     [Header("Player Behavior")]
     [SerializeField] public PlayerSO player_behaviour;
 
+    [Header("Buffs")]
+    [SerializeField] private BuffController buffController;
+
     [Header("Ground Check")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundCheckRadius = 0.2f;
@@ -22,7 +25,12 @@ public class Player : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();   
+        rb = GetComponent<Rigidbody2D>();
+        
+        if (player_behaviour != null && buffController != null)
+        {
+            player_behaviour.SetBuffController(buffController);
+        }
     }
 
     // Update is called once per frame
