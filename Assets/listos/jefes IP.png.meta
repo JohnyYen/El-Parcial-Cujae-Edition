@@ -1,18 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-guid: 41fe65dafe3d262439bdc98b4a7237cb
-=======
-guid: 38eeb93f35595c71c8fdc88a92b0d1d8
->>>>>>> 9ceec05 (feat: add images)
-=======
-guid: 38eeb93f35595c71c8fdc88a92b0d1d8
->>>>>>> 9ceec05 (feat: add images)
+guid: e15c9a25f884eb945a5e78b71b22a640
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2206776480129646561
-    second: hombre_0
+      213: 5469174045670845169
+    second: jefes IP_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -45,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -83,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hombre_0
+      name: jefes IP_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 475
-        height: 843
+        y: 13
+        width: 482
+        height: 456
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f108f2bbb74ff51e0800000000000000
-      internalID: -2206776480129646561
+      spriteID: 1fa2ffe41d866eb40800000000000000
+      internalID: 5469174045670845169
       vertices: []
       indices: 
       edges: []
@@ -143,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hombre_0: -2206776480129646561
+      jefes IP_0: 5469174045670845169
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
