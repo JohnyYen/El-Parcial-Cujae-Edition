@@ -10,10 +10,14 @@ public abstract class PlayerSO : ScriptableObject, IPlayerBehaviour, IPlayerProp
     public abstract float Enfoque { get; }
     public abstract bool CanDash { get; }
     public abstract bool CanJump { get; }
+    public abstract bool IsInvincible { get; }
     public abstract PlayerState CurrentState { get; }
 
     public abstract float JumpForce { get; }
     public abstract float DashSpeed { get; }
+    public abstract float SoftAttackCooldown { get; }
+    public abstract float HardAttackCooldown { get; }
+    public abstract float DashCooldown { get; }
 
     // ========== MÉTODOS ==========
 
@@ -27,6 +31,8 @@ public abstract class PlayerSO : ScriptableObject, IPlayerBehaviour, IPlayerProp
 
     public abstract void SoftAttack();
     public abstract void HardAttack();
+    public abstract void SetBuffController(BuffController buffController);
+    public abstract void SetInvincibility(bool value);
 
     // ========== EVENTOS ==========
 
@@ -54,4 +60,10 @@ public abstract class PlayerSO : ScriptableObject, IPlayerBehaviour, IPlayerProp
     /// Parámetro: daño infringido
     /// </summary>
     public abstract event Action<float> OnAttackHit;
+
+    /// <summary>
+    /// Se dispara cuando el estado de invencibilidad cambia.
+    /// Parámetro: true si está invencible, false si no
+    /// </summary>
+    public abstract event Action<bool> OnInvincibilityStatusChanged;
 }
