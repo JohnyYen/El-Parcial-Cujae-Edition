@@ -1,18 +1,45 @@
 using System.Collections;
 using UnityEngine;
+using System;
 
 public class BuffController : MonoBehaviour
 {
+    // ========== VARIABLES PRIVADAS ==========
+    
+    [SerializeField] private float speedMultiplier = 1f;
+    [SerializeField] private float fireRateMultiplier = 1f;
+    [SerializeField] private bool isInvencible = false;
+    
+    private Coroutine coffeeCoroutine;
+    private Coroutine notebookCoroutine;
 
-    [SerializeField] public float speedMultiplier = 1f;
-    [SerializeField] float fireRateMultiplier = 1f;
-
-    [SerializeField] bool isInvencible = false;
-    Coroutine coffeeCoroutine;
-    Coroutine notebookCoroutine;
-
+    // ========== PROPIEDADES PÚBLICAS ==========
+    
     public float SpeedMultiplier => speedMultiplier;
     public float FireRateMultiplier => fireRateMultiplier;
+    public bool IsInvincible => isInvencible;
+
+    // ========== EVENTOS ==========
+    
+    /// <summary>
+    /// Se dispara cuando el multiplicador de velocidad cambia.
+    /// Parámetro: nuevo valor del multiplicador
+    /// </summary>
+    public event Action<float> OnSpeedMultiplierChanged;
+
+    /// <summary>
+    /// Se dispara cuando el multiplicador de velocidad de fuego cambia.
+    /// Parámetro: nuevo valor del multiplicador
+    /// </summary>
+    public event Action<float> OnFireRateMultiplierChanged;
+
+    /// <summary>
+    /// Se dispara cuando el estado de invencibilidad cambia.
+    /// Parámetro: true si está invencible, false si no
+    /// </summary>
+    public event Action<bool> OnInvincibilityStatusChanged;
+
+    // ========== MÉTODOS PÚBLICOS ==========
 
     public void ApplyCoffeeBuff(CoffeBuffSO buff)
     {
@@ -22,16 +49,6 @@ public class BuffController : MonoBehaviour
         coffeeCoroutine = StartCoroutine(CoffeeRoutine(buff));
     }
 
-    IEnumerator CoffeeRoutine(CoffeBuffSO buff)
-    {
-        speedMultiplier = buff.speedMultiplier;
-        fireRateMultiplier = buff.fireRateMultiplier;
-
-        yield return new WaitForSeconds(buff.duration);
-
-        speedMultiplier = 1f;
-        fireRateMultiplier = 1f;
-    }
     public void ApplyNotebookBuff()
     {
         if (notebookCoroutine != null)
@@ -39,16 +56,40 @@ public class BuffController : MonoBehaviour
 
         notebookCoroutine = StartCoroutine(NotebookRoutine());
     }
-    IEnumerator NotebookRoutine()
-    {
-        // Aquí se implementaría el efecto del cuaderno, por ejemplo:
-        // - Aumentar el daño de los ataques
-        // - Reducir el tiempo de recarga
-        // - O cualquier otro efecto deseado
-        isInvencible = true; // Ejemplo: el jugador se vuelve invencible
-        yield return new WaitForSeconds(5f); // Duración del efecto del cuaderno
 
-        // Aquí se revertirían los cambios realizados por el 
-        isInvencible = false; // Revertir el estado de invencibilidad
+    // ========== CORRUTINAS PRIVADAS ==========
+
+    private IEnumerator CoffeeRoutine(CoffeBuffSO buff)
+    {
+        // Aplicar nuevos multiplicadores
+        speedMultiplier = buff.speedMultiplier;
+        fireRateMultiplier = buff.fireRateMultiplier;
+
+        // Disparar eventos para notificar al Player
+        OnSpeedMultiplierChanged?.Invoke(speedMultiplier);
+        OnFireRateMultiplierChanged?.Invoke(fireRateMultiplier);
+
+        yield return new WaitForSeconds(buff.duration);
+
+        // Revertir multiplicadores a 1f (valores por defecto)
+        speedMultiplier = 1f;
+        fireRateMultiplier = 1f;
+
+        // Disparar eventos para notificar la finalización del buff
+        OnSpeedMultiplierChanged?.Invoke(speedMultiplier);
+        OnFireRateMultiplierChanged?.Invoke(fireRateMultiplier);
+    }
+
+    private IEnumerator NotebookRoutine()
+    {
+        // Aplicar invencibilidad
+        isInvencible = true;
+        OnInvincibilityStatusChanged?.Invoke(true);
+
+        yield return new WaitForSeconds(5f);
+
+        // Revertir invencibilidad
+        isInvencible = false;
+        OnInvincibilityStatusChanged?.Invoke(false);
     }
 }

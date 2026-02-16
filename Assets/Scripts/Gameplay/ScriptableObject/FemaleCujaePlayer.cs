@@ -43,6 +43,7 @@ public class FemaleCujaePlayer : PlayerSO
     private bool dashAvailable = true;
     private bool jumpAvailable = true;
     private bool isAlive = true;
+    private bool isInvincible = false;
     private PlayerState currentState = PlayerState.Idle;
     private float lastDashTime;
     private float lastSoftAttackTime;
@@ -62,6 +63,7 @@ public class FemaleCujaePlayer : PlayerSO
     public override event Action OnSoftAttackUsed;
     public override event Action OnHardAttackUsed;
     public override event Action<float> OnAttackHit;
+    public override event Action<bool> OnInvincibilityStatusChanged;
 
     // ========== PROPIEDADES ==========
 
@@ -74,6 +76,8 @@ public class FemaleCujaePlayer : PlayerSO
     public override bool CanDash => dashAvailable;
 
     public override bool CanJump => jumpAvailable;
+
+    public override bool IsInvincible => isInvincible;
 
     public override PlayerState CurrentState => currentState;
 
@@ -129,7 +133,7 @@ public class FemaleCujaePlayer : PlayerSO
 
     public override void AddStress(float amount)
     {
-        if (!isAlive) return;
+        if (!isAlive || isInvincible) return;
 
         currentStress = Mathf.Min(currentStress + amount, maxStress);
         OnStressChanged?.Invoke(currentStress);
@@ -270,5 +274,14 @@ public class FemaleCujaePlayer : PlayerSO
     public override void SetBuffController(BuffController buffController)
     {
         this.buffController = buffController;
+    }
+
+    public override void SetInvincibility(bool value)
+    {
+        if (isInvincible != value)
+        {
+            isInvincible = value;
+            OnInvincibilityStatusChanged?.Invoke(value);
+        }
     }
 }
