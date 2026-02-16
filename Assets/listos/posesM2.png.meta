@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 6480687a8d833c54a8b30f067f7d6fee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -911557395574210878
+    second: posesM2_0
+  - first:
+      213: -8586929539708855847
+    second: posesM2_1
+  - first:
+      213: -3642594344107307566
+    second: posesM2_2
+  - first:
+      213: 3206881049720764351
+    second: posesM2_3
+  - first:
+      213: -1691126744978174932
+    second: posesM2_4
+  - first:
+      213: -3239120633185092134
+    second: posesM2_5
+  - first:
+      213: 6932353848961472490
+    second: posesM2_6
+  - first:
+      213: -2206145148295921240
+    second: posesM2_7
+  - first:
+      213: 1458635121917432899
+    second: posesM2_8
+  - first:
+      213: 1562851032707320306
+    second: posesM2_9
+  - first:
+      213: 901046375277904175
+    second: posesM2_10
+  - first:
+      213: -292297940744688795
+    second: posesM2_11
+  - first:
+      213: 546564545313466237
+    second: posesM2_12
+  - first:
+      213: 1004951950097274900
+    second: posesM2_13
+  - first:
+      213: -8383643206753476684
+    second: posesM2_14
+  - first:
+      213: -928232237482911321
+    second: posesM2_15
+  - first:
+      213: -6549497569682919189
+    second: posesM2_16
+  - first:
+      213: -5218971929650372092
+    second: posesM2_17
+  - first:
+      213: -3857485557457521526
+    second: posesM2_18
+  - first:
+      213: -8040515939879534078
+    second: posesM2_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: posesM2_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1045
+        width: 173
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce3b6cd06f7953f0800000000000000
+      internalID: -911557395574210878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_1
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 1043
+        width: 163
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d95852441915d880800000000000000
+      internalID: -8586929539708855847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_2
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1235
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd03aa4eb7e27dc0800000000000000
+      internalID: -3642594344107307566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1043
+        width: 227
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7b98de251218c20800000000000000
+      internalID: 3206881049720764351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_4
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 1206
+        width: 55
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2cc9677f29e788e0800000000000000
+      internalID: -1691126744978174932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_5
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1063
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add3d5a12f45c03d0800000000000000
+      internalID: -3239120633185092134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_6
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1049
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae719a0b81ba43060800000000000000
+      internalID: 6932353848961472490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_7
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 768
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1ced02da23261e0800000000000000
+      internalID: -2206145148295921240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_8
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 738
+        width: 185
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3441cca4aec1e3410800000000000000
+      internalID: 1458635121917432899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_9
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 764
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f94f51ebbc50b510800000000000000
+      internalID: 1562851032707320306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_10
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 716
+        width: 161
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21c79487e8218c00800000000000000
+      internalID: 901046375277904175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_11
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 716
+        width: 174
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ba551529c81fbf0800000000000000
+      internalID: -292297940744688795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_12
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 361
+        width: 156
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d776b32ee89c59700800000000000000
+      internalID: 546564545313466237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_13
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 362
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41852e1697e42fd00800000000000000
+      internalID: 1004951950097274900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_14
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 363
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf97d10ce057ab80800000000000000
+      internalID: -8383643206753476684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_15
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 370
+        width: 116
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a9d3cfa2b14e13f0800000000000000
+      internalID: -928232237482911321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_16
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 367
+        width: 164
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be0f3cd39a28b15a0800000000000000
+      internalID: -6549497569682919189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_17
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 77
+        width: 275
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40264786eac7297b0800000000000000
+      internalID: -5218971929650372092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_18
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 19
+        width: 118
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a847b85c255777ac0800000000000000
+      internalID: -3857485557457521526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: posesM2_19
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 25
+        width: 252
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2024d986a595a6090800000000000000
+      internalID: -8040515939879534078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      posesM2_0: -911557395574210878
+      posesM2_1: -8586929539708855847
+      posesM2_10: 901046375277904175
+      posesM2_11: -292297940744688795
+      posesM2_12: 546564545313466237
+      posesM2_13: 1004951950097274900
+      posesM2_14: -8383643206753476684
+      posesM2_15: -928232237482911321
+      posesM2_16: -6549497569682919189
+      posesM2_17: -5218971929650372092
+      posesM2_18: -3857485557457521526
+      posesM2_19: -8040515939879534078
+      posesM2_2: -3642594344107307566
+      posesM2_3: 3206881049720764351
+      posesM2_4: -1691126744978174932
+      posesM2_5: -3239120633185092134
+      posesM2_6: 6932353848961472490
+      posesM2_7: -2206145148295921240
+      posesM2_8: 1458635121917432899
+      posesM2_9: 1562851032707320306
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
