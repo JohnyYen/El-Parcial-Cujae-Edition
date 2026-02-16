@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afefe1dd292127ed3b3787e901d91035, type: 3}
-  m_Name: ElParcialBoss
+  m_Script: {fileID: 11500000, guid: a949b343828e5b25b97768747ca80d64, type: 3}
+  m_Name: RamShot
   m_EditorClassIdentifier: 
-  maxHealth: 1000
-  phase2Threshold: 800
-  phase3Threshold: 400
-  phase1Attacks: []
-  phase2Attacks: []
-  phase3Attacks: []
+  ramSpeed: 15
+  ramDuration: 0.5
