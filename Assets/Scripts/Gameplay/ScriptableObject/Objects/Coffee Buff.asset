@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921a0432667f69be4a58beba9cdf4c54, type: 3}
   m_Name: Coffee Buff
   m_EditorClassIdentifier: 
-  duration: 5
+  duration: 3
   speedMultiplier: 1.5
   fireRateMultiplier: 1.25
