@@ -288,52 +288,15 @@ public class MinionBehaviour : MonoBehaviour
     {
         if (playerTransform == null) return;
 
-        // Comportamiento específico según el tipo de minion
-        if (minionData.Type == MinionType.Ranged)
-        {
-            MoveRangedBehaviour();
-        }
-        else
-        {
-            // Movimiento estándar hacia el jugador
-            Vector2 direction = (playerTransform.position - transform.position).normalized;
-            rb.linearVelocity = direction * minionData.MoveSpeed;
-            
-            // Flip sprite
-            FlipSprite(direction.x);
-        }
-    }
-
-    private void MoveRangedBehaviour()
-    {
-        RangedMinion rangedData = minionData as RangedMinion;
-        if (rangedData == null || playerTransform == null) return;
-
-        float distance = Vector2.Distance(transform.position, playerTransform.position);
-        Vector2 direction;
-
-        // Si está muy cerca, retrocede
-        if (rangedData.ShouldRetreat(transform, playerTransform))
-        {
-            direction = (transform.position - playerTransform.position).normalized;
-            rb.linearVelocity = direction * minionData.MoveSpeed;
-        }
-        // Si está lejos, se acerca
-        else if (!rangedData.IsAtOptimalDistance(transform, playerTransform))
-        {
-            direction = (playerTransform.position - transform.position).normalized;
-            rb.linearVelocity = direction * minionData.MoveSpeed;
-        }
-        // Si está en distancia óptima, no se mueve
-        else
-        {
-            rb.linearVelocity = Vector2.zero;
-        }
-
+        // Movimiento estándar hacia el jugador
+        Vector2 direction = (playerTransform.position - transform.position).normalized;
+        rb.linearVelocity = direction * minionData.MoveSpeed;
+        
         // Flip sprite
-        Vector2 playerDirection = (playerTransform.position - transform.position).normalized;
-        FlipSprite(playerDirection.x);
+        FlipSprite(direction.x);
     }
+
+
 
     private void MoveTowardsTarget(Vector2 target)
     {
@@ -428,10 +391,12 @@ public class MinionBehaviour : MonoBehaviour
         if (attackPoint == null)
             attackPoint = transform;
 
+        Debug.Log($"{minionData.Type} minion is attacking!");
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, playerLayer);
         
         foreach (Collider2D hit in hits)
         {
+            Debug.Log($"{minionData.Type} minion hit something in attack range: {hit.name}");
             Player player = hit.GetComponent<Player>();
             if (player != null && player.player_behaviour != null)
             {

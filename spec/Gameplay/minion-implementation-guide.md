@@ -56,31 +56,28 @@ Implementa IMinion y define:
 - Estado interno del minion
 
 #### Implementaciones Concretas
-Cuatro tipos de minions, cada uno con características únicas:
+Tres tipos de minions, cada uno con características únicas:
 
 **BasicMinion:**
 - Vida: 50 HP
-- Velocidad: 2 (lenta)
+- Velocidad: 2.0 (lenta)
 - Comportamiento: Movimiento lineal directo
 - Enfoque reward: 10
+- **Usado por Boss:** Fase 1 y 2
 
-**FastMinion:**
-- Vida: 25 HP
-- Velocidad: 5 (muy rápida)
-- Comportamiento: Agresivo con movimientos rápidos
-- Enfoque reward: 15
-
-**TankMinion:**
-- Vida: 150 HP
-- Velocidad: 1.5 (muy lenta)
-- Comportamiento: Resistente (20% reducción de daño)
-- Enfoque reward: 30
-
-**RangedMinion:**
+**MediumMinion:**
 - Vida: 70 HP
-- Velocidad: 3 (normal)
-- Comportamiento: Mantiene distancia, dispara proyectiles
+- Velocidad: 3.5 (media)
+- Comportamiento: Equilibrado, más agresivo
 - Enfoque reward: 20
+- **Usado por Boss:** Fase 2 y 3
+
+**HardMinion:**
+- Vida: 120 HP
+- Velocidad: 1.8 (lenta)
+- Comportamiento: Resistente (25% reducción de daño)
+- Enfoque reward: 35
+- **Usado por Boss:** No (reservado para uso especial)
 
 ## Configuración en Unity
 
@@ -112,17 +109,23 @@ En el Inspector del prefab:
 
 ```
 MinionBehaviour:
-├── Minion Data: [Drag & drop el MinionSO]
+├── Minion Data: [Drag & drop el MinionSO - BasicMinion o MediumMinion]
 ├── Player Transform: [Auto-asignado en tiempo de ejecución]
 ├── Sprite Renderer: [Auto-asignado si está en el mismo GameObject]
 ├── Hit Color: Red
 ├── Hit Flash Duration: 0.1
 ├── Attack Point: [Transform hijo para posición de ataque]
-├── Attack Radius: 0.5
-├── Player Layer: Player
+├── Attack Radius: 1.0-1.5 ⚠️ AJUSTAR según escala del juego
+├── Player Layer: Player ⚠️ CRÍTICO - debe coincidir con layer del jugador
 ├── Death Particles: [Prefab de partículas opcional]
 └── Hit Particles: [Prefab de partículas opcional]
 ```
+
+> **⚠️ IMPORTANTE:**
+> - **Attack Radius:** El valor de 0.5 es muy pequeño para la mayoría de juegos. Empieza con 1.0-1.5 y ajusta según necesites.
+> - **Player Layer:** Debe estar configurado correctamente o los ataques no funcionarán. Selecciona el layer donde está tu GameObject del jugador.
+
+> **Nota:** Boss solo usa Basic y Medium. Hard es opcional para otros contextos.
 
 ---
 
@@ -438,25 +441,58 @@ minionSpawner.useObjectPooling = false;
 
 ## Troubleshooting
 
+### ⚠️ Problema Más Común: Los Ataques No Funcionan
+
+**Síntoma:** El minion persigue al jugador y se detiene, pero no lo ataca.
+
+**Causas y Soluciones:**
+
+1. **Player Layer no configurado** (causa #1 más común)
+   - En el prefab del minion, Inspector → MinionBehaviour → Player Layer
+   - Debe estar seleccionado el layer donde está el jugador (normalmente "Player")
+   - Si está en "Nothing" o vacío, NO funcionará
+
+2. **Attack Radius muy pequeño** (causa #2 más común)
+   - Attack Radius: 0.5 es muy pequeño
+   - Aumentar a 1.0-1.5 para empezar
+   - Verificar en Scene view: selecciona el minion spawneado, verás un círculo rojo (attack range) - debe ser visible y suficientemente grande
+
+3. **Jugador en layer incorrecto**
+   - Seleccionar GameObject del jugador
+   - Inspector → Layer → debe estar en "Player"
+   - Verificar que tenga tag "Player"
+
+4. **Jugador sin Collider2D**
+   - El jugador necesita un Collider2D para ser detectado por OverlapCircleAll
+   - Agregar BoxCollider2D o CircleCollider2D al jugador
+
+**Cómo verificar en tiempo real:**
+```csharp
+// En MinionBehaviour.HandleAttack(), añade estos Debug.Log temporalmente:
+Debug.Log($"Attack radius: {attackRadius}, PlayerLayer: {playerLayer.value}");
+Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, playerLayer);
+Debug.Log($"Colliders found: {hits.Length}");
+```
+
+---
+
+### Otros Problemas
+
 **Los minions no se mueven:**
-- Verificar que tienen Rigidbody2D
+- Verificar que tienen Rigidbody2D (Dynamic, Gravity Scale: 0)
 - Verificar que MinionSO está asignado
 - Verificar que el jugador tiene tag "Player"
+- Verificar que Detection Range es suficiente (default: 8.0)
 
 **Los minions no detectan al jugador:**
-- Verificar Detection Range en el MinionSO
-- Verificar que el jugador está en la escena
-- Verificar layers
+- Verificar Detection Range en el MinionSO (debe ser mayor que la distancia)
+- Verificar que el jugador está en la escena activa
+- Verificar en Scene view: selecciona el minion, verás un círculo amarillo (detection range)
 
-**Los ataques no funcionan:**
-- Verificar Attack Range
-- Verificar Attack Cooldown
-- Verificar Player Layer en MinionBehaviour
-- Verificar que el jugador tiene Player component
-
-**Los proyectiles no se disparan:**
-- Verificar que ProjectilePrefab está asignado en RangedMinion
-- Verificar que el prefab tiene MinionProjectile component
+**Los minions atraviesan paredes:**
+- Cambiar Rigidbody2D de Kinematic a Dynamic
+- Agregar colliders a las paredes
+- Configurar Collision Matrix en Project Settings → Physics 2D
 - MinionSO: `Assets/Scripts/Gameplay/ScriptableObject/Interfaces/MinionSO.cs`
 - MinionBehaviour: `Assets/Scripts/Gameplay/MinionBehaviour.cs`
 - Integración con Boss: [boss-minion-integration.md](boss-minion-integration.md)
@@ -466,10 +502,10 @@ minionSpawner.useObjectPooling = false;
 ---
 
 ## Resumen Rápido
-
-### Para usar con el Boss (MVP):
-1. ✅ Crear prefab con MinionBehaviour
-2. ✅ Asignar MinionSO al prefab
+2 prefabs: BasicMinion y MediumMinion
+2. ✅ Asignar MinionSO respectivos
+3. ✅ Configurar ambos en Boss (2 slots)
+4. ✅ Funciona automáticamente según fasfab
 3. ✅ Configurar en Boss
 4. ✅ Funciona automáticamente
 

@@ -1,31 +1,31 @@
 using UnityEngine;
 
 /// <summary>
-/// Implementación del minion tanque.
+/// Implementación del minion difícil (Hard).
 /// Características:
-/// - Vida: Alta (120-180 HP)
-/// - Velocidad: Muy lenta (0.3x-0.5x)
-/// - Comportamiento: Resistente, controla espacio
+/// - Vida: Alta (100-150 HP)
+/// - Velocidad: Lenta (1.5-2 unidades)
+/// - Comportamiento: Resistente con reducción de daño
 /// - Movimiento: Lento pero imparable
 /// </summary>
-[CreateAssetMenu(fileName = "TankMinion", menuName = "Minions/Tank Minion")]
-public class TankMinion : MinionSO
+[CreateAssetMenu(fileName = "HardMinion", menuName = "Minions/Hard Minion")]
+public class HardMinion : MinionSO
 {
-    [Header("Tank Specific")]
-    [SerializeField] private float damageReduction = 0.2f; // 20% de reducción de daño
+    [Header("Hard Specific")]
+    [SerializeField] private float damageReduction = 0.25f; // 25% de reducción de daño
 
-    public override MinionType Type => MinionType.Tank;
+    public override MinionType Type => MinionType.Hard;
 
     private void OnEnable()
     {
-        // Configuración específica del minion tanque
-        maxHealth = 150f; // Vida alta
-        moveSpeed = 1.5f; // Velocidad muy lenta (0.45x de velocidad base)
-        attackDamage = 30f; // Daño alto
-        attackRange = 2f; // Mayor rango de ataque
-        attackCooldown = 2f; // Cooldown más largo
-        enfoqueReward = 30f; // Mayor recompensa por dificultad
-        detectionRange = 7f;
+        // Configuración específica del minion difícil
+        maxHealth = 120f;
+        moveSpeed = 1.8f;
+        attackDamage = 30f;
+        attackRange = 2f;
+        attackCooldown = 1.8f;
+        enfoqueReward = 35f;
+        detectionRange = 8f;
     }
 
     /// <summary>
@@ -36,11 +36,11 @@ public class TankMinion : MinionSO
         if (!isAlive) return;
         
         // El movimiento real se maneja en el MonoBehaviour
-        // Para el Tank: movimiento lento pero constante
+        // Para el Hard: movimiento lento pero constante
     }
 
     /// <summary>
-    /// Aplica daño reducido por la resistencia del tanque.
+    /// Aplica daño reducido por la resistencia del minion hard.
     /// </summary>
     public override void TakeDamage(float amount)
     {

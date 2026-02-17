@@ -15,86 +15,136 @@ Los Minions son enemigos secundarios spawnados por el boss. Tienen 3 niveles de 
 
 ### Sistema de Niveles
 
-#### Minion Nivel 1 (Fácil)
+#### Minion Tipo 1 - Basic (Fácil)
 
-- **Vida:** 30-50 HP
-- **Daño:** 5-10 por ataque
-- **Velocidad:** Lenta (0.5x - 0.7x)
-- **Comportamiento:** Follow básico, ataque cuerpo a cuerpo simple
-- **Tamaño:** Pequeño
-- **Puntos de experiencia:** 10
+- **Vida:** 50 HP
+- **Daño:** 10 por ataque
+- **Velocidad:** 2.0 unidades/seg (lenta)
+- **Rango de ataque:** 2.0 unidades
+- **Rango de detección:** 8.0 unidades
+- **Comportamiento:** Follow directo, ataque cuerpo a cuerpo simple
+- **Enfoque al morir:** 10 puntos
+- **Usado por Boss:** ✅ Sí (Fase 1 y 2)
 
-#### Minion Nivel 2 (Medio)
+#### Minion Tipo 2 - Medium (Medio)
 
-- **Vida:** 60-100 HP
-- **Daño:** 15-25 por ataque
-- **Velocidad:** Normal (0.8x - 1.0x)
-- **Comportamiento:** Combinación de seguimiento y ataques evasivos
-- **Tamaño:** Mediano
-- **Puntos de experiencia:** 25
+- **Vida:** 70 HP
+- **Daño:** 20 por ataque
+- **Velocidad:** 3.5 unidades/seg (rápida)
+- **Rango de ataque:** 2.0 unidades
+- **Rango de detección:** 8.0 unidades
+- **Comportamiento:** Agresivo, persecución rápida
+- **Enfoque al morir:** 20 puntos
+- **Usado por Boss:** ✅ Sí (Fase 2 y 3)
 
-#### Minion Nivel 3 (Difícil)
+#### Minion Tipo 3 - Hard (Difícil)
 
-- **Vida:** 120-180 HP
-- **Daño:** 30-45 por ataque
-- **Velocidad:** Rápida (1.2x - 1.5x)
-- **Comportamiento:** Agresivo, ataques rápidos, posible resistencia
-- **Tamaño:** Grande
-- **Puntos de experiencia:** 50
+- **Vida:** 120 HP
+- **Daño:** 30 por ataque
+- **Velocidad:** 1.8 unidades/seg (lenta, pero resistente)
+- **Rango de ataque:** 2.0 unidades
+- **Rango de detección:** 8.0 unidades
+- **Comportamiento:** Tanque con 25% de reducción de daño
+- **Enfoque al morir:** 35 puntos
+- **Usado por Boss:** ❌ No (reservado para uso especial)
 
 ### Comportamiento por Nivel
 
 #### Movimiento
 
+Todos los minions usan movimiento directo hacia el jugador:
+
 ```csharp
-void IMinion.Mover(Vector2 direccion) {
-  float velocidad = ObtenerVelocidadPorNivel();
-  
-  // Facil: Movimiento lineal directo
-  if (tipo == TipoMinion.Facil) {
-    transform.position += (Vector3)direccion * velocidad * Time.deltaTime;
-  }
-  
-  // Medio: Movimiento con slight evasion
-  if (tipo == TipoMinion.Medio) {
-    Vector2 direccionEvasiva = CalcularEvasion(direccion);
-    transform.position += (Vector3)direccionEvasiva * velocidad * Time.deltaTime;
-  }
-  
-  // Dificil: Movimiento predictivo
-  if (tipo == TipoMinion.Dificil) {
-    Vector2 posicionPredicha = PredecirPosicionPlayer(direccion);
-    transform.position += (Vector3)(posicionPredicha - transform.position).normalized * velocidad * Time.deltaTime;
-  }
+// En MinionBehaviour.cs
+private void MoveTowardsPlayer()
+{
+    if (playerTransform == null) return;
+
+    // Movimiento estándar hacia el jugador
+    Vector2 direction = (playerTransform.position - transform.position).normalized;
+    rb.linearVelocity = direction * minionData.MoveSpeed;
+    
+    // Flip sprite según dirección
+    FlipSprite(direction.x);
 }
 ```
+
+La diferencia entre tipos está en la velocidad:
+- **Basic:** Lento (2.0) - más fácil de esquivar
+- **Medium:** Rápido (3.5) - presión constante
+- **Hard:** Lento (1.8) pero resistente - difícil de eliminar
 
 #### Ataque
 
 ```csharp
-void IMinion.Atacar(ITargetable objetivo) {
-  if (EstaEnRango(objetivo)) {
-    // Facil: Ataque simple
-    if (tipo == TipoMinion.Facil) {
-      objetivo.RecibirDamage(ObtenerDamage());
-    }
+Todos los minions usan ataque de contacto:
+
+```csharp
+// En MinionBehaviour.cs - HandleAttack()
+private void HandleAttack()
+{
+    if (attackPoint == null)
+        attackPoint = transform;
+
+    // Detectar jugador en rango de ataque
+    Collider2D[] hits = Physics2D.OverlapCircleAll(
+        attackPoint.position, 
+        attackRadius, 
+        playerLayer
+    );
     
-    // Medio: Ataque con combo corto
-    if (tipo == TipoMinion.Medio) {
-      EjecutarCombo(objetivo, 2 golpes);
+    foreach (Collider2D hit in hits)
+    {
+        Player player = hit.GetComponent<Player>();
+        if (player != null && player.player_behaviour != null)
+        {
+            // Aplicar daño según el tipo de minion
+            player.player_behaviour.AddStress(minionData.AttackDamage);
+        }
     }
+#### Sistema de Daño
+// En MinionBehaviour.cs - HandleDeath()
+private void HandleDeath()
+{
+    ChangeState(MinionState.Death);
     
-    // Dificil: Ataque con posible critico
-    if (tipo == TipoMinion.Dificil) {
-      bool esCritico = Random.value < 0.3f; // 30% chance
-      float dano = esCritico ? ObtenerDamage() * 1.5f : ObtenerDamage();
-      objetivo.RecibirDamage(dano);
-      if (esCritico) MostrarFeedbackCritico();
+    // Otorgar enfoque al jugador
+    Player player = playerTransform?.GetComponent<Player>();
+    if (player != null && player.player_behaviour != null)
+    {
+        player.player_behaviour.AddEnfoque(minionData.EnfoqueReward);
     }
-  }
+
+    // Partículas de muerte
+    if (deathParticles != null)
+    {
+        Instantiate(deathParticles, transform.position, Quaternion.identity);
+    }
+
+    // Destruir después de animación
+    Destroy(gameObject, 1f
+    // Aplica reducción de daño del 25%
+    float reducedDamage = amount * (1f - damageReduction); // 0.75x
+    currentHealth -= reducedDamage;
+    InvokeOnMinionHit(reducedDamage);
+
+    if (currentHealth <= 0)
+    {
+        currentHealth = 0;
+        Die();
+    }
 }
 ```
 
+#### Muerte
+
+}
+```
+
+La diferencia entre tipos está en el daño:
+- **Basic:** 10 de daño
+- **Medium:** 20 de daño
+- **Hard:** 30 de daño
 ### Vida y Muerte
 
 ```csharp
@@ -108,11 +158,11 @@ void IMinion.RecibirDamage(float cantidad) {
   if (tipo == TipoMinion.Dificil && vidaActual < vidaMaxima * 0.3f) {
     ActivarModoDesesperacion();
   }
-  
-  if (vidaActual <= 0) {
-    Morir();
-  }
-}
+  Tipo | Velocidad | Estrategia | Usado por Boss |
+|------|-----------|------------|----------------|
+| Basic | 2.0 (lenta) | Follow directo | ✅ Sí |
+| Medium | 3.5 (rápida) | Follow agresivo | ✅ Sí |
+| Hard | 1.8 (lenta) | Follow resistente (25% reducción daño) | ❌ No
 
 void IMinion.Morir() {
   // Animation de muerte
@@ -123,16 +173,37 @@ void IMinion.Morir() {
   
   // Drop de recursos (si aplica)
   SpawnDrop();
-  
-  // Destroy después de animación
-  Destroy(gameObject, tiempoAnimacionMuerte);
-}
-```
+### Arquitectura Implementada
 
-## Comportamiento General
+- **Interface:** `IMinion.cs`
+- **Base abstracta:** `MinionSO.cs` (ScriptableObject)
+- **Implementaciones:** `BasicMinion.cs`, `MediumMinion.cs`, `HardMinion.cs`
+- **MonoBehaviour:** `MinionBehaviour.cs` (controla física y estados)
+- **Enum:** `MinionType` (Basic, Medium, Hard)
 
-### Máquina de Estados del Minion
+### Configuración de Prefabs
 
+- **Rigidbody2D:** Dynamic, Gravity Scale: 0, Freeze Rotation Z
+- **Collider2D:** BoxCollider2D o CircleCollider2D
+- **Layer:** Enemy
+- **Tag:** No requerido
+
+### Configuración Crítica
+
+⚠️ **MinionBehaviour Inspector:**
+- **Attack Radius:** 1.0-1.5 (NO usar 0.5, es muy pequeño)
+- **Player Layer:** Debe coincidir con el layer del jugador
+
+### Opcionales
+
+- **Animator:** Controller con parámetros IsMoving, IsAttacking, IsDead
+- **Audio:** SFX para spawn, ataque, hit, muerte
+- **Partículas:** Efectos de muerte y hit
+- **Pooling:** MinionSpawner incluye object pooling (opcional)
+
+## Integración con Boss
+
+Ver [boss-minion-integration.md](boss-minion-integration.md) para detalles completos de implementación.
 ```
 SPAWN → IDLE → (Player detectado) → PERSECUCION → ATAQUE
         → (Daño recibido) → HIT → PERSECUCION
