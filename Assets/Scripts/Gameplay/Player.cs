@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
 
         Debug.Log($"PlayerSO: {player_behaviour.name}, Stress: {player_behaviour.Stress / player_behaviour.MaxStress}, Enfoque: {player_behaviour.Enfoque / player_behaviour.MaxEnfoque}");
-        
+
         hud.SetStress(player_behaviour.Stress / player_behaviour.MaxStress);
         hud.SetFocus(player_behaviour.Enfoque / player_behaviour.MaxEnfoque);
 
@@ -109,6 +109,9 @@ public class Player : MonoBehaviour
         player_behaviour.OnStressChanged += OnPlayerStressChanged;
         player_behaviour.OnEnfoqueChanged += OnPlayerEnfoqueChanged;
 
+        // Suscribirse a evento de muerte
+        player_behaviour.OnPlayerDeath += OnPlayerDeath;
+
         // Suscribirse a eventos del BuffController
         if (buffController != null)
         {
@@ -128,6 +131,9 @@ public class Player : MonoBehaviour
         // Desuscribirse de eventos de HUD
         player_behaviour.OnStressChanged -= OnPlayerStressChanged;
         player_behaviour.OnEnfoqueChanged -= OnPlayerEnfoqueChanged;
+
+        // Desuscribirse de evento de muerte
+        player_behaviour.OnPlayerDeath -= OnPlayerDeath;
 
         // Desuscribirse de eventos del BuffController
         if (buffController != null)
@@ -235,6 +241,28 @@ public class Player : MonoBehaviour
             float normalizedStress = newStress / player_behaviour.MaxStress;
             hud.SetStress(normalizedStress);
         }
+    }
+
+    // ========== MÉTODO CALLBACK PARA MUERTE ==========
+
+    private void OnPlayerDeath()
+    {
+        Debug.Log("¡El jugador ha muerto!");
+        
+        // Detener todas las acciones del jugador
+        enabled = false;
+        
+        // Ocultar el HUD
+        if (hud != null)
+        {
+            hud.SetVisible(false);
+        }
+        
+        // Pausar el juego
+        Time.timeScale = 0f;
+        
+        // TODO: Mostrar pantalla de Game Over
+        // SceneManager.LoadScene("GameOverScreen");
     }
 
     private void OnPlayerEnfoqueChanged(float newEnfoque)

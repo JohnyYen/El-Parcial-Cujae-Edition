@@ -97,6 +97,7 @@ public class Boss : MonoBehaviour
         if (!IsAlive) return;
 
         // Seleccionar tipo de ataque según la fase
+        Debug.Log($"Boss ejecuta ataque en fase {bossBehaviour.CurrentPhase}");
         AttackType attackType = GetRandomAttackForPhase();
         bossBehaviour.PerformAttack(attackType);
         animator.SetTrigger("Attack");

@@ -78,7 +78,6 @@ public class GameHUD : MonoBehaviour
     public void SetFocus(float value01)
     {
         targetFocus = Mathf.Clamp01(value01);
-        Debug.Log($"SetFocus called with {value01}, targetFocus now {targetFocus}, currentFocus {currentFocus}");
     }
 
     public void AddFocus(float amount)
@@ -127,9 +126,7 @@ public class GameHUD : MonoBehaviour
     {
         currentFocus = Mathf.Lerp(currentFocus, targetFocus, smoothSpeed * Time.deltaTime);
         focusBar.value = currentFocus;
-
-        Debug.Log($"Updating Focus Bar | Current: {currentFocus:F2} | Target: {targetFocus:F2}");
-
+        
         if (focusBarFill != null)
         {
             bool isFull = currentFocus >= 0.99f;

@@ -30,7 +30,7 @@ public class MeleeAttack : BossAttackSO
     public override float Damage => damage;
     public override float Cooldown => cooldown;
     public override float LastAttackTime => lastAttackTime;
-    public override bool CanExecute => Time.time - lastAttackTime >= cooldown;
+    public override bool CanExecute => Time.time - lastAttackTime >= cooldown - 0.01f;
     public override bool IsInProgress => isInProgress;
 
     // ========== EVENTOS ==========
