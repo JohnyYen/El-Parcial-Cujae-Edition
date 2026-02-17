@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8021922032883896090}
   m_Layer: 0
   m_Name: SoftBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   lifetime: 3
-  bullet: {fileID: 0}
+  damage: 14
+  bullet: {fileID: 11400000, guid: 33f38eb2be67f41c4aee24d4984f31af, type: 2}
 --- !u!58 &8021922032883896090
 CircleCollider2D:
   m_ObjectHideFlags: 0
