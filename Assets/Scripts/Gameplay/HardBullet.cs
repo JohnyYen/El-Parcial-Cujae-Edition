@@ -1,10 +1,14 @@
 using UnityEngine;
 
-public class HardBullet : MonoBehaviour
+public class HardBullet : MonoBehaviour, IBullet
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private float lifetime = 8f;
+    [SerializeField] private float damage = 32f;
     [SerializeField] public HardShotSO bullet; // Efecto del ataque fuerte
+
+    public float Damage => damage;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private Rigidbody2D rb;
