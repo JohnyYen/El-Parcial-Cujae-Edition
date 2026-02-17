@@ -91,6 +91,10 @@ public class MaleCujaePlayer : PlayerSO
 
     public override float DashCooldown => dashCooldown;
 
+    public override float MaxStress => maxStress;
+
+    public override float MaxEnfoque => maxEnfoque;
+
     // ========== MÉTODOS ==========
 
     public override void Move(Transform transform, float direction)
@@ -222,7 +226,7 @@ public class MaleCujaePlayer : PlayerSO
     public void ResetPlayer()
     {
         currentStress = 0;
-        currentEnfoque = 0;
+        currentEnfoque = 20;
         dashAvailable = true;
         jumpAvailable = true;
         isAlive = true;

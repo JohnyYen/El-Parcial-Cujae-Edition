@@ -19,9 +19,14 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject softBulletPrefab;
     [SerializeField] private GameObject hardBulletPrefab;
 
+    [Header("HUD")]
+    [SerializeField] private GameHUD hud;
+
+
     private bool isGrounded = true;
     private Rigidbody2D rb;
     private Animator animator;
+
 
     // ========== PROPIEDADES ==========
 
@@ -32,6 +37,12 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        Debug.Log($"PlayerSO: {player_behaviour.name}, Stress: {player_behaviour.Stress / player_behaviour.MaxStress}, Enfoque: {player_behaviour.Enfoque / player_behaviour.MaxEnfoque}");
+        
+        hud.SetStress(player_behaviour.Stress / player_behaviour.MaxStress);
+        hud.SetFocus(player_behaviour.Enfoque / player_behaviour.MaxEnfoque);
+
 
         if (player_behaviour != null && buffController != null)
         {
@@ -94,6 +105,10 @@ public class Player : MonoBehaviour
         player_behaviour.OnSoftAttackUsed += SoftAttack;
         player_behaviour.OnHardAttackUsed += HardAttack;
 
+        // Suscribirse a eventos de HUD
+        player_behaviour.OnStressChanged += OnPlayerStressChanged;
+        player_behaviour.OnEnfoqueChanged += OnPlayerEnfoqueChanged;
+
         // Suscribirse a eventos del BuffController
         if (buffController != null)
         {
@@ -109,6 +124,10 @@ public class Player : MonoBehaviour
         player_behaviour.OnDashUsed -= Dash;
         player_behaviour.OnSoftAttackUsed -= SoftAttack;
         player_behaviour.OnHardAttackUsed -= HardAttack;
+
+        // Desuscribirse de eventos de HUD
+        player_behaviour.OnStressChanged -= OnPlayerStressChanged;
+        player_behaviour.OnEnfoqueChanged -= OnPlayerEnfoqueChanged;
 
         // Desuscribirse de eventos del BuffController
         if (buffController != null)
@@ -203,6 +222,28 @@ public class Player : MonoBehaviour
         {
             player_behaviour.SetInvincibility(isInvincible);
             Debug.Log($"Invincibility status changed to: {isInvincible}");
+        }
+    }
+
+    // ========== MÉTODOS CALLBACK PARA HUD ==========
+
+    private void OnPlayerStressChanged(float newStress)
+    {
+        if (hud != null && player_behaviour != null)
+        {
+            // Normalizar el valor a 0-1
+            float normalizedStress = newStress / player_behaviour.MaxStress;
+            hud.SetStress(normalizedStress);
+        }
+    }
+
+    private void OnPlayerEnfoqueChanged(float newEnfoque)
+    {
+        if (hud != null && player_behaviour != null)
+        {
+            // Normalizar el valor a 0-1
+            float normalizedEnfoque = newEnfoque / player_behaviour.MaxEnfoque;
+            hud.SetFocus(normalizedEnfoque);
         }
     }
 }

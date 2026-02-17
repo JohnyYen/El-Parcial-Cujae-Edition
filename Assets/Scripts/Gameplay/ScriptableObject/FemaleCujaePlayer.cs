@@ -91,6 +91,10 @@ public class FemaleCujaePlayer : PlayerSO
 
     public override float DashCooldown => dashCooldown;
 
+    public override float MaxStress => maxStress;
+
+    public override float MaxEnfoque => maxEnfoque;
+
     // ========== MÉTODOS ==========
 
     public override void Move(Transform transform, float direction)

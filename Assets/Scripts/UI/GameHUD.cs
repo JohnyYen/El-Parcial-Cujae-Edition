@@ -39,9 +39,7 @@ public class GameHUD : MonoBehaviour
         stressBar.value = 0f;
         focusBar.value = 0f;
         currentStress = 0f;
-        targetStress = 0f;
         currentFocus = 0f;
-        targetFocus = 0f;
 
         if (damageOverlay != null)
         {
@@ -60,6 +58,8 @@ public class GameHUD : MonoBehaviour
         UpdateFocusBar();
         UpdateDamageFlash();
         HandlePauseInput();
+
+        // Debug.Log($"HUD Update | Stress: {currentStress:F2} | Focus: {currentFocus:F2} | Paused: {isPaused}");
     }
 
     // --- Public methods for Gameplay scripts to call ---
@@ -78,6 +78,7 @@ public class GameHUD : MonoBehaviour
     public void SetFocus(float value01)
     {
         targetFocus = Mathf.Clamp01(value01);
+        Debug.Log($"SetFocus called with {value01}, targetFocus now {targetFocus}, currentFocus {currentFocus}");
     }
 
     public void AddFocus(float amount)
@@ -126,6 +127,8 @@ public class GameHUD : MonoBehaviour
     {
         currentFocus = Mathf.Lerp(currentFocus, targetFocus, smoothSpeed * Time.deltaTime);
         focusBar.value = currentFocus;
+
+        Debug.Log($"Updating Focus Bar | Current: {currentFocus:F2} | Target: {targetFocus:F2}");
 
         if (focusBarFill != null)
         {
