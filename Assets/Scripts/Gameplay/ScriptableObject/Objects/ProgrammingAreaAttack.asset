@@ -16,6 +16,6 @@ MonoBehaviour:
   damage: 25
   cooldown: 3
   validPhases: 0200000003000000
-  areaPrefab: {fileID: 0}
+  areaPrefab: {fileID: 2597932270596559170, guid: 79d315ac245a26a88a0736a89f92290c, type: 3}
   areaRadius: 5
   areaDuration: 2
