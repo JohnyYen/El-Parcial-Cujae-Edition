@@ -29,6 +29,8 @@ public class Boss : MonoBehaviour
     public ElParcialBoss BossBehaviour => bossBehaviour;
     public bool IsAlive => bossBehaviour != null && bossBehaviour.IsAlive;
 
+    private Animator animator;
+
     // ========== INICIALIZACIÓN ==========
 
     void Start()
@@ -42,6 +44,7 @@ public class Boss : MonoBehaviour
         SetupEventSubscriptions();
         lastAttackTime = Time.time;
         lastSpawnTime = Time.time;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -62,6 +65,8 @@ public class Boss : MonoBehaviour
             SpawnMinion();
             lastSpawnTime = Time.time;
         }
+
+        animator.SetInteger("Phase", bossBehaviour.CurrentPhase);
     }
 
     // ========== MÉTODOS PÚBLICOS ==========
@@ -94,6 +99,7 @@ public class Boss : MonoBehaviour
         // Seleccionar tipo de ataque según la fase
         AttackType attackType = GetRandomAttackForPhase();
         bossBehaviour.PerformAttack(attackType);
+        animator.SetTrigger("Attack");
     }
 
     private AttackType GetRandomAttackForPhase()
