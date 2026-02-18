@@ -19,6 +19,9 @@ public class ProjectileAttack : BossAttackSO
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private int projectileCount = 3;
     [SerializeField] private float projectileSpeed = 10f;
+    [SerializeField] private float spawnDelay = 0f; // Delay entre proyectiles (0 = todos a la vez)
+    [SerializeField] private bool spiralPattern = false; // Si true, ángulo incrementa entre spawns
+    [SerializeField] private float spiralAngleOffset = 0f; // Ángulo inicial adicional
 
     // ========== ESTADO PRIVADO ==========
 
@@ -89,7 +92,18 @@ public class ProjectileAttack : BossAttackSO
 
         // Posición de spawn (normalmente desde la posición del boss)
         Vector3 spawnPos = Vector3.zero;
-        float angle = (360f / projectileCount) * index;
+        
+        float angle;
+        if (spiralPattern)
+        {
+            // Patrón espiral: cada proyectil en ángulo diferente consecutivo
+            angle = spiralAngleOffset + (index * (360f / projectileCount));
+        }
+        else
+        {
+            // Patrón radial normal: distribución uniforme
+            angle = (360f / projectileCount) * index;
+        }
         
         // Crear dirección basada en ángulo
         float radians = angle * Mathf.Deg2Rad;
