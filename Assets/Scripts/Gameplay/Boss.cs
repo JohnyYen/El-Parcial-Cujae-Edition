@@ -72,7 +72,11 @@ public class Boss : MonoBehaviour
             lastSpawnTime = Time.time;
         }
 
-        animator.SetInteger("Phase", bossBehaviour.CurrentPhase);
+        // Actualizar parámetro de fase en el Animator
+        if (animator != null)
+        {
+            animator.SetInteger("Phase", bossBehaviour.CurrentPhase);
+        }
     }
 
     // ========== MÉTODOS PÚBLICOS ==========
@@ -127,7 +131,12 @@ public class Boss : MonoBehaviour
             Debug.Log($"Jugador lejos ({distanceToPlayer:F2}m) - Boss ejecuta ataque a distancia en fase {bossBehaviour.CurrentPhase}");
         }
 
-        animator.SetTrigger("Attack");
+        // Activar animación de ataque
+        if (animator != null)
+        {
+            animator.SetTrigger("Attack");
+        }
+        
         bossBehaviour.PerformAttack(attackType, transform.position);
     }
 
@@ -225,12 +234,25 @@ public class Boss : MonoBehaviour
     private void OnBossPhaseChanged(int newPhase)
     {
         Debug.Log($"¡Boss entra en Fase {newPhase}!");
-        // Aquí iría cambio de animaciones, efectos visuales, sonidos, etc.
+        
+        // Actualizar parámetro de fase inmediatamente
+        if (animator != null)
+        {
+            animator.SetInteger("Phase", newPhase);
+        }
+        
+        // Aquí iría cambio de efectos visuales, sonidos, etc.
     }
 
     private void OnBossDeath()
     {
         Debug.Log("¡El Parcial ha sido derrotado!");
+
+        // Activar animación de muerte
+        if (animator != null)
+        {
+            animator.SetTrigger("Complete");
+        }
 
         // Mostrar pantalla de victoria
         if (victoryScreen != null)
