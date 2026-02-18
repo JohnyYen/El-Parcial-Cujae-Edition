@@ -11,6 +11,9 @@ public class Boss : MonoBehaviour
     [Header("Boss Behavior")]
     [SerializeField] private ElParcialBoss bossBehaviour;
 
+    [Header("Victory Screen")]
+    [SerializeField] private VictoryScreen victoryScreen;
+
     [Header("Attack Timing")]
     [SerializeField] private float attackInterval = 3f;
 
@@ -189,7 +192,16 @@ public class Boss : MonoBehaviour
     private void OnBossDeath()
     {
         Debug.Log("¡El Parcial ha sido derrotado!");
-        // Aquí iría lógica de victoria, drop de items, etc.
+
+        // Mostrar pantalla de victoria
+        if (victoryScreen != null)
+        {
+            victoryScreen.Show();
+        }
+        else
+        {
+            Debug.LogWarning("VictoryScreen no está asignado en el Inspector!");
+        }
     }
 
     private void OnBossAttack(AttackType attackType)

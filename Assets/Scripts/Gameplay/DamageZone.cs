@@ -77,16 +77,11 @@ public class DamageZone : MonoBehaviour
     /// </summary>
     private void ApplyDamage(Collider2D collision)
     {
-        Debug.Log($"Zona de daño golpea al jugador por {damage} daño");
-        
-        // Aquí iría la lógica para aplicar daño al jugador
-        // Ejemplo:
-        // PlayerSO player = collision.GetComponent<Player>().player_behaviour;
-        // if (player != null)
-        // {
-        //     player.AddStress(damage);
-        // }
-
-        // Por ahora solo registramos el evento
+        Player player = collision.GetComponent<Player>();
+        if (player != null && player.player_behaviour != null)
+        {
+            player.player_behaviour.AddStress(damage);
+            Debug.Log($"Zona de daño golpea al jugador por {damage} de estrés");
+        }
     }
 }

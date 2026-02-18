@@ -29,20 +29,23 @@ public class BossProjectile : MonoBehaviour, IBullet
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // Si golpea al jugador
         if (collision.CompareTag("Player"))
         {
-            Debug.Log($"Proyectil del boss golpea al jugador por {damage} daño");
+            Player player = collision.GetComponent<Player>();
+            if (player != null && player.player_behaviour != null)
+            {
+                player.player_behaviour.AddStress(damage);
+                Debug.Log($"Proyectil del boss golpea al jugador por {damage} de estrés");
+            }
             
             if (destroyOnImpact)
             {
                 Destroy(gameObject);
             }
         }
-        // Si golpea al boss (ricochete?, ignorar)
         else if (collision.CompareTag("Enemy"))
         {
-            // Ignorar colisiones con el boss
+            // Ignorar colisiones con el boss u otros enemigos
         }
     }
 }
