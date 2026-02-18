@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -19,8 +20,14 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject softBulletPrefab;
     [SerializeField] private GameObject hardBulletPrefab;
 
+    [Header("HUD")]
+    [SerializeField] private GameHUD hud;
+
+
     private bool isGrounded = true;
     private Rigidbody2D rb;
+    private Animator animator;
+
 
     // ========== PROPIEDADES ==========
 
@@ -30,6 +37,13 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+
+        Debug.Log($"PlayerSO: {player_behaviour.name}, Stress: {player_behaviour.Stress / player_behaviour.MaxStress}, Enfoque: {player_behaviour.Enfoque / player_behaviour.MaxEnfoque}");
+
+        hud.SetStress(player_behaviour.Stress / player_behaviour.MaxStress);
+        hud.SetFocus(player_behaviour.Enfoque / player_behaviour.MaxEnfoque);
+
 
         if (player_behaviour != null && buffController != null)
         {
@@ -50,7 +64,15 @@ public class Player : MonoBehaviour
         if (player_behaviour != null)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
+
+            if (horizontalInput > 0)
+                transform.localScale = new Vector3(1, 1, 1); // Mirar a la derecha
+            else if (horizontalInput < 0)
+                transform.localScale = new Vector3(-1, 1, 1); // Mirar a la izquierda
+
+
             player_behaviour.Move(transform, horizontalInput);
+            animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
 
             if (Input.GetAxis("Dash") > 0.0f)
             {
@@ -84,6 +106,13 @@ public class Player : MonoBehaviour
         player_behaviour.OnSoftAttackUsed += SoftAttack;
         player_behaviour.OnHardAttackUsed += HardAttack;
 
+        // Suscribirse a eventos de HUD
+        player_behaviour.OnStressChanged += OnPlayerStressChanged;
+        player_behaviour.OnEnfoqueChanged += OnPlayerEnfoqueChanged;
+
+        // Suscribirse a evento de muerte
+        player_behaviour.OnPlayerDeath += OnPlayerDeath;
+
         // Suscribirse a eventos del BuffController
         if (buffController != null)
         {
@@ -100,6 +129,13 @@ public class Player : MonoBehaviour
         player_behaviour.OnSoftAttackUsed -= SoftAttack;
         player_behaviour.OnHardAttackUsed -= HardAttack;
 
+        // Desuscribirse de eventos de HUD
+        player_behaviour.OnStressChanged -= OnPlayerStressChanged;
+        player_behaviour.OnEnfoqueChanged -= OnPlayerEnfoqueChanged;
+
+        // Desuscribirse de evento de muerte
+        player_behaviour.OnPlayerDeath -= OnPlayerDeath;
+
         // Desuscribirse de eventos del BuffController
         if (buffController != null)
         {
@@ -113,6 +149,7 @@ public class Player : MonoBehaviour
     {
         if (player_behaviour != null && isGrounded)
         {
+            animator.SetTrigger("Jump");
             rb.AddForce(Vector2.up * player_behaviour.JumpForce, ForceMode2D.Impulse);
         }
     }
@@ -128,6 +165,8 @@ public class Player : MonoBehaviour
                 rb.AddForce(Vector2.right * player_behaviour.DashSpeed * speedMultiplier, ForceMode2D.Impulse);
             else if (horizontalInput < 0) // Dashing left
                 rb.AddForce(Vector2.left * player_behaviour.DashSpeed * speedMultiplier, ForceMode2D.Impulse);
+
+            animator.SetTrigger("Dash");
         }
     }
 
@@ -137,6 +176,7 @@ public class Player : MonoBehaviour
         Debug.Log("SoftAttack ejecutado!");
 
         Instantiate(softBulletPrefab, transform.position + transform.right * 0.5f, Quaternion.identity);
+        animator.SetTrigger("SoftAttack");
 
         // Aquí se agregará:
         // - Reproducir animación de ataque suave
@@ -151,6 +191,7 @@ public class Player : MonoBehaviour
         Debug.Log("HardAttack ejecutado!");
 
         Instantiate(hardBulletPrefab, transform.position + transform.right * 0.5f, Quaternion.identity);
+        animator.SetTrigger("Special");
 
         // Aquí se agregará:
         // - Reproducir animación de ataque fuerte
@@ -188,6 +229,50 @@ public class Player : MonoBehaviour
         {
             player_behaviour.SetInvincibility(isInvincible);
             Debug.Log($"Invincibility status changed to: {isInvincible}");
+        }
+    }
+
+    // ========== MÉTODOS CALLBACK PARA HUD ==========
+
+    private void OnPlayerStressChanged(float newStress)
+    {
+        if (hud != null && player_behaviour != null)
+        {
+            // Normalizar el valor a 0-1
+            float normalizedStress = newStress / player_behaviour.MaxStress;
+            hud.SetStress(normalizedStress);
+        }
+    }
+
+    // ========== MÉTODO CALLBACK PARA MUERTE ==========
+
+    private void OnPlayerDeath()
+    {
+        Debug.Log("¡El jugador ha muerto!");
+        
+        // Detener todas las acciones del jugador
+        enabled = false;
+        
+        // Ocultar el HUD
+        if (hud != null)
+        {
+            hud.SetVisible(false);
+        }
+        
+        // Pausar el juego
+        // Time.timeScale = 0f;
+        
+        // TODO: Mostrar pantalla de Game Over
+        SceneManager.LoadScene("GameOver");
+    }
+
+    private void OnPlayerEnfoqueChanged(float newEnfoque)
+    {
+        if (hud != null && player_behaviour != null)
+        {
+            // Normalizar el valor a 0-1
+            float normalizedEnfoque = newEnfoque / player_behaviour.MaxEnfoque;
+            hud.SetFocus(normalizedEnfoque);
         }
     }
 }

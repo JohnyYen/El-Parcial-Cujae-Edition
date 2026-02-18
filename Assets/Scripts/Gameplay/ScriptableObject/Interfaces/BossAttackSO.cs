@@ -11,7 +11,22 @@ public abstract class BossAttackSO : ScriptableObject, IBossAttack
 
     // ========== EJECUCIÓN ==========
 
+    /// <summary>
+    /// Ejecuta el ataque sin posición específica (compatibilidad hacia atrás).
+    /// </summary>
     public abstract void Execute();
+
+    /// <summary>
+    /// Ejecuta el ataque desde una posición específica del boss.
+    /// Sobrescribir este método en ataques que necesiten la posición (ej: Melee).
+    /// </summary>
+    /// <param name="bossPosition">Posición actual del boss en el mundo</param>
+    public virtual void Execute(Vector2 bossPosition)
+    {
+        // Por defecto, llama al Execute sin parámetros
+        Execute();
+    }
+
     public abstract bool IsInProgress { get; }
 
     // ========== COOLDOWN ==========

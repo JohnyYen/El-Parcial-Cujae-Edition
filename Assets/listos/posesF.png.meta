@@ -1,65 +1,12 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
 guid: 487450c01e36df24daec06bf72450421
-=======
-guid: 9ccebe75b0c2aebb8bb2aaabfd699e25
->>>>>>> 9ceec05 (feat: add images)
-=======
-guid: 9ccebe75b0c2aebb8bb2aaabfd699e25
->>>>>>> 9ceec05 (feat: add images)
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -7086153907940366453
-    second: posesF_0
-  - first:
-      213: 2080483893571445806
-    second: posesF_1
-  - first:
-      213: -8193343121797026425
-    second: posesF_2
-  - first:
-      213: 2060013490967404367
-    second: posesF_3
-  - first:
-      213: 280956295664387413
-    second: posesF_4
-  - first:
-      213: 6749075750386164232
-    second: posesF_5
-  - first:
-      213: 5349043757906494538
-    second: posesF_6
-  - first:
-      213: -5650469456707573367
-    second: posesF_7
-  - first:
-      213: 2280781613166077820
-    second: posesF_8
-  - first:
-      213: 1577016991863252389
-    second: posesF_9
-  - first:
-      213: -6647894003004033001
-    second: posesF_10
-  - first:
-      213: 7706957906688225261
-    second: posesF_11
-  - first:
-      213: 4608912736769044624
-    second: posesF_12
-  - first:
-      213: -4199325186507733047
-    second: posesF_13
-  - first:
-      213: 280370931779249547
-    second: posesF_14
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -90,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
-  nPOTScale: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 1
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 0
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 0
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -116,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -138,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -148,337 +95,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: posesF_0
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 920
-        width: 158
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b87e775909ce8ad90800000000000000
-      internalID: -7086153907940366453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_1
-      rect:
-        serializedVersion: 2
-        x: 305
-        y: 906
-        width: 124
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e246f3d041d5fdc10800000000000000
-      internalID: 2080483893571445806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_2
-      rect:
-        serializedVersion: 2
-        x: 305
-        y: 931
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 78de56647d56b4e80800000000000000
-      internalID: -8193343121797026425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_3
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 904
-        width: 112
-        height: 232
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f4fdf990b53a69c10800000000000000
-      internalID: 2060013490967404367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_4
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 671
-        width: 108
-        height: 239
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5554c78234826e300800000000000000
-      internalID: 280956295664387413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_5
-      rect:
-        serializedVersion: 2
-        x: 284
-        y: 693
-        width: 125
-        height: 175
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80268f703a889ad50800000000000000
-      internalID: 6749075750386164232
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_6
-      rect:
-        serializedVersion: 2
-        x: 581
-        y: 682
-        width: 158
-        height: 226
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a44890615fe9b3a40800000000000000
-      internalID: 5349043757906494538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_7
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 0
-        width: 139
-        height: 666
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98920c277ff7591b0800000000000000
-      internalID: -5650469456707573367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_8
-      rect:
-        serializedVersion: 2
-        x: 314
-        y: 455
-        width: 118
-        height: 231
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c77a1070bc6f6af10800000000000000
-      internalID: 2280781613166077820
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_9
-      rect:
-        serializedVersion: 2
-        x: 591
-        y: 449
-        width: 95
-        height: 218
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a5a3c44990b2e510800000000000000
-      internalID: 1577016991863252389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_10
-      rect:
-        serializedVersion: 2
-        x: 281
-        y: 245
-        width: 182
-        height: 204
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 718be7650afedb3a0800000000000000
-      internalID: -6647894003004033001
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_11
-      rect:
-        serializedVersion: 2
-        x: 597
-        y: 236
-        width: 102
-        height: 205
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: def2a07026d94fa60800000000000000
-      internalID: 7706957906688225261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_12
-      rect:
-        serializedVersion: 2
-        x: 659
-        y: 236
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 09074eb07b526ff30800000000000000
-      internalID: 4608912736769044624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_13
-      rect:
-        serializedVersion: 2
-        x: 279
-        y: 11
-        width: 181
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9c70bd9edfff8b5c0800000000000000
-      internalID: -4199325186507733047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: posesF_14
-      rect:
-        serializedVersion: 2
-        x: 418
-        y: 13
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b852c0280e314e300800000000000000
-      internalID: 280370931779249547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     customData: 
     physicsShape: []
@@ -492,22 +109,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      posesF_0: -7086153907940366453
-      posesF_1: 2080483893571445806
-      posesF_10: -6647894003004033001
-      posesF_11: 7706957906688225261
-      posesF_12: 4608912736769044624
-      posesF_13: -4199325186507733047
-      posesF_14: 280370931779249547
-      posesF_2: -8193343121797026425
-      posesF_3: 2060013490967404367
-      posesF_4: 280956295664387413
-      posesF_5: 6749075750386164232
-      posesF_6: 5349043757906494538
-      posesF_7: -5650469456707573367
-      posesF_8: 2280781613166077820
-      posesF_9: 1577016991863252389
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

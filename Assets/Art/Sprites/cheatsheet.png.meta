@@ -1,0 +1,1098 @@
+fileFormatVersion: 2
+guid: cac23a2b5178aee30ad97fae1b522461
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4485980260863182837
+    second: cheatsheet_0
+  - first:
+      213: -6601287325927765291
+    second: cheatsheet_1
+  - first:
+      213: 1552875666777261358
+    second: cheatsheet_2
+  - first:
+      213: 6563135554918706664
+    second: cheatsheet_3
+  - first:
+      213: 3653918575391492291
+    second: cheatsheet_4
+  - first:
+      213: 7942420619912627288
+    second: cheatsheet_5
+  - first:
+      213: -4069726296270837567
+    second: cheatsheet_6
+  - first:
+      213: -5975150874395613106
+    second: cheatsheet_7
+  - first:
+      213: -6667351539289785080
+    second: cheatsheet_8
+  - first:
+      213: -7390161794437284797
+    second: cheatsheet_9
+  - first:
+      213: -5604558126334100339
+    second: cheatsheet_10
+  - first:
+      213: -4339929502098439057
+    second: cheatsheet_11
+  - first:
+      213: 8695379564310974695
+    second: cheatsheet_12
+  - first:
+      213: 224752366449288240
+    second: cheatsheet_13
+  - first:
+      213: 9022490366573638755
+    second: cheatsheet_14
+  - first:
+      213: 6103553782006072535
+    second: cheatsheet_15
+  - first:
+      213: 304191387208303376
+    second: cheatsheet_16
+  - first:
+      213: 549145725578796731
+    second: cheatsheet_17
+  - first:
+      213: 1832854388411960487
+    second: cheatsheet_18
+  - first:
+      213: 8870086442197741673
+    second: cheatsheet_19
+  - first:
+      213: -3555227692724590354
+    second: cheatsheet_20
+  - first:
+      213: -3164796977621548815
+    second: cheatsheet_21
+  - first:
+      213: 7836551867502178115
+    second: cheatsheet_22
+  - first:
+      213: 4632925416014439312
+    second: cheatsheet_23
+  - first:
+      213: -7394619073687840124
+    second: cheatsheet_24
+  - first:
+      213: -5338655562243906033
+    second: cheatsheet_25
+  - first:
+      213: -1927653620788378196
+    second: cheatsheet_26
+  - first:
+      213: -2928311051622520718
+    second: cheatsheet_27
+  - first:
+      213: 7530693527135055098
+    second: cheatsheet_28
+  - first:
+      213: -2497119651753343471
+    second: cheatsheet_29
+  - first:
+      213: 220936794288412742
+    second: cheatsheet_30
+  - first:
+      213: -5666837737558103279
+    second: cheatsheet_31
+  - first:
+      213: 2459502644588788061
+    second: cheatsheet_32
+  - first:
+      213: 1710114869418642689
+    second: cheatsheet_33
+  - first:
+      213: 3485185445214098620
+    second: cheatsheet_34
+  - first:
+      213: -3087032408030405317
+    second: cheatsheet_35
+  - first:
+      213: -5161103553660877725
+    second: cheatsheet_36
+  - first:
+      213: 6838110811487539538
+    second: cheatsheet_37
+  - first:
+      213: -8551141374505210684
+    second: cheatsheet_38
+  - first:
+      213: -3114507469218618556
+    second: cheatsheet_39
+  - first:
+      213: 7336403086310375845
+    second: cheatsheet_40
+  - first:
+      213: -522579126906910793
+    second: cheatsheet_41
+  - first:
+      213: -4595746628350629915
+    second: cheatsheet_42
+  - first:
+      213: 8731670359917856719
+    second: cheatsheet_43
+  - first:
+      213: -4007782594031850262
+    second: cheatsheet_44
+  - first:
+      213: 211881540890204455
+    second: cheatsheet_45
+  - first:
+      213: 7348628988803424297
+    second: cheatsheet_46
+  - first:
+      213: 2067110522262944143
+    second: cheatsheet_47
+  - first:
+      213: -8493111817276248157
+    second: cheatsheet_48
+  - first:
+      213: -6702279859047966958
+    second: cheatsheet_49
+  - first:
+      213: 8702015704687669330
+    second: cheatsheet_50
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cheatsheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1310
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f70a2e8747614e30800000000000000
+      internalID: 4485980260863182837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_1
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1310
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da89c5f6248364a0800000000000000
+      internalID: -6601287325927765291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_2
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 1310
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e254b92013cec8510800000000000000
+      internalID: 1552875666777261358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_3
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 1310
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed6aa3a301f41b50800000000000000
+      internalID: 6563135554918706664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_4
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1310
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c84964c59355b230800000000000000
+      internalID: 3653918575391492291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_5
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1310
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85441aa1975293e60800000000000000
+      internalID: 7942420619912627288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1048
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c8e5b1fe7d6587c0800000000000000
+      internalID: -4069726296270837567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_7
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1048
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48e84cffeff31da0800000000000000
+      internalID: -5975150874395613106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_8
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 1048
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d7af3a91fc873a0800000000000000
+      internalID: -6667351539289785080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_9
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 1048
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34cf6e1b00fd07990800000000000000
+      internalID: -7390161794437284797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_10
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1048
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8cb3dc041c9832b0800000000000000
+      internalID: -5604558126334100339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_11
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1048
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f644f2d9c1975c3c0800000000000000
+      internalID: -4339929502098439057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 786
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e052f5c4a13ca870800000000000000
+      internalID: 8695379564310974695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_13
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 786
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03463a4261b7e1300800000000000000
+      internalID: 224752366449288240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_14
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 786
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36471096f23563d70800000000000000
+      internalID: 9022490366573638755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_15
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 786
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d4c6f3a3dd24b450800000000000000
+      internalID: 6103553782006072535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_16
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 786
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013c84a7474b83400800000000000000
+      internalID: 304191387208303376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_17
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 786
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbe5c0fb025fe9700800000000000000
+      internalID: 549145725578796731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 524
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac8f4afa5b9f6910800000000000000
+      internalID: 1832854388411960487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_19
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 524
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 960743a9f90e81b70800000000000000
+      internalID: 8870086442197741673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_20
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 524
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8e487ff3b49aec0800000000000000
+      internalID: -3555227692724590354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_21
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 524
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f043aaaae16414d0800000000000000
+      internalID: -3164796977621548815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_22
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 524
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f2466576601cc60800000000000000
+      internalID: 7836551867502178115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_23
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 524
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0936b6c9e157b4040800000000000000
+      internalID: 4632925416014439312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 262
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a128f7129016990800000000000000
+      internalID: -7394619073687840124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_25
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 262
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f06e9423d0949e5b0800000000000000
+      internalID: -5338655562243906033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_26
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 262
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5c9eabe399f35e0800000000000000
+      internalID: -1927653620788378196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_27
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 262
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27860380d9c8c57d0800000000000000
+      internalID: -2928311051622520718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_28
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 262
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afce7351dd5628860800000000000000
+      internalID: 7530693527135055098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_29
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 262
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116489338e2785dd0800000000000000
+      internalID: -2497119651753343471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184b7d739ce1c22fda684195d0190442
+      internalID: -1403163640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_31
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 0
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba59bea0f3c1fc3da90f21ccb027c1e
+      internalID: -983003427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_32
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aacfc58ca7739732947e4e87e764565
+      internalID: 2038932559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_33
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 0
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d053dac6127b10ca926acf0c208390
+      internalID: -368977859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_34
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 0
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318d36c02b42764bb9293497171b4a0b
+      internalID: -1774451421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cheatsheet_35
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 0
+        width: 217
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6344512a276aadf289e386a4d5122dfd
+      internalID: 921467817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2d74d772b71da170b989054edad62cba
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cheatsheet_0: 4485980260863182837
+      cheatsheet_1: -6601287325927765291
+      cheatsheet_10: -5604558126334100339
+      cheatsheet_11: -4339929502098439057
+      cheatsheet_12: 8695379564310974695
+      cheatsheet_13: 224752366449288240
+      cheatsheet_14: 9022490366573638755
+      cheatsheet_15: 6103553782006072535
+      cheatsheet_16: 304191387208303376
+      cheatsheet_17: 549145725578796731
+      cheatsheet_18: 1832854388411960487
+      cheatsheet_19: 8870086442197741673
+      cheatsheet_2: 1552875666777261358
+      cheatsheet_20: -3555227692724590354
+      cheatsheet_21: -3164796977621548815
+      cheatsheet_22: 7836551867502178115
+      cheatsheet_23: 4632925416014439312
+      cheatsheet_24: -7394619073687840124
+      cheatsheet_25: -5338655562243906033
+      cheatsheet_26: -1927653620788378196
+      cheatsheet_27: -2928311051622520718
+      cheatsheet_28: 7530693527135055098
+      cheatsheet_29: -2497119651753343471
+      cheatsheet_3: 6563135554918706664
+      cheatsheet_30: -1403163640
+      cheatsheet_31: -983003427
+      cheatsheet_32: 2038932559
+      cheatsheet_33: -368977859
+      cheatsheet_34: -1774451421
+      cheatsheet_35: 921467817
+      cheatsheet_4: 3653918575391492291
+      cheatsheet_5: 7942420619912627288
+      cheatsheet_6: -4069726296270837567
+      cheatsheet_7: -5975150874395613106
+      cheatsheet_8: -6667351539289785080
+      cheatsheet_9: -7390161794437284797
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,30 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
 guid: c9a7ba8cd0453b54bb61e2bd69fbc76b
-=======
-guid: da356f73708d8a40197226098f462639
->>>>>>> 9ceec05 (feat: add images)
-=======
-guid: da356f73708d8a40197226098f462639
->>>>>>> 9ceec05 (feat: add images)
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 976508318212584436
-    second: minion_0
-  - first:
-      213: 2558563176373075412
-    second: minion_1
-  - first:
-      213: -4929529862601557568
-    second: minion_2
-  - first:
-      213: -8244174728236160723
-    second: minion_3
-  - first:
-      213: 2223739927697154483
-    second: minion_4
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,12 +34,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -86,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,20 +100,20 @@ TextureImporter:
       name: minion_0
       rect:
         serializedVersion: 2
-        x: 62
-        y: 307
-        width: 222
-        height: 223
+        x: 0
+        y: 287
+        width: 309
+        height: 287
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4f3764344214d8d00800000000000000
-      internalID: 976508318212584436
+      spriteID: 42573e0deebf7b6cc814fb822f31f093
+      internalID: -1116834924
       vertices: []
       indices: 
       edges: []
@@ -145,20 +122,20 @@ TextureImporter:
       name: minion_1
       rect:
         serializedVersion: 2
-        x: 352
-        y: 389
-        width: 170
-        height: 97
+        x: 309
+        y: 287
+        width: 309
+        height: 287
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4ddbc1f27a7d18320800000000000000
-      internalID: 2558563176373075412
+      spriteID: 2ab0e82f696ff9b88877cf9564f6d281
+      internalID: -1803382046
       vertices: []
       indices: 
       edges: []
@@ -167,20 +144,20 @@ TextureImporter:
       name: minion_2
       rect:
         serializedVersion: 2
-        x: 22
-        y: 22
-        width: 233
-        height: 219
+        x: 0
+        y: 0
+        width: 309
+        height: 287
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0c934fd25bac69bb0800000000000000
-      internalID: -4929529862601557568
+      spriteID: af4ac7a956ad32eee94bdd45c16b9f72
+      internalID: 978838509
       vertices: []
       indices: 
       edges: []
@@ -189,42 +166,20 @@ TextureImporter:
       name: minion_3
       rect:
         serializedVersion: 2
-        x: 361
-        y: 40
-        width: 210
-        height: 222
+        x: 309
+        y: 0
+        width: 309
+        height: 287
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d292b31a3cec69d80800000000000000
-      internalID: -8244174728236160723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minion_4
-      rect:
-        serializedVersion: 2
-        x: 567
-        y: 155
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3b1ed3faeaf4cde10800000000000000
-      internalID: 2223739927697154483
+      spriteID: d6d9dd851e49dd8a0acbd111941aebbf
+      internalID: -1615083775
       vertices: []
       indices: 
       edges: []
@@ -233,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 96ded194840facf3dab2e118ee9e20e4
     internalID: 0
     vertices: []
     indices: 
@@ -243,11 +198,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      minion_0: 976508318212584436
-      minion_1: 2558563176373075412
-      minion_2: -4929529862601557568
-      minion_3: -8244174728236160723
-      minion_4: 2223739927697154483
+      minion_0: -1116834924
+      minion_1: -1803382046
+      minion_2: 978838509
+      minion_3: -1615083775
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

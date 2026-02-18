@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2489760904088848115}
   - component: {fileID: 1436700091820379538}
   - component: {fileID: 6106847958965718310}
+  - component: {fileID: 7975169949307011006}
+  - component: {fileID: 9108266344187787992}
   m_Layer: 0
   m_Name: CujaeMalePlayer
   m_TagString: Player
@@ -108,9 +110,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 8793639957104055765, guid: 6585a43b7f8b352439be293073e65bee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.16, y: 0.16}
@@ -153,8 +155,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.002977267, y: -0.00049134344}
-  m_Size: {x: 0.19150731, y: 0.1937529}
+  m_Offset: {x: -0.06347203, y: 0.10321379}
+  m_Size: {x: 0.9001584, y: 2.751812}
   m_Direction: 0
 --- !u!114 &1436700091820379538
 MonoBehaviour:
@@ -177,6 +179,7 @@ MonoBehaviour:
     m_Bits: 8
   softBulletPrefab: {fileID: 5722484108183235105, guid: c857b7578020d84b19a2bfa9f00fc42e, type: 3}
   hardBulletPrefab: {fileID: 2760570311657211737, guid: a6aad525543fa3956862ca368a727b39, type: 3}
+  hud: {fileID: 0}
 --- !u!114 &6106847958965718310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +195,74 @@ MonoBehaviour:
   speedMultiplier: 1
   fireRateMultiplier: 1
   isInvencible: 0
+--- !u!95 &7975169949307011006
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3717959297717209545}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a2451f1864f5ad14bbc1ff62bf39f438, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!61 &9108266344187787992
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3717959297717209545}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.0333488, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.06, y: 2.59}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.6598153, y: 2.59}
+  m_EdgeRadius: 0
 --- !u!1 &7593857878728247330
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +288,7 @@ Transform:
   m_GameObject: {fileID: 7593857878728247330}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.318, y: -0.087, z: 0}
+  m_LocalPosition: {x: 0.318, y: -1.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

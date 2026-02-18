@@ -89,6 +89,11 @@ public class ElParcialBoss : BossSO
 
     public override void PerformAttack(AttackType type)
     {
+        PerformAttack(type, Vector2.zero);
+    }
+
+    public override void PerformAttack(AttackType type, Vector2 bossPosition)
+    {
         var attacks = GetPhasedAttacks();
         var validAttacks = attacks.Where(a => a != null && a.IsValidForPhase((BossPhase)currentPhase)).ToArray();
 
@@ -100,10 +105,23 @@ public class ElParcialBoss : BossSO
 
         var selectedAttack = validAttacks[UnityEngine.Random.Range(0, validAttacks.Length)];
 
-        if (selectedAttack != null && selectedAttack.CanExecute)
+        if (selectedAttack == null)
         {
-            selectedAttack.Execute();
+            Debug.LogWarning($"Selected attack is null");
+            return;
+        }
+
+        Debug.Log($"Selected attack: {selectedAttack.AttackName} | CanExecute: {selectedAttack.CanExecute} | LastAttackTime: {selectedAttack.LastAttackTime} | Cooldown: {selectedAttack.Cooldown}");
+
+        if (selectedAttack.CanExecute)
+        {
+            Debug.Log($"Boss executes {selectedAttack.AttackName} of type {type} in phase {currentPhase}");
+            selectedAttack.Execute(bossPosition);
             OnAttack?.Invoke(type);
+        }
+        else
+        {
+            Debug.LogWarning($"Attack {selectedAttack.AttackName} not ready. Cooldown remaining: {(selectedAttack.LastAttackTime + selectedAttack.Cooldown) - Time.time:F2}s");
         }
     }
 

@@ -6,6 +6,9 @@ using UnityEngine;
 /// </summary>
 public class BossHit : MonoBehaviour
 {
+    [Header("Enfoque Reward")]
+    [SerializeField] private float enfoqueReward = 5f;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log($"BossHit detecta colisión con: {collision.gameObject.name}");
@@ -31,6 +34,14 @@ public class BossHit : MonoBehaviour
         else
         {
             Debug.LogError("No se encontró componente Boss en el GameObject");
+        }
+
+        // Otorgar enfoque al jugador por acertar el ataque
+        Player player = FindFirstObjectByType<Player>();
+        if (player != null && player.player_behaviour != null)
+        {
+            player.player_behaviour.AddEnfoque(enfoqueReward);
+            Debug.Log($"Jugador recibe {enfoqueReward} de enfoque por acertar al boss");
         }
 
         // Destruir el projectil después del impacto

@@ -17,7 +17,7 @@ public class MeleeAttack : BossAttackSO
 
     [Header("Melee Settings")]
     [SerializeField] private float meleeRange = 3f;
-    [SerializeField] private float meleeDuration = 0.5f;
+    [SerializeField] private LayerMask playerLayer;
 
     // ========== ESTADO PRIVADO ==========
 
@@ -30,7 +30,7 @@ public class MeleeAttack : BossAttackSO
     public override float Damage => damage;
     public override float Cooldown => cooldown;
     public override float LastAttackTime => lastAttackTime;
-    public override bool CanExecute => Time.time - lastAttackTime >= cooldown;
+    public override bool CanExecute => Time.time - lastAttackTime >= cooldown - 0.01f;
     public override bool IsInProgress => isInProgress;
 
     // ========== EVENTOS ==========
@@ -43,6 +43,12 @@ public class MeleeAttack : BossAttackSO
 
     public override void Execute()
     {
+        // Sin posición del boss, no podemos detectar colisión
+        Debug.LogWarning("MeleeAttack.Execute() llamado sin posición del boss. Usar Execute(Vector2).");
+    }
+
+    public override void Execute(Vector2 bossPosition)
+    {
         if (!CanExecute)
             return;
 
@@ -50,13 +56,10 @@ public class MeleeAttack : BossAttackSO
         isInProgress = true;
         OnAttackStarted?.Invoke();
 
-        Debug.Log($"Boss ejecuta: {attackName}");
-        
-        // Crear hitbox melee y verificar colisión
-        CreateMeleeHitbox();
+        Debug.Log($"Boss ejecuta: {attackName} desde posición {bossPosition}");
 
-        // Notificar que golpea al jugador
-        OnAttackHitPlayer?.Invoke(damage);
+        // Detectar y dañar al jugador en rango
+        CreateMeleeHitbox(bossPosition);
 
         isInProgress = false;
         OnAttackEnded?.Invoke();
@@ -74,16 +77,29 @@ public class MeleeAttack : BossAttackSO
 
     // ========== MÉTODOS PRIVADOS ==========
 
-    private void CreateMeleeHitbox()
+    private void CreateMeleeHitbox(Vector2 bossPosition)
     {
-        // La lógica de hitbox dependerá del sistema de colisiones del juego
-        // Por ahora solo registramos el ataque
-        
-        Debug.Log($"Hitbox Melee activado - Range: {meleeRange}, Duration: {meleeDuration}s");
+        // Detectar colisiones con Physics2D.OverlapCircle
+        Collider2D[] hits = Physics2D.OverlapCircleAll(bossPosition, meleeRange, playerLayer);
 
-        // Aquí se podría:
-        // 1. Crear un collider temporal
-        // 2. Detectar colisiones con Physics2D.OverlapCircle
-        // 3. Aplicar daño a entidades en rango
+        if (hits.Length == 0)
+        {
+            Debug.Log($"MeleeAttack: No hay jugador en rango {meleeRange} desde {bossPosition}");
+            return;
+        }
+
+        foreach (Collider2D hit in hits)
+        {
+            if (hit.CompareTag("Player"))
+            {
+                Player player = hit.GetComponent<Player>();
+                if (player != null && player.player_behaviour != null)
+                {
+                    player.player_behaviour.AddStress(damage);
+                    OnAttackHitPlayer?.Invoke(damage);
+                    Debug.Log($"MeleeAttack golpea al jugador por {damage} de estrés");
+                }
+            }
+        }
     }
 }

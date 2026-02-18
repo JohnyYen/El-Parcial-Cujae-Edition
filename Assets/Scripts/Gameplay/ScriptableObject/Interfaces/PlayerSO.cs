@@ -18,6 +18,8 @@ public abstract class PlayerSO : ScriptableObject, IPlayerBehaviour, IPlayerProp
     public abstract float SoftAttackCooldown { get; }
     public abstract float HardAttackCooldown { get; }
     public abstract float DashCooldown { get; }
+    public abstract float MaxStress { get; }
+    public abstract float MaxEnfoque { get; }
 
     // ========== MÉTODOS ==========
 

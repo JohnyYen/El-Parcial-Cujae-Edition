@@ -10,8 +10,11 @@ public class NewGamePanel : MonoBehaviour
     [Header("Delete Buttons (asignar 3 elementos)")]
     [SerializeField] private GameObject[] deleteButtons;
 
-    [Header("Gameplay Scene")]
-    [SerializeField] private string gameplaySceneName = "Gameplay";
+    [Header("Intro Scene")]
+    [SerializeField] private string introSceneName = "IntroNarrativa";
+
+    [Header("Level Select Scene")]
+    [SerializeField] private string levelSelectSceneName = "LevelSelect";
 
     private const int MaxSlots = 3;
     private int selectedSlot = -1;
@@ -68,12 +71,12 @@ public class NewGamePanel : MonoBehaviour
         PlayerPrefs.SetString($"SaveSlot_{slotIndex}", System.DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
         PlayerPrefs.SetInt("CurrentSlot", slotIndex);
         PlayerPrefs.Save();
-        SceneManager.LoadScene(gameplaySceneName);
+        SceneManager.LoadScene(introSceneName);
     }
 
     private void LoadGame(int slotIndex)
     {
         PlayerPrefs.SetInt("CurrentSlot", slotIndex);
-        SceneManager.LoadScene(gameplaySceneName);
+        SceneManager.LoadScene(levelSelectSceneName);
     }
 }

@@ -11,6 +11,9 @@ public class Boss : MonoBehaviour
     [Header("Boss Behavior")]
     [SerializeField] private ElParcialBoss bossBehaviour;
 
+    [Header("Victory Screen")]
+    [SerializeField] private VictoryScreen victoryScreen;
+
     [Header("Attack Timing")]
     [SerializeField] private float attackInterval = 3f;
 
@@ -29,6 +32,8 @@ public class Boss : MonoBehaviour
     public ElParcialBoss BossBehaviour => bossBehaviour;
     public bool IsAlive => bossBehaviour != null && bossBehaviour.IsAlive;
 
+    private Animator animator;
+
     // ========== INICIALIZACIÓN ==========
 
     void Start()
@@ -42,6 +47,7 @@ public class Boss : MonoBehaviour
         SetupEventSubscriptions();
         lastAttackTime = Time.time;
         lastSpawnTime = Time.time;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -62,6 +68,8 @@ public class Boss : MonoBehaviour
             SpawnMinion();
             lastSpawnTime = Time.time;
         }
+
+        animator.SetInteger("Phase", bossBehaviour.CurrentPhase);
     }
 
     // ========== MÉTODOS PÚBLICOS ==========
@@ -92,8 +100,10 @@ public class Boss : MonoBehaviour
         if (!IsAlive) return;
 
         // Seleccionar tipo de ataque según la fase
+        animator.SetTrigger("Attack");
         AttackType attackType = GetRandomAttackForPhase();
-        bossBehaviour.PerformAttack(attackType);
+        Debug.Log($"Boss ejecuta ataque en fase {bossBehaviour.CurrentPhase}");
+        bossBehaviour.PerformAttack(attackType, transform.position);
     }
 
     private AttackType GetRandomAttackForPhase()
@@ -182,7 +192,16 @@ public class Boss : MonoBehaviour
     private void OnBossDeath()
     {
         Debug.Log("¡El Parcial ha sido derrotado!");
-        // Aquí iría lógica de victoria, drop de items, etc.
+
+        // Mostrar pantalla de victoria
+        if (victoryScreen != null)
+        {
+            victoryScreen.Show();
+        }
+        else
+        {
+            Debug.LogWarning("VictoryScreen no está asignado en el Inspector!");
+        }
     }
 
     private void OnBossAttack(AttackType attackType)
