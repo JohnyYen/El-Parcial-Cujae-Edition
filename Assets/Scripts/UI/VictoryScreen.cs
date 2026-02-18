@@ -33,6 +33,7 @@ public class VictoryScreen : MonoBehaviour
 
     private void Start()
     {
+        gameObject.SetActive(false);
         Application.targetFrameRate = 60;
 
         // Initialize hidden state

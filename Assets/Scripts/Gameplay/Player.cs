@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -259,10 +260,10 @@ public class Player : MonoBehaviour
         }
         
         // Pausar el juego
-        Time.timeScale = 0f;
+        // Time.timeScale = 0f;
         
         // TODO: Mostrar pantalla de Game Over
-        // SceneManager.LoadScene("GameOverScreen");
+        SceneManager.LoadScene("GameOver");
     }
 
     private void OnPlayerEnfoqueChanged(float newEnfoque)

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1436700091820379538}
   - component: {fileID: 6106847958965718310}
   - component: {fileID: 7975169949307011006}
+  - component: {fileID: 9108266344187787992}
   m_Layer: 0
   m_Name: CujaeMalePlayer
   m_TagString: Player
@@ -178,6 +179,7 @@ MonoBehaviour:
     m_Bits: 8
   softBulletPrefab: {fileID: 5722484108183235105, guid: c857b7578020d84b19a2bfa9f00fc42e, type: 3}
   hardBulletPrefab: {fileID: 2760570311657211737, guid: a6aad525543fa3956862ca368a727b39, type: 3}
+  hud: {fileID: 0}
 --- !u!114 &6106847958965718310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +217,52 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!61 &9108266344187787992
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3717959297717209545}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.0333488, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.06, y: 2.59}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.6598153, y: 2.59}
+  m_EdgeRadius: 0
 --- !u!1 &7593857878728247330
 GameObject:
   m_ObjectHideFlags: 0
