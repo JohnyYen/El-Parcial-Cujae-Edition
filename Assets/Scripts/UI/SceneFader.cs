@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 using System.Collections;
+using UnityEngine.UI;
 
 /// <summary>
 /// Sistema de fade reutilizable para transiciones entre escenas.
@@ -42,17 +43,22 @@ public class SceneFader : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log("=== SCENE FADER AWAKE ===");
+
         // Singleton
         if (Instance != null && Instance != this)
         {
+            Debug.LogWarning($"SceneFader duplicado detectado, destruyendo: {gameObject.name}");
             Destroy(gameObject);
             return;
         }
 
         Instance = this;
+        Debug.Log($"SceneFader Instance asignado: {gameObject.name}");
 
         // No destruir entre escenas
         DontDestroyOnLoad(gameObject);
+        Debug.Log("DontDestroyOnLoad aplicado");
 
         // Obtener o añadir CanvasGroup
         canvasGroup = GetComponent<CanvasGroup>();
@@ -64,6 +70,9 @@ public class SceneFader : MonoBehaviour
         // Configurar inicialmente
         canvasGroup.blocksRaycasts = true;
         canvasGroup.interactable = false;
+        canvasGroup.alpha = 0f;  // Iniciar transparente
+
+        Debug.Log($"CanvasGroup configurado - Alpha: {canvasGroup.alpha}, BlocksRaycasts: {canvasGroup.blocksRaycasts}");
 
         // Asegurar que el canvas esté configurado correctamente
         SetupCanvas();
@@ -71,9 +80,12 @@ public class SceneFader : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log($"=== SCENE FADER START === fadeOnStart: {fadeOnStart}");
+        
         if (fadeOnStart)
         {
             // Iniciar con fade in desde negro
+            Debug.Log($"Iniciando FadeIn con duración: {startFadeInDuration}s");
             FadeIn(startFadeInDuration);
         }
     }
@@ -305,6 +317,25 @@ public class SceneFader : MonoBehaviour
 
         // Cargar escena
         SceneManager.LoadScene(sceneName);
+        
+        // Esperar un frame para que la nueva escena se inicialice
+        yield return null;
+
+        // Fade in desde negro (manual porque DontDestroyOnLoad no ejecuta Awake de nuevo)
+        elapsed = 0f;
+        float fadeInDuration = defaultFadeDuration;
+        while (elapsed < fadeInDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / fadeInDuration;
+            t = 1f - (1f - t) * (1f - t);
+            canvasGroup.alpha = Mathf.Lerp(1f, 0f, t);
+            yield return null;
+        }
+
+        canvasGroup.alpha = 0f;
+        canvasGroup.blocksRaycasts = false;
+        isFading = false;
     }
 
     private IEnumerator FadeTransitionRoutine(string sceneName, float fadeOutDuration, float fadeInDuration)
