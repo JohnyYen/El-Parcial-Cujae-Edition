@@ -68,6 +68,11 @@ public class IntroNarrativaManager : MonoBehaviour
     [SerializeField] private AudioClip ambientMusic;
     [SerializeField][Range(0f, 1f)] private float musicVolume = 0.4f;
 
+    [Header("Typewriter Audio")]
+    [SerializeField] private AudioClip typewriterSound;
+    [SerializeField][Range(0f, 1f)] private float typewriterVolume = 0.5f;
+    [SerializeField] private bool playTypewriterSound = true;
+
     // ========== SCENE ==========
 
     [Header("Scene")]
@@ -92,6 +97,7 @@ public class IntroNarrativaManager : MonoBehaviour
     private Coroutine autoAdvanceCoroutine;
     private Coroutine blinkCoroutine;
     private AudioSource audioSource;
+    private AudioSource typewriterAudioSource;
     private Vector2 originalTextPosition;
 
     // ========== INICIALIZACIÓN ==========
@@ -120,6 +126,7 @@ public class IntroNarrativaManager : MonoBehaviour
 
     private void SetupAudio()
     {
+        // Audio ambiente
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = ambientMusic;
         audioSource.volume = musicVolume;
@@ -129,6 +136,16 @@ public class IntroNarrativaManager : MonoBehaviour
         if (ambientMusic != null)
         {
             audioSource.Play();
+        }
+
+        // Audio de typewriter
+        if (typewriterSound != null)
+        {
+            typewriterAudioSource = gameObject.AddComponent<AudioSource>();
+            typewriterAudioSource.clip = typewriterSound;
+            typewriterAudioSource.volume = typewriterVolume;
+            typewriterAudioSource.loop = true;
+            typewriterAudioSource.playOnAwake = false;
         }
     }
 
@@ -278,11 +295,24 @@ public class IntroNarrativaManager : MonoBehaviour
         int totalVisibleCharacters = textComponent.textInfo.characterCount;
         int counter = 0;
 
+        // INICIAR AUDIO de typewriter
+        if (playTypewriterSound && typewriterAudioSource != null && typewriterSound != null)
+        {
+            typewriterAudioSource.time = 0f;
+            typewriterAudioSource.Play();
+        }
+
         while (counter < totalVisibleCharacters)
         {
             counter++;
             textComponent.maxVisibleCharacters = counter;
             yield return new WaitForSeconds(typewriterSpeed);
+        }
+
+        // DETENER AUDIO de typewriter
+        if (typewriterAudioSource != null && typewriterAudioSource.isPlaying)
+        {
+            typewriterAudioSource.Stop();
         }
 
         isTypewriting = false;
@@ -479,12 +509,17 @@ public class IntroNarrativaManager : MonoBehaviour
             StopCoroutine(currentTypewriterCoroutine);
         }
 
+        // Detener audio de typewriter
+        if (typewriterAudioSource != null && typewriterAudioSource.isPlaying)
+        {
+            typewriterAudioSource.Stop();
+        }
+
         if (introText != null)
         {
             introText.maxVisibleCharacters = introText.textInfo.characterCount;
             introText.alpha = 1f;
             
-            // 确保位置正确
             if (useSlideUpAnimation)
             {
                 introText.rectTransform.anchoredPosition = originalTextPosition;
