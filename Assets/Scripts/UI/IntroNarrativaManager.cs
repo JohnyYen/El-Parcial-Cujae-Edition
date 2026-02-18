@@ -87,6 +87,7 @@ public class IntroNarrativaManager : MonoBehaviour
 
     private int currentSlideIndex = 0;
     private bool isTypewriting = false;
+    private Coroutine currentSlideCoroutine;
     private Coroutine currentTypewriterCoroutine;
     private Coroutine autoAdvanceCoroutine;
     private Coroutine blinkCoroutine;
@@ -204,14 +205,15 @@ public class IntroNarrativaManager : MonoBehaviour
 
         while (currentSlideIndex < slides.Length)
         {
-            // Mostrar el slide actual
-            yield return StartCoroutine(ShowSlide(currentSlideIndex));
+            // Mostrar el slide actual y guardar referencia
+            currentSlideCoroutine = StartCoroutine(ShowSlide(currentSlideIndex));
+            yield return currentSlideCoroutine;
 
             // Esperar el tiempo del slide O hasta que el usuario avance
             autoAdvanceCoroutine = StartCoroutine(AutoAdvanceTimer());
             yield return autoAdvanceCoroutine;
 
-            // Avanzar al siguiente slide
+            // Avanzar al siguiente slide (auto advance)
             currentSlideIndex++;
             UpdateProgressBar();
         }
@@ -430,27 +432,44 @@ public class IntroNarrativaManager : MonoBehaviour
     {
         Debug.Log($"AdvanceToNextSlide - isTypewriting: {isTypewriting}, currentSlideIndex: {currentSlideIndex}");
 
-        if (isTypewriting)
+        // Detener cualquier corrutina de slide en progreso
+        if (currentSlideCoroutine != null)
         {
-            CompleteTypewriterImmediately();
-            return;
+            StopCoroutine(currentSlideCoroutine);
         }
-
+        if (currentTypewriterCoroutine != null)
+        {
+            StopCoroutine(currentTypewriterCoroutine);
+        }
         if (autoAdvanceCoroutine != null)
         {
             StopCoroutine(autoAdvanceCoroutine);
         }
 
-        // Incrementar índice aquí también para avance manual
+        // Si está mostrando el slide actual, completar el typewriter primero
+        if (isTypewriting)
+        {
+            CompleteTypewriterImmediately();
+        }
+
+        // Ocultar hint
+        HideHint();
+
+        // Incrementar índice
         currentSlideIndex++;
         UpdateProgressBar();
 
         Debug.Log($"Nuevo índice: {currentSlideIndex}, Total slides: {slides.Length}");
 
+        // Si llegamos al final, ir a siguiente escena
         if (currentSlideIndex >= slides.Length)
         {
             StartCoroutine(GoToNextScene());
+            return;
         }
+
+        // MOSTRAR SIGUIENTE SLIDE INMEDIATAMENTE
+        currentSlideCoroutine = StartCoroutine(ShowSlide(currentSlideIndex));
     }
 
     private void CompleteTypewriterImmediately()
