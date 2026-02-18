@@ -25,6 +25,10 @@ public class HardBullet : MonoBehaviour, IBullet
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        // No destruir si impacta un enemigo (el enemigo maneja la destrucción)
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Boss"))
+            return;
+
         Destroy(gameObject);
     }
 }
