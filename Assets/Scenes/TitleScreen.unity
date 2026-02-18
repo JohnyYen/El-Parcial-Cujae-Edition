@@ -8586,7 +8586,8 @@ MonoBehaviour:
   - {fileID: 590061740}
   - {fileID: 811817842}
   - {fileID: 175858599}
-  introSceneName: IntroNarrativa
+  introSceneName: IntroNarrative
+  levelSelectSceneName: LevelSelect
 --- !u!114 &1901141232
 MonoBehaviour:
   m_ObjectHideFlags: 0

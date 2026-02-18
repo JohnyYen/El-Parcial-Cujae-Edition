@@ -52,7 +52,7 @@ public class TitleScreenManager : MonoBehaviour
 
     public void OnJugar()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void OnNuevoJuego()

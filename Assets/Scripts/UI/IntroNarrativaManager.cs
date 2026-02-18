@@ -50,7 +50,7 @@ public class IntroNarrativaManager : MonoBehaviour
     [SerializeField][Range(0f, 1f)] private float musicVolume = 0.4f;
 
     [Header("Scene")]
-    [SerializeField] private string nextSceneName = "Gameplay";
+    [SerializeField] private string nextSceneName = "LevelSelect";
 
     [Header("UI References")]
     [SerializeField] private TMP_Text introText;
