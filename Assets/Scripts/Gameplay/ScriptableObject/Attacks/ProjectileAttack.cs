@@ -30,6 +30,7 @@ public class ProjectileAttack : BossAttackSO
     // ========== PROPIEDADES ==========
 
     public override string AttackName => attackName;
+    public override AttackType Type => AttackType.Projectile;
     public override float Damage => damage;
     public override float Cooldown => cooldown;
     public override float LastAttackTime => lastAttackTime;

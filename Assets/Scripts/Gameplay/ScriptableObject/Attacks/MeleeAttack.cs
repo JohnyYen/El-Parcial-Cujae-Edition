@@ -27,6 +27,7 @@ public class MeleeAttack : BossAttackSO
     // ========== PROPIEDADES ==========
 
     public override string AttackName => attackName;
+    public override AttackType Type => AttackType.Melee;
     public override float Damage => damage;
     public override float Cooldown => cooldown;
     public override float LastAttackTime => lastAttackTime;
@@ -79,6 +80,9 @@ public class MeleeAttack : BossAttackSO
 
     private void CreateMeleeHitbox(Vector2 bossPosition)
     {
+        // Dibujar círculo de debug para visualizar el rango
+        DrawDebugCircle(bossPosition, meleeRange, Color.red, 1f);
+
         // Detectar colisiones con Physics2D.OverlapCircle
         Collider2D[] hits = Physics2D.OverlapCircleAll(bossPosition, meleeRange, playerLayer);
 
@@ -100,6 +104,25 @@ public class MeleeAttack : BossAttackSO
                     Debug.Log($"MeleeAttack golpea al jugador por {damage} de estrés");
                 }
             }
+        }
+    }
+
+    /// <summary>
+    /// Dibuja un círculo de debug en 2D.
+    /// </summary>
+    private void DrawDebugCircle(Vector2 center, float radius, Color color, float duration)
+    {
+        int segments = 36;
+        float angleStep = 360f / segments;
+
+        Vector3 prevPoint = center + new Vector2(Mathf.Cos(0), Mathf.Sin(0)) * radius;
+
+        for (int i = 1; i <= segments; i++)
+        {
+            float angle = Mathf.Deg2Rad * (angleStep * i);
+            Vector3 newPoint = center + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * radius;
+            Debug.DrawLine(prevPoint, newPoint, color, duration);
+            prevPoint = newPoint;
         }
     }
 }

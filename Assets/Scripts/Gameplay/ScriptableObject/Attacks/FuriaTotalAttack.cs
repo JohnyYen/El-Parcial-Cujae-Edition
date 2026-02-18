@@ -33,6 +33,7 @@ public class FuriaTotalAttack : BossAttackSO
     // ========== PROPIEDADES ==========
 
     public override string AttackName => attackName;
+    public override AttackType Type => AttackType.Area;
     public override float Damage => damage;
     public override float Cooldown => cooldown;
     public override float LastAttackTime => lastAttackTime;

@@ -17,6 +17,9 @@ public class Boss : MonoBehaviour
     [Header("Attack Timing")]
     [SerializeField] private float attackInterval = 3f;
 
+    [Header("Attack Configuration")]
+    [SerializeField] private float meleeDetectionRange = 4f;
+
     [Header("Minion Spawning")]
     [SerializeField] private float minionSpawnInterval = 5f;
     [SerializeField] private GameObject basicMinionPrefab;
@@ -99,10 +102,32 @@ public class Boss : MonoBehaviour
     {
         if (!IsAlive) return;
 
-        // Seleccionar tipo de ataque según la fase
+        // Buscar al jugador
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj == null)
+        {
+            Debug.LogWarning("No se encontró al jugador!");
+            return;
+        }
+
+        // Calcular distancia al jugador
+        float distanceToPlayer = Vector2.Distance(transform.position, playerObj.transform.position);
+        AttackType attackType;
+
+        // Si el jugador está cerca, intentar ataque Melee
+        if (distanceToPlayer <= meleeDetectionRange)
+        {
+            attackType = AttackType.Melee;
+            Debug.Log($"Jugador cerca ({distanceToPlayer:F2}m) - Boss intenta Melee en fase {bossBehaviour.CurrentPhase}");
+        }
+        else
+        {
+            // Si está lejos, seleccionar ataque aleatorio (excluyendo Melee)
+            attackType = GetRandomRangedAttackForPhase();
+            Debug.Log($"Jugador lejos ({distanceToPlayer:F2}m) - Boss ejecuta ataque a distancia en fase {bossBehaviour.CurrentPhase}");
+        }
+
         animator.SetTrigger("Attack");
-        AttackType attackType = GetRandomAttackForPhase();
-        Debug.Log($"Boss ejecuta ataque en fase {bossBehaviour.CurrentPhase}");
         bossBehaviour.PerformAttack(attackType, transform.position);
     }
 
@@ -113,6 +138,20 @@ public class Boss : MonoBehaviour
             1 => (AttackType)Random.Range(0, 2),  // Melee o Projectile
             2 => (AttackType)Random.Range(0, 3),  // Cualquiera
             3 => (AttackType)Random.Range(0, 3),  // Todos con igual probabilidad
+            _ => AttackType.Projectile
+        };
+    }
+
+    /// <summary>
+    /// Obtiene un ataque aleatorio a distancia (excluyendo Melee) según la fase actual.
+    /// </summary>
+    private AttackType GetRandomRangedAttackForPhase()
+    {
+        return bossBehaviour.CurrentPhase switch
+        {
+            1 => AttackType.Projectile,  // Solo Projectile disponible
+            2 => Random.value < 0.5f ? AttackType.Projectile : AttackType.Area,  // Projectile o Area
+            3 => Random.value < 0.5f ? AttackType.Projectile : AttackType.Area,  // Projectile o Area
             _ => AttackType.Projectile
         };
     }

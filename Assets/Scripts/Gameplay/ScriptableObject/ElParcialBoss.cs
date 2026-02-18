@@ -95,11 +95,13 @@ public class ElParcialBoss : BossSO
     public override void PerformAttack(AttackType type, Vector2 bossPosition)
     {
         var attacks = GetPhasedAttacks();
-        var validAttacks = attacks.Where(a => a != null && a.IsValidForPhase((BossPhase)currentPhase)).ToArray();
+        var validAttacks = attacks
+            .Where(a => a != null && a.IsValidForPhase((BossPhase)currentPhase) && a.Type == type)
+            .ToArray();
 
         if (validAttacks.Length == 0)
         {
-            Debug.LogWarning($"No valid attacks found for phase {currentPhase}");
+            Debug.LogWarning($"No valid attacks of type {type} found for phase {currentPhase}");
             return;
         }
 

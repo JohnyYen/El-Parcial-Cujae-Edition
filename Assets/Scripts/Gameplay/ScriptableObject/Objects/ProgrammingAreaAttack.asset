@@ -17,10 +17,11 @@ MonoBehaviour:
   cooldown: 3
   validPhases: 020000000300000001000000
   areaPrefab: {fileID: 2597932270596559170, guid: 79d315ac245a26a88a0736a89f92290c, type: 3}
-  areaRadius: 5
+  areaRadius: 4
   areaDuration: 2
-  initialRadiusScale: 0.2
+  initialRadiusScale: 0.1
+  delayBeforeExpansion: 0.6
   expansionDuration: 0.8
-  minDistanceLeft: 2
-  maxDistanceLeft: 10
+  minDistanceLeft: 1
+  maxDistanceLeft: 20
   verticalVariation: 5

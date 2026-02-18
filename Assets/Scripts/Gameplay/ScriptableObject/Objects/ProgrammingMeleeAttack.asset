@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackName: Golpe Directo
   damage: 30
-  cooldown: 1.5
+  cooldown: 0
   validPhases: 010000000200000003000000
-  meleeRange: 3
-  meleeDuration: 0.5
+  meleeRange: 6
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0

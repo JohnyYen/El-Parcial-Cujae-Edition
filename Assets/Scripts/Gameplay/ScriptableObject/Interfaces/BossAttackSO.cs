@@ -7,6 +7,7 @@ public abstract class BossAttackSO : ScriptableObject, IBossAttack
     // ========== IDENTIFICACIÓN ==========
 
     public abstract string AttackName { get; }
+    public abstract AttackType Type { get; }
     public abstract float Damage { get; }
 
     // ========== EJECUCIÓN ==========
