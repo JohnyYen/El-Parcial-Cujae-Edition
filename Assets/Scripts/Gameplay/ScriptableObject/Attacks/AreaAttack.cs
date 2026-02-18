@@ -3,7 +3,7 @@ using System;
 
 /// <summary>
 /// Implementación de ataque de área.
-/// Crea una zona de daño expansiva que afecta toda el área de juego.
+/// Crea una zona de daño expansiva desde la posición del boss.
 /// </summary>
 [CreateAssetMenu(fileName = "AreaAttack", menuName = "Boss Attacks/Area")]
 public class AreaAttack : BossAttackSO
@@ -24,6 +24,7 @@ public class AreaAttack : BossAttackSO
 
     private float lastAttackTime = -999f;
     private bool isInProgress;
+    private Vector2 lastBossPosition;
 
     // ========== PROPIEDADES ==========
 
@@ -46,22 +47,26 @@ public class AreaAttack : BossAttackSO
     {
         lastAttackTime = -999f;
     }
+
     public override void Execute()
+    {
+        Execute(Vector2.zero);
+    }
+
+    public override void Execute(Vector2 bossPosition)
     {
         if (!CanExecute)
             return;
 
         lastAttackTime = Time.time;
+        lastBossPosition = bossPosition;
         isInProgress = true;
         OnAttackStarted?.Invoke();
 
-        Debug.Log($"Boss ejecuta: {attackName}");
+        Debug.Log($"Boss ejecuta: {attackName} desde {bossPosition}");
 
         // Crear área de daño
         CreateDamageArea();
-
-        // Notificar que golpea al jugador
-        OnAttackHitPlayer?.Invoke(damage);
 
         isInProgress = false;
         OnAttackEnded?.Invoke();
@@ -87,8 +92,8 @@ public class AreaAttack : BossAttackSO
             return;
         }
 
-        // Posición de spawn (normalmente desde la posición del boss)
-        Vector3 spawnPos = Vector3.zero;
+        // Posición de spawn desde la posición del boss
+        Vector2 spawnPos = lastBossPosition;
 
         // Instanciar área de daño
         GameObject areaObj = Instantiate(areaPrefab, spawnPos, Quaternion.identity);
@@ -114,6 +119,6 @@ public class AreaAttack : BossAttackSO
         // Destruir después de la duración
         Destroy(areaObj, areaDuration);
 
-        Debug.Log($"Área de daño creada - Radius: {areaRadius}, Duration: {areaDuration}s, Daño: {damage}");
+        Debug.Log($"Área de daño creada en {spawnPos} - Radius: {areaRadius}, Duration: {areaDuration}s, Daño: {damage}");
     }
 }

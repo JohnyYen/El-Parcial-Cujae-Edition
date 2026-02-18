@@ -89,6 +89,11 @@ public class ElParcialBoss : BossSO
 
     public override void PerformAttack(AttackType type)
     {
+        PerformAttack(type, Vector2.zero);
+    }
+
+    public override void PerformAttack(AttackType type, Vector2 bossPosition)
+    {
         var attacks = GetPhasedAttacks();
         var validAttacks = attacks.Where(a => a != null && a.IsValidForPhase((BossPhase)currentPhase)).ToArray();
 
@@ -107,11 +112,11 @@ public class ElParcialBoss : BossSO
         }
 
         Debug.Log($"Selected attack: {selectedAttack.AttackName} | CanExecute: {selectedAttack.CanExecute} | LastAttackTime: {selectedAttack.LastAttackTime} | Cooldown: {selectedAttack.Cooldown}");
-        
+
         if (selectedAttack.CanExecute)
         {
             Debug.Log($"Boss executes {selectedAttack.AttackName} of type {type} in phase {currentPhase}");
-            selectedAttack.Execute();
+            selectedAttack.Execute(bossPosition);
             OnAttack?.Invoke(type);
         }
         else

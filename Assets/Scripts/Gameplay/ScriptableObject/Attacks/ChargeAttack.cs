@@ -10,7 +10,7 @@ using System;
 public class ChargeAttack : BossAttackSO
 {
     // ========== CONFIGURACIÓN ==========
-    // Que tal
+
     [SerializeField] private string attackName = "Embestida";
     [SerializeField] private float damage = 25f;
     [SerializeField] private float cooldown = 3f;
@@ -21,12 +21,12 @@ public class ChargeAttack : BossAttackSO
     [SerializeField] private float chargeSpeed = 15f;
     [SerializeField] private float chargeDuration = 0.6f;
     [SerializeField] private float chargeDistance = 10f;
-    [SerializeField] private bool trackPlayer = false; // Si true, ajusta dirección durante la carga
 
     // ========== ESTADO PRIVADO ==========
 
     private float lastAttackTime = -999f;
     private bool isInProgress;
+    private Vector2 lastBossPosition;
 
     // ========== PROPIEDADES ==========
 
@@ -58,35 +58,40 @@ public class ChargeAttack : BossAttackSO
 
     public override void Execute()
     {
+        Execute(Vector2.zero);
+    }
+
+    public override void Execute(Vector2 bossPosition)
+    {
         if (!CanExecute)
             return;
 
         lastAttackTime = Time.time;
+        lastBossPosition = bossPosition;
         isInProgress = true;
         OnAttackStarted?.Invoke();
 
-        Debug.Log($"Boss ejecuta: {attackName}");
+        Debug.Log($"Boss ejecuta: {attackName} desde {bossPosition}");
 
         // Obtener posición del jugador
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        GameObject boss = GameObject.FindGameObjectWithTag("Enemy");
 
-        if (player == null || boss == null)
+        if (player == null)
         {
-            Debug.LogWarning($"No se encontró jugador o boss para ChargeAttack!");
+            Debug.LogWarning($"No se encontró jugador para ChargeAttack!");
             isInProgress = false;
             OnAttackEnded?.Invoke();
             return;
         }
 
         // Calcular dirección hacia el jugador
-        Vector2 direction = (player.transform.position - boss.transform.position).normalized;
+        Vector2 direction = ((Vector2)player.transform.position - lastBossPosition).normalized;
 
         // Notificar dirección de carga (para que el Boss pueda animarse)
         OnChargeDirection?.Invoke(direction);
 
         // Crear hitbox de carga
-        CreateChargeHitbox(boss.transform.position, direction);
+        CreateChargeHitbox(lastBossPosition, direction);
 
         isInProgress = false;
         OnAttackEnded?.Invoke();
@@ -104,13 +109,13 @@ public class ChargeAttack : BossAttackSO
 
     // ========== MÉTODOS PRIVADOS ==========
 
-    private void CreateChargeHitbox(Vector3 startPos, Vector2 direction)
+    private void CreateChargeHitbox(Vector2 startPos, Vector2 direction)
     {
         // Si hay prefab de hitbox, usarlo
         if (chargeHitboxPrefab != null)
         {
             GameObject hitbox = Instantiate(chargeHitboxPrefab, startPos, Quaternion.identity);
-            
+
             // Configurar movimiento del hitbox
             ChargeHitbox hitboxScript = hitbox.GetComponent<ChargeHitbox>();
             if (hitboxScript != null)
@@ -132,30 +137,30 @@ public class ChargeAttack : BossAttackSO
         {
             // Sin prefab: crear hitbox simple
             Debug.Log($"Charge hacia dirección {direction} - Speed: {chargeSpeed}, Duration: {chargeDuration}s");
-            
+
             // Crear GameObject temporal con collider
             GameObject hitbox = new GameObject("ChargeHitbox");
             hitbox.transform.position = startPos;
-            
+
             // Añadir collider
             CircleCollider2D collider = hitbox.AddComponent<CircleCollider2D>();
             collider.isTrigger = true;
             collider.radius = 1f;
-            
+
             // Añadir Rigidbody para movimiento
             Rigidbody2D rb = hitbox.AddComponent<Rigidbody2D>();
             rb.gravityScale = 0;
             rb.linearVelocity = direction * chargeSpeed;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-            
+
             // Añadir script de daño
             ChargeHitbox hitboxScript = hitbox.AddComponent<ChargeHitbox>();
             hitboxScript.Initialize(direction, chargeSpeed, chargeDuration, damage);
-            
+
             // Destruir después de la duración
             Destroy(hitbox, chargeDuration);
         }
 
-        Debug.Log($"ChargeHitbox creado - Dir: {direction}, Speed: {chargeSpeed}, Damage: {damage}");
+        Debug.Log($"ChargeHitbox creado en {startPos} - Dir: {direction}, Speed: {chargeSpeed}, Damage: {damage}");
     }
 }

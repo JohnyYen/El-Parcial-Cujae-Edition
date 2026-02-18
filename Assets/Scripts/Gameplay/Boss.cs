@@ -103,7 +103,7 @@ public class Boss : MonoBehaviour
         animator.SetTrigger("Attack");
         AttackType attackType = GetRandomAttackForPhase();
         Debug.Log($"Boss ejecuta ataque en fase {bossBehaviour.CurrentPhase}");
-        bossBehaviour.PerformAttack(attackType);
+        bossBehaviour.PerformAttack(attackType, transform.position);
     }
 
     private AttackType GetRandomAttackForPhase()

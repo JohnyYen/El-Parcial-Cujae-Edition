@@ -3,7 +3,7 @@ using System;
 
 /// <summary>
 /// Implementación de ataque de proyectiles.
-/// Los proyectiles se disparan en patrón radial hacia el jugador.
+/// Los proyectiles se disparan en patrón radial desde la posición del boss.
 /// </summary>
 [CreateAssetMenu(fileName = "ProjectileAttack", menuName = "Boss Attacks/Projectile")]
 public class ProjectileAttack : BossAttackSO
@@ -14,7 +14,7 @@ public class ProjectileAttack : BossAttackSO
     [SerializeField] private float damage = 20f;
     [SerializeField] private float cooldown = 2f;
     [SerializeField] private BossPhase[] validPhases = { BossPhase.Fase1, BossPhase.Fase2, BossPhase.Fase3 };
-    
+
     [Header("Projectile Settings")]
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private int projectileCount = 3;
@@ -27,6 +27,7 @@ public class ProjectileAttack : BossAttackSO
 
     private float lastAttackTime = -999f;
     private bool isInProgress;
+    private Vector2 lastBossPosition;
 
     // ========== PROPIEDADES ==========
 
@@ -49,17 +50,24 @@ public class ProjectileAttack : BossAttackSO
     {
         lastAttackTime = -999f;
     }
+
     public override void Execute()
+    {
+        Execute(Vector2.zero);
+    }
+
+    public override void Execute(Vector2 bossPosition)
     {
         if (!CanExecute)
             return;
 
         lastAttackTime = Time.time;
+        lastBossPosition = bossPosition;
         isInProgress = true;
         OnAttackStarted?.Invoke();
 
-        Debug.Log($"Boss ejecuta: {attackName}");
-        
+        Debug.Log($"Boss ejecuta: {attackName} desde {bossPosition}");
+
         // Lógica de disparo de proyectiles
         for (int i = 0; i < projectileCount; i++)
         {
@@ -90,9 +98,9 @@ public class ProjectileAttack : BossAttackSO
             return;
         }
 
-        // Posición de spawn (normalmente desde la posición del boss)
-        Vector3 spawnPos = Vector3.zero;
-        
+        // Posición de spawn desde la posición del boss
+        Vector2 spawnPos = lastBossPosition;
+
         float angle;
         if (spiralPattern)
         {
@@ -104,14 +112,14 @@ public class ProjectileAttack : BossAttackSO
             // Patrón radial normal: distribución uniforme
             angle = (360f / projectileCount) * index;
         }
-        
+
         // Crear dirección basada en ángulo
         float radians = angle * Mathf.Deg2Rad;
-        Vector3 direction = new Vector3(Mathf.Cos(radians), Mathf.Sin(radians), 0).normalized;
+        Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
 
         // Instanciar proyectil
         GameObject projectile = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
-        
+
         // Configurar velocidad si tiene Rigidbody
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         if (rb != null)

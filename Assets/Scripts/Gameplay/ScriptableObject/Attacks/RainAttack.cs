@@ -22,7 +22,6 @@ public class RainAttack : BossAttackSO
     [SerializeField] private float spawnHeight = 8f; // Altura de spawn sobre el jugador
     [SerializeField] private float spawnWidth = 5f; // Ancho del área de lluvia
     [SerializeField] private float projectileSpeed = 8f;
-    [SerializeField] private float spawnDelay = 0.1f; // Delay entre cada proyectil
 
     // ========== ESTADO PRIVADO ==========
 
@@ -52,6 +51,11 @@ public class RainAttack : BossAttackSO
     }
 
     public override void Execute()
+    {
+        Execute(Vector2.zero);
+    }
+
+    public override void Execute(Vector2 bossPosition)
     {
         if (!CanExecute)
             return;
@@ -91,7 +95,7 @@ public class RainAttack : BossAttackSO
 
     // ========== MÉTODOS PRIVADOS ==========
 
-    private void SpawnRainProjectiles(Vector3 playerPosition)
+    private void SpawnRainProjectiles(Vector2 playerPosition)
     {
         if (projectilePrefab == null)
         {
@@ -103,10 +107,9 @@ public class RainAttack : BossAttackSO
         {
             // Posición de spawn: arriba del jugador + offset aleatorio en X
             float randomOffsetX = UnityEngine.Random.Range(-spawnWidth / 2f, spawnWidth / 2f);
-            Vector3 spawnPos = new Vector3(
+            Vector2 spawnPos = new Vector2(
                 playerPosition.x + randomOffsetX,
-                playerPosition.y + spawnHeight,
-                0
+                playerPosition.y + spawnHeight
             );
 
             // Instanciar proyectil
