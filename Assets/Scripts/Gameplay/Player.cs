@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
 
     private bool isGrounded = true;
     private Rigidbody2D rb;
+    private Animator animator;
 
     // ========== PROPIEDADES ==========
 
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         if (player_behaviour != null && buffController != null)
         {
@@ -50,7 +52,15 @@ public class Player : MonoBehaviour
         if (player_behaviour != null)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
+
+            if (horizontalInput > 0)
+                transform.localScale = new Vector3(1, 1, 1); // Mirar a la derecha
+            else if (horizontalInput < 0)
+                transform.localScale = new Vector3(-1, 1, 1); // Mirar a la izquierda
+
+
             player_behaviour.Move(transform, horizontalInput);
+            animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
 
             if (Input.GetAxis("Dash") > 0.0f)
             {
@@ -113,6 +123,7 @@ public class Player : MonoBehaviour
     {
         if (player_behaviour != null && isGrounded)
         {
+            animator.SetTrigger("Jump");
             rb.AddForce(Vector2.up * player_behaviour.JumpForce, ForceMode2D.Impulse);
         }
     }
@@ -128,6 +139,8 @@ public class Player : MonoBehaviour
                 rb.AddForce(Vector2.right * player_behaviour.DashSpeed * speedMultiplier, ForceMode2D.Impulse);
             else if (horizontalInput < 0) // Dashing left
                 rb.AddForce(Vector2.left * player_behaviour.DashSpeed * speedMultiplier, ForceMode2D.Impulse);
+
+            animator.SetTrigger("Dash");
         }
     }
 
@@ -137,6 +150,7 @@ public class Player : MonoBehaviour
         Debug.Log("SoftAttack ejecutado!");
 
         Instantiate(softBulletPrefab, transform.position + transform.right * 0.5f, Quaternion.identity);
+        animator.SetTrigger("SoftAttack");
 
         // Aquí se agregará:
         // - Reproducir animación de ataque suave
@@ -151,6 +165,7 @@ public class Player : MonoBehaviour
         Debug.Log("HardAttack ejecutado!");
 
         Instantiate(hardBulletPrefab, transform.position + transform.right * 0.5f, Quaternion.identity);
+        animator.SetTrigger("Special");
 
         // Aquí se agregará:
         // - Reproducir animación de ataque fuerte
