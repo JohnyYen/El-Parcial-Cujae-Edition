@@ -3,7 +3,7 @@ using System;
 
 /// <summary>
 /// Implementación de ataque de proyectiles.
-/// Los proyectiles se disparan en patrón radial desde la posición del boss.
+/// Los proyectiles se disparan en un cono de 45° hacia la izquierda (hacia el jugador).
 /// </summary>
 [CreateAssetMenu(fileName = "ProjectileAttack", menuName = "Boss Attacks/Projectile")]
 public class ProjectileAttack : BossAttackSO
@@ -20,8 +20,6 @@ public class ProjectileAttack : BossAttackSO
     [SerializeField] private int projectileCount = 3;
     [SerializeField] private float projectileSpeed = 10f;
     [SerializeField] private float spawnDelay = 0f; // Delay entre proyectiles (0 = todos a la vez)
-    [SerializeField] private bool spiralPattern = false; // Si true, ángulo incrementa entre spawns
-    [SerializeField] private float spiralAngleOffset = 0f; // Ángulo inicial adicional
 
     // ========== ESTADO PRIVADO ==========
 
@@ -101,43 +99,42 @@ public class ProjectileAttack : BossAttackSO
         // Posición de spawn desde la posición del boss
         Vector2 spawnPos = lastBossPosition;
 
-        float angle;
-        if (spiralPattern)
+        // Calcular ángulo en un cono de 45° apuntando hacia la izquierda (hacia el jugador)
+        // Ángulo base: 180° (izquierda)
+        // Spread: ±22.5° (cono de 45° total)
+        float baseAngle = 180f; // Dirección hacia la izquierda
+        float spreadAngle;
+        
+        if (projectileCount == 1)
         {
-            // Patrón espiral: cada proyectil en ángulo diferente consecutivo
-            angle = spiralAngleOffset + (index * (360f / projectileCount));
+            spreadAngle = 0f; // Disparo recto hacia la izquierda
         }
         else
         {
-            // Patrón radial normal: distribución uniforme
-            angle = (360f / projectileCount) * index;
+            // Distribuir uniformemente entre -22.5° y +22.5°
+            spreadAngle = -22.5f + (45f / (projectileCount - 1)) * index;
         }
-
-        // Crear dirección basada en ángulo
-        float radians = angle * Mathf.Deg2Rad;
+        
+        float finalAngle = baseAngle + spreadAngle;
+        
+        // Crear dirección basada en ángulo final y normalizar explícitamente
+        float radians = finalAngle * Mathf.Deg2Rad;
         Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
 
         // Instanciar proyectil
         GameObject projectile = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
 
-        // Configurar velocidad si tiene Rigidbody
-        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.linearVelocity = direction * projectileSpeed;
-        }
-
-        // Pasar daño al proyectil desde este script de ataque
+        // Inicializar el proyectil usando su método Initialize
         BossProjectile bossProj = projectile.GetComponent<BossProjectile>();
         if (bossProj != null)
         {
-            bossProj.SetDamage(damage);
-            Debug.Log($"Proyectil spawn #{index + 1} - Ángulo: {angle}°, Daño: {damage}");
+            // Usar el método Initialize que configura todo internamente
+            bossProj.Initialize(direction, projectileSpeed, damage);
+            Debug.Log($"Proyectil #{index + 1} - Ángulo: {finalAngle}°, Dirección: {direction}, Speed: {projectileSpeed}");
         }
         else
         {
-            Debug.LogWarning("BossProjectile component not found on projectile prefab!");
-            Debug.Log($"Proyectil spawn #{index + 1} - Ángulo: {angle}°");
+            Debug.LogError($"¡BossProjectile component NO encontrado en el prefab! El proyectil no funcionará correctamente.");
         }
     }
 }
