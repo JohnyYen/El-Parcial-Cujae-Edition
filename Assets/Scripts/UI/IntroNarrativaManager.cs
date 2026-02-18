@@ -148,13 +148,18 @@ public class IntroNarrativaManager : MonoBehaviour
             continueIndicator.SetActive(false);
         }
 
-        // Configurar textCanvasGroup si existe
-        if (textCanvasGroup == null && introText != null)
+        // Asegurar que el texto sea visible (sin CanvasGroup que pueda bloquear)
+        if (introText != null)
         {
-            textCanvasGroup = introText.GetComponent<CanvasGroup>();
-            if (textCanvasGroup == null)
+            introText.alpha = 1f;
+            
+            // Eliminar cualquier CanvasGroup que pueda estar bloquendo la visibilidad
+            CanvasGroup existingCG = introText.GetComponent<CanvasGroup>();
+            if (existingCG != null)
             {
-                textCanvasGroup = introText.gameObject.AddComponent<CanvasGroup>();
+                existingCG.alpha = 1f;
+                existingCG.blocksRaycasts = false;
+                existingCG.interactable = false;
             }
         }
     }
@@ -216,12 +221,24 @@ public class IntroNarrativaManager : MonoBehaviour
 
     private IEnumerator ShowSlide(int index)
     {
+        Debug.Log($"ShowSlide llamado con índice: {index}");
+
         if (introText != null)
         {
-            // Resetear texto y posición
+            // Resetear texto y posición - FORZAR visibilidad
             introText.text = slides[index];
             introText.maxVisibleCharacters = 0;
             introText.alpha = 1f;
+            
+            // Asegurar que cualquier CanvasGroup tenga alpha = 1
+            CanvasGroup cg = introText.GetComponent<CanvasGroup>();
+            if (cg != null)
+            {
+                cg.alpha = 1f;
+                cg.blocksRaycasts = false;
+            }
+
+            Debug.Log($"Texto configurado: {slides[index]}, Alpha: {introText.alpha}");
 
             // Posición inicial
             if (useSlideUpAnimation)
@@ -241,6 +258,8 @@ public class IntroNarrativaManager : MonoBehaviour
             {
                 yield return StartCoroutine(FadeText(introText, 0f, 1f, fadeDuration));
             }
+
+            Debug.Log($"Slide {index} mostrado, iniciando typewriter");
 
             // typewriter
             currentTypewriterCoroutine = StartCoroutine(TypewriterEffect(introText));
