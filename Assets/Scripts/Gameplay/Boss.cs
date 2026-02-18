@@ -16,7 +16,8 @@ public class Boss : MonoBehaviour
 
     [Header("Minion Spawning")]
     [SerializeField] private float minionSpawnInterval = 5f;
-    [SerializeField] private GameObject minionPrefab;
+    [SerializeField] private GameObject basicMinionPrefab;
+    [SerializeField] private GameObject mediumMinionPrefab;
     [SerializeField] private Transform spawnPoints;
 
     private float lastAttackTime;
@@ -108,24 +109,60 @@ public class Boss : MonoBehaviour
 
     private void SpawnMinion()
     {
-        if (!IsAlive || spawnPoints == null || minionPrefab == null)
+        if (!IsAlive || spawnPoints == null)
             return;
 
-        // Seleccionar tipo de minion según fase
-        MinionType minionType = bossBehaviour.CurrentPhase switch
-        {
-            1 => MinionType.Basic,
-            2 => MinionType.Fast,
-            3 => MinionType.Tank,
-            _ => MinionType.Basic
-        };
+        // Seleccionar tipo y prefab de minion según fase
+        MinionType minionType;
+        GameObject prefabToSpawn;
 
+        switch (bossBehaviour.CurrentPhase)
+        {
+            case 1:
+                minionType = MinionType.Basic;
+                prefabToSpawn = basicMinionPrefab;
+                break;
+                
+            case 2:
+                // Fase 2: 50% Basic, 50% Medium
+                if (Random.value < 0.5f)
+                {
+                    minionType = MinionType.Basic;
+                    prefabToSpawn = basicMinionPrefab;
+                }
+                else
+                {
+                    minionType = MinionType.Medium;
+                    prefabToSpawn = mediumMinionPrefab;
+                }
+                break;
+                
+            case 3:
+                // Fase 3: Solo Medium (más difíciles)
+                minionType = MinionType.Medium;
+                prefabToSpawn = mediumMinionPrefab;
+                break;
+                
+            default:
+                minionType = MinionType.Basic;
+                prefabToSpawn = basicMinionPrefab;
+                break;
+        }
+
+        // Verificar que el prefab esté asignado
+        if (prefabToSpawn == null)
+        {
+            Debug.LogWarning($"Boss: Prefab para {minionType} no está asignado!");
+            return;
+        }
+
+        // Notificar al BossSO
         bossBehaviour.SpawnMinion(minionType);
 
         // Instanciar prefab en un spawn point aleatorio
         int spawnIndex = Random.Range(0, spawnPoints.childCount);
         Vector3 spawnPos = spawnPoints.GetChild(spawnIndex).position;
-        Instantiate(minionPrefab, spawnPos, Quaternion.identity);
+        Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
     }
 
     // ========== CALLBACKS DE EVENTOS ==========

@@ -20,7 +20,7 @@ El Boss es el enemigo principal del nivel. Tiene 3 fases con comportamientos dis
 - **Comportamiento:** Intro + ataques básicos
 - **Patrones de ataque:** 2-3 tipos básicos
 - **Velocidad:** Normal (1.0x)
-- **Spawning:** Minions nivel fácil (Facil)
+- **Spawning:** Minions tipo Basic (100%)
 - **Frecuencia ataques:** Media (cada 2-3 segundos)
 - **Mensajes:** Taunts iniciales
 
@@ -29,7 +29,7 @@ El Boss es el enemigo principal del nivel. Tiene 3 fases con comportamientos dis
 - **Comportamiento:** Aumenta agresividad
 - **Patrones de ataque:** 4-5 tipos (incluye ataques en área)
 - **Velocidad:** Aumentada (1.25x)
-- **Spawning:** Minions nivel medio (Medio)
+- **Spawning:** Minions tipo Basic (50%) y Medium (50%)
 - **Frecuencia ataques:** Alta (cada 1.5-2 segundos)
 - **Mensajes:** Frustración / ira
 
@@ -38,9 +38,11 @@ El Boss es el enemigo principal del nivel. Tiene 3 fases con comportamientos dis
 - **Comportamiento:** Modo desesperación - ataques máximos
 - **Patrones de ataque:** 6+ tipos (incluye super ataques)
 - **Velocidad:** Máxima (1.5x)
-- **Spawning:** Minions nivel difícil (Dificil) + combinaciones
+- **Spawning:** Minions tipo Medium (100%)
 - **Frecuencia ataques:** Muy alta (cada 1 segundo)
 - **Mensajes:** Desesperación / peligro
+
+> **Nota sobre Minions:** El Boss solo usa minions Basic y Medium. Hard está reservado para uso especial.
 
 ### Sistema de Cambios de Fase
 
@@ -61,15 +63,22 @@ void IBoss.CambiarFase(FaseBoss nuevaFase) {
   
   // Spawn de minions de transición
   if (nuevaFase == FaseBoss.Fase2) {
-    SpawnOleadaInicial(TipoMinion.Medio, 2);
+    // Fase 2: mezcla de Basic y Medium
+    SpawnOleadaInicial(MinionType.Basic, 1);
+    SpawnOleadaInicial(MinionType.Medium, 1);
   } else if (nuevaFase == FaseBoss.Fase3) {
-    SpawnOleadaInicial(TipoMinion.Dificil, 3);
+    // Fase 3: solo Medium
+    SpawnOleadaInicial(MinionType.Medium, 2);
   }
   
   // Notificar a sistemas externos
   NotifyPhaseChanged(nuevaFase);
 }
 ```
+
+**Implementación actual:**
+El Boss usa `Instantiate()` con 2 prefabs (basicMinionPrefab y mediumMinionPrefab).
+Ver [boss-minion-integration.md](boss-minion-integration.md) para detalles.
 
 ### Sistema de Ataques por Fase
 
@@ -102,22 +111,49 @@ void IBoss.CambiarFase(FaseBoss nuevaFase) {
 
 ### Sistema de Spawning de Enemigos
 
+**Implementación actual (simplificada):**
+
 ```csharp
-void IBoss.SpawnEnemigo(TipoMinion tipo) {
-  // Obtener posición de spawn disponible
-  Vector2[] spawnPoints = ObtenerPosicionSpawn();
-  Vector2 posicion = spawnPoints[Random.Range(0, spawnPoints.Length)];
-  
-  // Crear minion según tipo
-  IMinion nuevoMinion = MinionFactory.Crear(tipo, posicion);
-  
-  // Registrar en sistema de minions
-  MinionManager.Registrar(nuevoMinion);
-  
-  // Feedback visual
-  SpawnEffect(posicion);
+// En Boss.cs
+private void SpawnMinion()
+{
+    if (spawnPoints == null || spawnPoints.childCount == 0)
+        return;
+
+    // Seleccionar posición de spawn aleatoria
+    int spawnIndex = Random.Range(0, spawnPoints.childCount);
+    Transform spawnPoint = spawnPoints.GetChild(spawnIndex);
+
+    // Determinar tipo según fase actual
+    GameObject prefabToSpawn = null;
+    
+    if (boss_behaviour.CurrentHealthPercentage > 0.66f)
+    {
+        // Fase 1: 100% Basic
+        prefabToSpawn = basicMinionPrefab;
+    }
+    else if (boss_behaviour.CurrentHealthPercentage > 0.33f)
+    {
+        // Fase 2: 50% Basic, 50% Medium
+        prefabToSpawn = Random.value > 0.5f ? mediumMinionPrefab : basicMinionPrefab;
+    }
+    else
+    {
+        // Fase 3: 100% Medium
+        prefabToSpawn = mediumMinionPrefab;
+    }
+
+    if (prefabToSpawn != null)
+    {
+        Instantiate(prefabToSpawn, spawnPoint.position, Quaternion.identity);
+    }
 }
 ```
+
+**Configuración requerida en Boss:**
+- `basicMinionPrefab`: Prefab del minion Basic
+- `mediumMinionPrefab`: Prefab del minion Medium
+- `spawnPoints`: Transform contenedor con puntos de spawn como hijos
 
 #### Pool de Spawn
 
