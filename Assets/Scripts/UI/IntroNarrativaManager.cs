@@ -547,6 +547,13 @@ public class IntroNarrativaManager : MonoBehaviour
     {
         StopAllCoroutines();
         HideBlinkIndicator();
+
+        // Detener audio de typewriter
+        if (typewriterAudioSource != null && typewriterAudioSource.isPlaying)
+        {
+            typewriterAudioSource.Stop();
+        }
+
         StartCoroutine(GoToNextScene());
     }
 
@@ -554,6 +561,26 @@ public class IntroNarrativaManager : MonoBehaviour
     {
         HideHint();
 
+        // Detener todos los audios
+        if (typewriterAudioSource != null && typewriterAudioSource.isPlaying)
+        {
+            typewriterAudioSource.Stop();
+        }
+
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+
+        // Usar SceneFader si está disponible (prioridad)
+        SceneFader fader = FindFirstObjectByType<SceneFader>();
+        if (fader != null)
+        {
+            fader.FadeAndLoadScene(nextSceneName, 0.5f);
+            yield break;  // SceneFader maneja todo, salir aquí
+        }
+
+        // Fallback: usar fadeCanvasGroup nativo si no hay SceneFader
         if (fadeCanvasGroup != null)
         {
             yield return StartCoroutine(FadeCanvas(0f, 1f, fadeDuration));
@@ -563,18 +590,7 @@ public class IntroNarrativaManager : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
 
-        if (audioSource != null && audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
-
-        // Usar SceneFader si está disponible
-        SceneFader fader = FindFirstObjectByType<SceneFader>();
-        if (fader != null)
-        {
-            fader.FadeAndLoadScene(nextSceneName, 0.5f);
-        }
-        else if (!string.IsNullOrEmpty(nextSceneName))
+        if (!string.IsNullOrEmpty(nextSceneName))
         {
             SceneManager.LoadScene(nextSceneName);
         }
