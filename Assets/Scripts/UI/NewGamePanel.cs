@@ -71,12 +71,30 @@ public class NewGamePanel : MonoBehaviour
         PlayerPrefs.SetString($"SaveSlot_{slotIndex}", System.DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
         PlayerPrefs.SetInt("CurrentSlot", slotIndex);
         PlayerPrefs.Save();
-        SceneManager.LoadScene(introSceneName);
+
+        SceneFader fader = FindFirstObjectByType<SceneFader>();
+        if (fader != null)
+        {
+            fader.FadeAndLoadScene(introSceneName, 0.5f);
+        }
+        else
+        {
+            SceneManager.LoadScene(introSceneName);
+        }
     }
 
     private void LoadGame(int slotIndex)
     {
         PlayerPrefs.SetInt("CurrentSlot", slotIndex);
-        SceneManager.LoadScene(levelSelectSceneName);
+
+        SceneFader fader = FindFirstObjectByType<SceneFader>();
+        if (fader != null)
+        {
+            fader.FadeAndLoadScene(levelSelectSceneName, 0.5f);
+        }
+        else
+        {
+            SceneManager.LoadScene(levelSelectSceneName);
+        }
     }
 }

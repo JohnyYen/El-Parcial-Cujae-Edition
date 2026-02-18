@@ -107,13 +107,31 @@ public class VictoryScreen : MonoBehaviour
     public void OnContinue()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(levelSelectSceneName);
+        
+        SceneFader fader = FindFirstObjectByType<SceneFader>();
+        if (fader != null)
+        {
+            fader.FadeAndLoadScene(levelSelectSceneName, 0.5f);
+        }
+        else
+        {
+            SceneManager.LoadScene(levelSelectSceneName);
+        }
     }
 
     public void OnMainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(titleScreenSceneName);
+
+        SceneFader fader = FindFirstObjectByType<SceneFader>();
+        if (fader != null)
+        {
+            fader.FadeAndLoadScene(titleScreenSceneName, 0.5f);
+        }
+        else
+        {
+            SceneManager.LoadScene(titleScreenSceneName);
+        }
     }
 
     public void OnQuit()
