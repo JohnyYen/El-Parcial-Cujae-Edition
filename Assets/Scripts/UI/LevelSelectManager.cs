@@ -181,7 +181,17 @@ public class LevelSelectManager : MonoBehaviour
 
         if (!string.IsNullOrEmpty(selectedLevel.sceneName))
         {
-            SceneManager.LoadScene(selectedLevel.sceneName);
+            // Usar SceneFader para transición
+            SceneFader fader = FindFirstObjectByType<SceneFader>();
+            if (fader != null)
+            {
+                fader.FadeTransition(selectedLevel.sceneName, 0.5f, 0.5f);
+            }
+            else
+            {
+                // Fallback si no hay fader
+                SceneManager.LoadScene(selectedLevel.sceneName);
+            }
         }
         else
         {
@@ -191,7 +201,15 @@ public class LevelSelectManager : MonoBehaviour
 
     public void GoBackToTitle()
     {
-        SceneManager.LoadScene(titleScreenSceneName);
+        SceneFader fader = FindFirstObjectByType<SceneFader>();
+        if (fader != null)
+        {
+            fader.FadeAndLoadScene(titleScreenSceneName, 0.5f);
+        }
+        else
+        {
+            SceneManager.LoadScene(titleScreenSceneName);
+        }
     }
 
     private void OnDestroy()
