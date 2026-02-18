@@ -168,10 +168,7 @@ public class IntroNarrativaManager : MonoBehaviour
 
     private void HandleInput()
     {
-        var kb = Keyboard.current;
-        if (kb == null) return;
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             AdvanceToNextSlide();
         }
