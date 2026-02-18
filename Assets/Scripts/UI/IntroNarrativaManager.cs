@@ -545,30 +545,38 @@ public class IntroNarrativaManager : MonoBehaviour
 
     public void SkipIntro()
     {
+        Debug.Log("=== SKIP INTRO INICIADO ===");
         StopAllCoroutines();
         HideBlinkIndicator();
 
         // Detener audio de typewriter
         if (typewriterAudioSource != null && typewriterAudioSource.isPlaying)
         {
+            Debug.Log("Deteniendo audio typewriter");
             typewriterAudioSource.Stop();
         }
 
+        Debug.Log("Iniciando GoToNextScene coroutine");
         StartCoroutine(GoToNextScene());
     }
 
     private IEnumerator GoToNextScene()
     {
+        Debug.Log("=== GO TO NEXT SCENE INICIADO ===");
+        Debug.Log($"Escena destino: {nextSceneName}");
+
         HideHint();
 
         // Detener todos los audios
         if (typewriterAudioSource != null && typewriterAudioSource.isPlaying)
         {
+            Debug.Log("Deteniendo audio typewriter en GoToNextScene");
             typewriterAudioSource.Stop();
         }
 
         if (audioSource != null && audioSource.isPlaying)
         {
+            Debug.Log("Deteniendo audio ambiente");
             audioSource.Stop();
         }
 
@@ -576,23 +584,38 @@ public class IntroNarrativaManager : MonoBehaviour
         SceneFader fader = FindFirstObjectByType<SceneFader>();
         if (fader != null)
         {
+            Debug.Log($"SceneFader encontrado: {fader.gameObject.name}");
+            Debug.Log($"Llamando FadeAndLoadScene con: {nextSceneName}, duración: 0.5s");
             fader.FadeAndLoadScene(nextSceneName, 0.5f);
+            Debug.Log("SceneFader.FadeAndLoadScene llamado, saliendo de GoToNextScene");
             yield break;  // SceneFader maneja todo, salir aquí
+        }
+        else
+        {
+            Debug.LogWarning("SceneFader NO encontrado, usando fallback con fadeCanvasGroup");
         }
 
         // Fallback: usar fadeCanvasGroup nativo si no hay SceneFader
         if (fadeCanvasGroup != null)
         {
+            Debug.Log($"Usando fadeCanvasGroup para fade a negro, duración: {fadeDuration}s");
             yield return StartCoroutine(FadeCanvas(0f, 1f, fadeDuration));
+            Debug.Log("Fade a negro completado");
         }
         else
         {
+            Debug.Log("fadeCanvasGroup no asignado, esperando 0.2s");
             yield return new WaitForSeconds(0.2f);
         }
 
         if (!string.IsNullOrEmpty(nextSceneName))
         {
+            Debug.Log($"Cargando escena directamente: {nextSceneName}");
             SceneManager.LoadScene(nextSceneName);
+        }
+        else
+        {
+            Debug.LogError("nextSceneName está vacío o es null!");
         }
     }
 

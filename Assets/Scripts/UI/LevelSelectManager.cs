@@ -37,8 +37,17 @@ public class LevelSelectManager : MonoBehaviour
     private List<Button> buttonComponents = new List<Button>();
     private int currentIndex = 0;
 
+    private void Awake()
+    {
+        Debug.Log("=== LEVEL SELECT AWAKE ===");
+        Debug.Log($"Escena actual: {gameObject.scene.name}");
+    }
+
     private void Start()
     {
+        Debug.Log("=== LEVEL SELECT START ===");
+        Debug.Log($"Inicializando con {levels.Length} niveles");
+        
         GenerateLevelButtons();
         SetupBackButton();
 
@@ -46,6 +55,8 @@ public class LevelSelectManager : MonoBehaviour
         {
             SelectButton(0);
         }
+
+        Debug.Log($"LevelSelectManager listo - {spawnedButtons.Count} botones generados");
     }
 
     private void Update()
