@@ -170,11 +170,13 @@ public class IntroNarrativaManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
+            Debug.Log("Space/Return presionado - Avanzando slide");
             AdvanceToNextSlide();
         }
 
         if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
+            Debug.Log("KeypadEnter presionado - Saltando intro");
             SkipIntro();
         }
     }
@@ -183,23 +185,30 @@ public class IntroNarrativaManager : MonoBehaviour
 
     private IEnumerator PlayIntroSequence()
     {
+        // Fade in inicial
         if (fadeCanvasGroup != null)
         {
             yield return StartCoroutine(FadeCanvas(1f, 0f, fadeDuration));
         }
 
+        // Asegurar que el texto sea visible al inicio
+        if (introText != null)
+        {
+            introText.alpha = 1f;
+        }
+
         while (currentSlideIndex < slides.Length)
         {
-            // Crossfade del slide anterior si es necesario
-            if (useCrossfade && currentSlideIndex > 0 && textCanvasGroup != null)
-            {
-                yield return StartCoroutine(CrossfadeOutPrevious());
-            }
-
+            // Mostrar el slide actual
             yield return StartCoroutine(ShowSlide(currentSlideIndex));
 
+            // Esperar el tiempo del slide O hasta que el usuario avance
             autoAdvanceCoroutine = StartCoroutine(AutoAdvanceTimer());
             yield return autoAdvanceCoroutine;
+
+            // Avanzar al siguiente slide
+            currentSlideIndex++;
+            UpdateProgressBar();
         }
 
         yield return StartCoroutine(GoToNextScene());
@@ -209,12 +218,12 @@ public class IntroNarrativaManager : MonoBehaviour
     {
         if (introText != null)
         {
-            // Resetear posición y alpha
-            introText.alpha = 0f;
+            // Resetear texto y posición
             introText.text = slides[index];
             introText.maxVisibleCharacters = 0;
+            introText.alpha = 1f;
 
-            // Slide-up animation
+            // Posición inicial
             if (useSlideUpAnimation)
             {
                 introText.rectTransform.anchoredPosition = originalTextPosition + new Vector2(0, slideUpDistance);
@@ -223,17 +232,17 @@ public class IntroNarrativaManager : MonoBehaviour
             // Ocultar indicador
             HideBlinkIndicator();
 
-            // Ejecutar animación de entrada (slide-up + fade-in)
+            // Animación de entrada
             if (useSlideUpAnimation)
             {
-                StartCoroutine(SlideUpFadeIn());
+                yield return StartCoroutine(SlideUpFadeIn());
             }
             else
             {
                 yield return StartCoroutine(FadeText(introText, 0f, 1f, fadeDuration));
             }
 
-            // Iniciar typewriter
+            // typewriter
             currentTypewriterCoroutine = StartCoroutine(TypewriterEffect(introText));
         }
     }
@@ -393,14 +402,15 @@ public class IntroNarrativaManager : MonoBehaviour
             yield return null;
         }
 
-        currentSlideIndex++;
-        UpdateProgressBar();
+        // El avance del índice ahora se maneja en PlayIntroSequence
     }
 
     // ========== NAVEGACIÓN ==========
 
     private void AdvanceToNextSlide()
     {
+        Debug.Log($"AdvanceToNextSlide - isTypewriting: {isTypewriting}, currentSlideIndex: {currentSlideIndex}");
+
         if (isTypewriting)
         {
             CompleteTypewriterImmediately();
@@ -412,7 +422,11 @@ public class IntroNarrativaManager : MonoBehaviour
             StopCoroutine(autoAdvanceCoroutine);
         }
 
+        // Incrementar índice aquí también para avance manual
         currentSlideIndex++;
+        UpdateProgressBar();
+
+        Debug.Log($"Nuevo índice: {currentSlideIndex}, Total slides: {slides.Length}");
 
         if (currentSlideIndex >= slides.Length)
         {
