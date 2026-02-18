@@ -13,12 +13,19 @@ public class AreaAttack : BossAttackSO
     [SerializeField] private string attackName = "Explosión de Área";
     [SerializeField] private float damage = 25f;
     [SerializeField] private float cooldown = 3f;
-    [SerializeField] private BossPhase[] validPhases = { BossPhase.Fase2, BossPhase.Fase3 };
+    [SerializeField] private BossPhase[] validPhases = { BossPhase.Fase1, BossPhase.Fase2, BossPhase.Fase3 };
 
     [Header("Area Settings")]
     [SerializeField] private GameObject areaPrefab;
     [SerializeField] private float areaRadius = 5f;
     [SerializeField] private float areaDuration = 2f;
+    [SerializeField] private float initialRadiusScale = 0.2f; // 20% del tamaño final
+    [SerializeField] private float delayBeforeExpansion = 0.3f; // Tiempo que permanece pequeña antes de expandirse
+    [SerializeField] private float expansionDuration = 0.8f; // Tiempo de expansión
+    [Header("Spawn Area Settings")]
+    [SerializeField] private float minDistanceLeft = 2f; // Distancia mínima a la izquierda del jefe
+    [SerializeField] private float maxDistanceLeft = 10f; // Distancia máxima a la izquierda del jefe
+    [SerializeField] private float verticalVariation = 5f; // Variación vertical desde la posición del jefe
 
     // ========== ESTADO PRIVADO ==========
 
@@ -92,8 +99,8 @@ public class AreaAttack : BossAttackSO
             return;
         }
 
-        // Posición de spawn desde la posición del boss
-        Vector2 spawnPos = lastBossPosition;
+        // Generar posición aleatoria a la izquierda del boss
+        Vector2 spawnPos = GenerateRandomPositionLeft();
 
         // Instanciar área de daño
         GameObject areaObj = Instantiate(areaPrefab, spawnPos, Quaternion.identity);
@@ -105,11 +112,12 @@ public class AreaAttack : BossAttackSO
             circleCollider.radius = areaRadius;
         }
 
-        // Pasar daño a la zona desde este script de ataque
+        // Pasar daño y configuración de expansión a la zona desde este script de ataque
         DamageZone damageZone = areaObj.GetComponent<DamageZone>();
         if (damageZone != null)
         {
             damageZone.SetDamage(damage);
+            damageZone.SetExpansion(areaRadius * initialRadiusScale, areaRadius, expansionDuration, delayBeforeExpansion);
         }
         else
         {
@@ -120,5 +128,25 @@ public class AreaAttack : BossAttackSO
         Destroy(areaObj, areaDuration);
 
         Debug.Log($"Área de daño creada en {spawnPos} - Radius: {areaRadius}, Duration: {areaDuration}s, Daño: {damage}");
+    }
+
+    /// <summary>
+    /// Genera una posición aleatoria a la izquierda del jefe.
+    /// </summary>
+    private Vector2 GenerateRandomPositionLeft()
+    {
+        // Distancia aleatoria a la izquierda
+        float randomDistanceLeft = UnityEngine.Random.Range(minDistanceLeft, maxDistanceLeft);
+        
+        // Variación vertical aleatoria
+        float randomVerticalOffset = UnityEngine.Random.Range(-verticalVariation, verticalVariation);
+        
+        // Calcular posición final
+        Vector2 randomPosition = new Vector2(
+            lastBossPosition.x - randomDistanceLeft,  // A la izquierda del jefe
+            lastBossPosition.y + randomVerticalOffset  // Con variación vertical
+        );
+        
+        return randomPosition;
     }
 }

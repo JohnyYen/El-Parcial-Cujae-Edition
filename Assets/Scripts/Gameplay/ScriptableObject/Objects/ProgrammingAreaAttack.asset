@@ -15,7 +15,12 @@ MonoBehaviour:
   attackName: "Explosi\xF3n de \xC1rea"
   damage: 25
   cooldown: 3
-  validPhases: 0200000003000000
+  validPhases: 020000000300000001000000
   areaPrefab: {fileID: 2597932270596559170, guid: 79d315ac245a26a88a0736a89f92290c, type: 3}
   areaRadius: 5
   areaDuration: 2
+  initialRadiusScale: 0.2
+  expansionDuration: 0.8
+  minDistanceLeft: 2
+  maxDistanceLeft: 10
+  verticalVariation: 5
