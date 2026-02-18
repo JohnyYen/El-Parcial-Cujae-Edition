@@ -102,7 +102,7 @@ public class RainAttack : BossAttackSO
         for (int i = 0; i < projectileCount; i++)
         {
             // Posición de spawn: arriba del jugador + offset aleatorio en X
-            float randomOffsetX = Random.Range(-spawnWidth / 2f, spawnWidth / 2f);
+            float randomOffsetX = UnityEngine.Random.Range(-spawnWidth / 2f, spawnWidth / 2f);
             Vector3 spawnPos = new Vector3(
                 playerPosition.x + randomOffsetX,
                 playerPosition.y + spawnHeight,

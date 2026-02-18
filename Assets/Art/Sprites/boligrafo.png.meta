@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: c9a7ba8cd0453b54bb61e2bd69fbc76b
+guid: 514527ebf042538b287235b4959e1d41
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 819001243570555037
+    second: boligrafo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -34,12 +37,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -63,16 +66,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 2
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,7 +88,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,89 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: minion_0
+      name: boligrafo_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 287
-        width: 309
-        height: 287
+        x: 281
+        y: 264
+        width: 45
+        height: 413
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 42573e0deebf7b6cc814fb822f31f093
-      internalID: -1116834924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minion_1
-      rect:
-        serializedVersion: 2
-        x: 309
-        y: 287
-        width: 309
-        height: 287
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ab0e82f696ff9b88877cf9564f6d281
-      internalID: -1803382046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minion_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 309
-        height: 287
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af4ac7a956ad32eee94bdd45c16b9f72
-      internalID: 978838509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minion_3
-      rect:
-        serializedVersion: 2
-        x: 309
-        y: 0
-        width: 309
-        height: 287
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6d9dd851e49dd8a0acbd111941aebbf
-      internalID: -1615083775
+      spriteID: d9840a1ba4dad5b00800000000000000
+      internalID: 819001243570555037
       vertices: []
       indices: 
       edges: []
@@ -188,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 96ded194840facf3dab2e118ee9e20e4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -198,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      minion_0: -1116834924
-      minion_1: -1803382046
-      minion_2: 978838509
-      minion_3: -1615083775
+      boligrafo_0: 819001243570555037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

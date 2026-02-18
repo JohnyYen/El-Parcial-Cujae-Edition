@@ -10,7 +10,7 @@ using System;
 public class ChargeAttack : BossAttackSO
 {
     // ========== CONFIGURACIÓN ==========
-
+    // Que tal
     [SerializeField] private string attackName = "Embestida";
     [SerializeField] private float damage = 25f;
     [SerializeField] private float cooldown = 3f;

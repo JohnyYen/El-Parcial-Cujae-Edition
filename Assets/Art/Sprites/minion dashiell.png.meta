@@ -1,7 +1,16 @@
 fileFormatVersion: 2
-guid: c9a7ba8cd0453b54bb61e2bd69fbc76b
+guid: b0ee4d626c1f1d354ae7dbe0497276dc
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4035961140415182322
+    second: minion dashiell_0
+  - first:
+      213: -7028765810531163113
+    second: minion dashiell_1
+  - first:
+      213: -6227431190122207558
+    second: minion dashiell_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -34,12 +43,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -63,16 +72,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 2
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,7 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,89 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: minion_0
+      name: minion dashiell_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 287
-        width: 309
-        height: 287
+        x: 88
+        y: 226
+        width: 164
+        height: 189
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 42573e0deebf7b6cc814fb822f31f093
-      internalID: -1116834924
+      spriteID: e0ac54ae9b26df7c0800000000000000
+      internalID: -4035961140415182322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minion_1
+      name: minion dashiell_1
       rect:
         serializedVersion: 2
-        x: 309
-        y: 287
-        width: 309
-        height: 287
+        x: 268
+        y: 226
+        width: 171
+        height: 189
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2ab0e82f696ff9b88877cf9564f6d281
-      internalID: -1803382046
+      spriteID: 71421ed3cbec47e90800000000000000
+      internalID: -7028765810531163113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minion_2
+      name: minion dashiell_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 309
-        height: 287
+        x: 464
+        y: 214
+        width: 167
+        height: 177
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: af4ac7a956ad32eee94bdd45c16b9f72
-      internalID: 978838509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minion_3
-      rect:
-        serializedVersion: 2
-        x: 309
-        y: 0
-        width: 309
-        height: 287
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6d9dd851e49dd8a0acbd111941aebbf
-      internalID: -1615083775
+      spriteID: ab6e391b358b399a0800000000000000
+      internalID: -6227431190122207558
       vertices: []
       indices: 
       edges: []
@@ -188,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 96ded194840facf3dab2e118ee9e20e4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -198,10 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      minion_0: -1116834924
-      minion_1: -1803382046
-      minion_2: 978838509
-      minion_3: -1615083775
+      minion dashiell_0: -4035961140415182322
+      minion dashiell_1: -7028765810531163113
+      minion dashiell_2: -6227431190122207558
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
