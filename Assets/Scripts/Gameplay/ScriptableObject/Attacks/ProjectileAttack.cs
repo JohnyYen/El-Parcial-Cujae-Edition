@@ -42,6 +42,10 @@ public class ProjectileAttack : BossAttackSO
 
     // ========== MÉTODOS ==========
 
+    void OnEnable()
+    {
+        lastAttackTime = -999f;
+    }
     public override void Execute()
     {
         if (!CanExecute)

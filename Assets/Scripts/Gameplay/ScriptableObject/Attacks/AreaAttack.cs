@@ -42,6 +42,10 @@ public class AreaAttack : BossAttackSO
 
     // ========== MÉTODOS ==========
 
+    void OnEnable()
+    {
+        lastAttackTime = -999f;
+    }
     public override void Execute()
     {
         if (!CanExecute)
@@ -52,7 +56,7 @@ public class AreaAttack : BossAttackSO
         OnAttackStarted?.Invoke();
 
         Debug.Log($"Boss ejecuta: {attackName}");
-        
+
         // Crear área de daño
         CreateDamageArea();
 
@@ -88,7 +92,7 @@ public class AreaAttack : BossAttackSO
 
         // Instanciar área de daño
         GameObject areaObj = Instantiate(areaPrefab, spawnPos, Quaternion.identity);
-        
+
         // Configurar tamaño si es un círculo
         CircleCollider2D circleCollider = areaObj.GetComponent<CircleCollider2D>();
         if (circleCollider != null)
