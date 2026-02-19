@@ -25,6 +25,12 @@ public class VictoryScreen : MonoBehaviour
     [SerializeField] private CanvasGroup buttonsGroup;
     [SerializeField] private float fadeSpeed = 2f;
 
+    [Header("Victory Audio")]
+    [SerializeField] private AudioClip victoryMusic;
+    [SerializeField][Range(0f, 1f)] private float musicVolume = 0.7f;
+    [SerializeField] private bool loopMusic = true;
+
+    private AudioSource audioSource;
     private bool buttonsReady;
     private float messageAlpha;
     private float buttonsAlpha;
@@ -93,6 +99,29 @@ public class VictoryScreen : MonoBehaviour
     {
         gameObject.SetActive(true);
         Time.timeScale = 0f;
+        
+        // Reproducir música de victoria
+        PlayVictoryMusic();
+    }
+
+    /// <summary>
+    /// Reproduce la música de victoria.
+    /// </summary>
+    private void PlayVictoryMusic()
+    {
+        if (victoryMusic != null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.clip = victoryMusic;
+            audioSource.volume = musicVolume;
+            audioSource.loop = loopMusic;
+            audioSource.playOnAwake = false;
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("VictoryMusic no está asignado en el Inspector!");
+        }
     }
 
     /// <summary>
@@ -100,12 +129,24 @@ public class VictoryScreen : MonoBehaviour
     /// </summary>
     public void Hide()
     {
+        // Detener música si está sonando
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        
         gameObject.SetActive(false);
         Time.timeScale = 1f;
     }
 
     public void OnContinue()
     {
+        // Detener música de victoria
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        
         Time.timeScale = 1f;
         
         SceneFader fader = FindFirstObjectByType<SceneFader>();
@@ -121,6 +162,12 @@ public class VictoryScreen : MonoBehaviour
 
     public void OnMainMenu()
     {
+        // Detener música de victoria
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        
         Time.timeScale = 1f;
 
         SceneFader fader = FindFirstObjectByType<SceneFader>();
@@ -136,6 +183,12 @@ public class VictoryScreen : MonoBehaviour
 
     public void OnQuit()
     {
+        // Detener música de victoria
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
