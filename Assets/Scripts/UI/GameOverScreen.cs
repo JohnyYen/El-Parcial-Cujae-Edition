@@ -92,12 +92,28 @@ public class GameOverScreen : MonoBehaviour
 
     public void OnRetry()
     {
-        SceneManager.LoadScene(gameplaySceneName);
+        SceneFader fader = FindFirstObjectByType<SceneFader>();
+        if (fader != null)
+        {
+            fader.FadeAndLoadScene(gameplaySceneName, 0.5f);
+        }
+        else
+        {
+            SceneManager.LoadScene(gameplaySceneName);
+        }
     }
 
     public void OnMainMenu()
     {
-        SceneManager.LoadScene(titleScreenSceneName);
+        SceneFader fader = FindFirstObjectByType<SceneFader>();
+        if (fader != null)
+        {
+            fader.FadeAndLoadScene(titleScreenSceneName, 0.5f);
+        }
+        else
+        {
+            SceneManager.LoadScene(titleScreenSceneName);
+        }
     }
 
     public void OnQuit()

@@ -37,8 +37,17 @@ public class LevelSelectManager : MonoBehaviour
     private List<Button> buttonComponents = new List<Button>();
     private int currentIndex = 0;
 
+    private void Awake()
+    {
+        Debug.Log("=== LEVEL SELECT AWAKE ===");
+        Debug.Log($"Escena actual: {gameObject.scene.name}");
+    }
+
     private void Start()
     {
+        Debug.Log("=== LEVEL SELECT START ===");
+        Debug.Log($"Inicializando con {levels.Length} niveles");
+        
         GenerateLevelButtons();
         SetupBackButton();
 
@@ -46,6 +55,8 @@ public class LevelSelectManager : MonoBehaviour
         {
             SelectButton(0);
         }
+
+        Debug.Log($"LevelSelectManager listo - {spawnedButtons.Count} botones generados");
     }
 
     private void Update()
@@ -181,7 +192,17 @@ public class LevelSelectManager : MonoBehaviour
 
         if (!string.IsNullOrEmpty(selectedLevel.sceneName))
         {
-            SceneManager.LoadScene(selectedLevel.sceneName);
+            // Usar SceneFader para transición
+            SceneFader fader = FindFirstObjectByType<SceneFader>();
+            if (fader != null)
+            {
+                fader.FadeTransition(selectedLevel.sceneName, 0.5f, 0.5f);
+            }
+            else
+            {
+                // Fallback si no hay fader
+                SceneManager.LoadScene(selectedLevel.sceneName);
+            }
         }
         else
         {
@@ -191,7 +212,15 @@ public class LevelSelectManager : MonoBehaviour
 
     public void GoBackToTitle()
     {
-        SceneManager.LoadScene(titleScreenSceneName);
+        SceneFader fader = FindFirstObjectByType<SceneFader>();
+        if (fader != null)
+        {
+            fader.FadeAndLoadScene(titleScreenSceneName, 0.5f);
+        }
+        else
+        {
+            SceneManager.LoadScene(titleScreenSceneName);
+        }
     }
 
     private void OnDestroy()
