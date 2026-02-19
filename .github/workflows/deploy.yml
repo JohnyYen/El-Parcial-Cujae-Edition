@@ -6,12 +6,15 @@ jobs:
   build:
     runs-on: windows-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    env:
+      UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
 
-      - name: Build
-        uses: game-ci/unity-builder@v4
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: game-ci/unity-builder@v4
         with:
           unityVersion: 2022.3.20f1
           targetPlatform: StandaloneWindows64
+
