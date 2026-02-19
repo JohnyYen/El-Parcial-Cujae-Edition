@@ -395,6 +395,9 @@ MonoBehaviour:
   messageGroup: {fileID: 0}
   buttonsGroup: {fileID: 1100189177}
   fadeSpeed: 2
+  victoryMusic: {fileID: 8300000, guid: 504fbab5758a56e2989cf75a4e1af656, type: 3}
+  musicVolume: 0.7
+  loopMusic: 1
 --- !u!114 &76540528
 MonoBehaviour:
   m_ObjectHideFlags: 0
