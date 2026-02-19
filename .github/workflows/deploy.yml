@@ -4,13 +4,23 @@ on: [push]
 
 jobs:
   build:
-    runs-on: windows-latest
-
+    env:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            build-target: StandaloneLinux64
+          - os: windows-latest
+            build-target: StandaloneWindows64
+          - os: macos-latest
+            build-target: StandaloneOSX
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: game-ci/unity-builder@v4
+      - uses: buildalon/unity-action@v3
+        name: ${{ matrix.build-target }}-Build
         with:
-          unityVersion: 2022.3.20f1
-          targetPlatform: StandaloneWindows64
-
+          editor-path: path/to/your/unity/editor/installation
+          project-path: path/to/your/unity/project
+          log-name: ${{ matrix.build-target }}-Build
+          build-target: ${{ matrix.build-target }}
+          args: -quit -nographics -batchmode
