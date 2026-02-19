@@ -2533,6 +2533,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1581275748}
     - target: {fileID: 6906620681824040312, guid: 964bd966c7b3d5c11940d041f3d04db1, type: 3}
+      propertyPath: phase1Music
+      value: 
+      objectReference: {fileID: 8300000, guid: ec856d34ce6e94ea99e2421e6003e2ed, type: 3}
+    - target: {fileID: 6906620681824040312, guid: 964bd966c7b3d5c11940d041f3d04db1, type: 3}
+      propertyPath: phase2Music
+      value: 
+      objectReference: {fileID: 8300000, guid: 5231fcf26bee05ec38746ce0d18e7c1a, type: 3}
+    - target: {fileID: 6906620681824040312, guid: 964bd966c7b3d5c11940d041f3d04db1, type: 3}
+      propertyPath: phase3Music
+      value: 
+      objectReference: {fileID: 8300000, guid: b3196c6fb04faafb2a44e638213d77d1, type: 3}
+    - target: {fileID: 6906620681824040312, guid: 964bd966c7b3d5c11940d041f3d04db1, type: 3}
       propertyPath: spawnPoints
       value: 
       objectReference: {fileID: 611303827}
